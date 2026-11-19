@@ -1,0 +1,24 @@
+# Baseline Profile for MaD Internet TV / IPTV
+# Critical Path: Application Startup, MainActivity, PlayerManager, Database & Compose UI
+Lcom/example/NexusTvApplication;
+Lcom/example/MainActivity;
+Lcom/example/ui/viewmodel/MainViewModel;
+Lcom/example/data/local/AppDatabase;
+Lcom/example/data/local/ChannelDao;
+Lcom/example/data/local/EpgDao;
+Lcom/example/data/local/PlaylistDao;
+Lcom/example/data/local/entity/ChannelFts;
+Lcom/example/data/model/ChannelItem;
+Lcom/example/data/model/EpgProgram;
+Lcom/example/data/model/PlaylistEntity;
+Lcom/example/data/model/AppSettings;
+Lcom/example/data/repository/ContentRepository;
+Lcom/example/data/player/PlayerManager;
+Lcom/example/data/player/MediaCacheHolder;
+Lcom/example/data/parser/ContentClassifier;
+Lcom/example/data/parser/DachMasterDatabase;
+Lcom/example/data/parser/EpgMatcher;
+Lcom/example/data/parser/FreeEpgService;
+Landroidx/compose/runtime/Composer;
+Landroidx/compose/foundation/lazy/LazyListState;
+Landroidx/compose/material3/ScaffoldKt;

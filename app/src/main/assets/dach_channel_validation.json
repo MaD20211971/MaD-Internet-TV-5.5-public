@@ -1,0 +1,101 @@
+{
+  "summary": {
+    "totalDeChannels": 46,
+    "totalAtChannels": 31,
+    "totalChChannels": 28,
+    "totalChannels": 105,
+    "duplicateChannelIdsCount": 0,
+    "duplicateAliasesCount": 0,
+    "missingPopularityCount": 0,
+    "missingCountryCount": 0,
+    "missingCategoryCount": 0,
+    "missingRegionCount": 0
+  },
+  "duplicateChannelIds": [],
+  "duplicateAliases": [],
+  "missingPopularity": [],
+  "missingCountry": [],
+  "missingCategory": [],
+  "missingRegion": [],
+  "collisionCandidates": {
+    "deAtCollisions": [
+      {
+        "pattern": "RTL vs RTL Austria",
+        "de": "DE_RTL",
+        "at": "AT_RTL_AUSTRIA",
+        "rule": "Austrian window must match AT, default RTL is DE."
+      },
+      {
+        "pattern": "SAT.1 vs SAT.1 Österreich",
+        "de": "DE_SAT1",
+        "at": "AT_SAT1_OESTERREICH",
+        "rule": "Österreich keyword directs to AT."
+      },
+      {
+        "pattern": "ProSieben vs ProSieben Austria",
+        "de": "DE_PROSIEBEN",
+        "at": "AT_PROSIEBEN_AUSTRIA",
+        "rule": "Austria keyword directs to AT."
+      },
+      {
+        "pattern": "VOX vs VOX Austria",
+        "de": "DE_VOX",
+        "at": "AT_VOX_AUSTRIA",
+        "rule": "Austria keyword directs to AT."
+      },
+      {
+        "pattern": "ServusTV DE vs ServusTV AT",
+        "de": "DE_SERVUSTV_DE",
+        "at": "AT_SERVUSTV",
+        "rule": "ServusTV without qualifier defaults to AT (origin), ServusTV Deutschland is DE."
+      }
+    ],
+    "deChCollisions": [
+      {
+        "pattern": "3sat (DE) vs 3+ (CH)",
+        "de": "DE_3SAT",
+        "ch": "CH_3_PLUS",
+        "rule": "3sat is DE cultural channel, 3+ is CH private entertainment. Regex negative lookaheads prevent false positive."
+      },
+      {
+        "pattern": "RTL vs RTL Schweiz",
+        "de": "DE_RTL",
+        "ch": "CH_RTL_SCHWEIZ",
+        "rule": "Schweiz/CH tag directs to CH."
+      },
+      {
+        "pattern": "SAT.1 vs SAT.1 Schweiz",
+        "de": "DE_SAT1",
+        "ch": "CH_SAT1_SCHWEIZ",
+        "rule": "Schweiz/CH tag directs to CH."
+      },
+      {
+        "pattern": "ProSieben vs ProSieben Schweiz",
+        "de": "DE_PROSIEBEN",
+        "ch": "CH_PROSIEBEN_SCHWEIZ",
+        "rule": "Schweiz/CH tag directs to CH."
+      }
+    ],
+    "atChCollisions": [
+      {
+        "pattern": "PULS 4 (AT) vs PULS 24 (AT) vs Puls 8 (CH)",
+        "at": [
+          "AT_PULS_4",
+          "AT_PULS_24"
+        ],
+        "ch": "CH_PULS_8",
+        "rule": "Strict digit boundaries: Puls 4 != Puls 8 != Puls 24."
+      },
+      {
+        "pattern": "ATV (AT) vs ATV II (AT)",
+        "at": [
+          "AT_ATV",
+          "AT_ATV2"
+        ],
+        "ch": null,
+        "rule": "ATV matches only ATV without II or 2."
+      }
+    ]
+  },
+  "validationStatus": "PASSED"
+}

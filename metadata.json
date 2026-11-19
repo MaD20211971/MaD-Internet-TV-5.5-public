@@ -1,0 +1,8 @@
+{
+  "name": "MaD IPTV public",
+  "description": "Premium IPTV Player für Android \u0026 Android TV mit Unterstützung für Xtream, MAC Portale, M3U, EPG, Aufnahme und VOD. Neue GUI2",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

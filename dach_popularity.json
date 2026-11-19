@@ -1,0 +1,785 @@
+{
+  "version": "1.0.0",
+  "year": 2025,
+  "DE": {
+    "country": "Deutschland",
+    "source": "AGF Videoforschung / Marktanteile 2024-2025",
+    "ranking": [
+      {
+        "rank": 1,
+        "channelId": "DE_ZDF",
+        "canonicalName": "ZDF",
+        "marketShare": 14.6,
+        "popularityScore": 100.0
+      },
+      {
+        "rank": 2,
+        "channelId": "DE_ARD_DAS_ERSTE",
+        "canonicalName": "Das Erste",
+        "marketShare": 11.9,
+        "popularityScore": 98.0
+      },
+      {
+        "rank": 3,
+        "channelId": "DE_RTL",
+        "canonicalName": "RTL",
+        "marketShare": 8.0,
+        "popularityScore": 95.0
+      },
+      {
+        "rank": 4,
+        "channelId": "DE_SAT1",
+        "canonicalName": "SAT.1",
+        "marketShare": 4.7,
+        "popularityScore": 91.0
+      },
+      {
+        "rank": 5,
+        "channelId": "DE_VOX",
+        "canonicalName": "VOX",
+        "marketShare": 4.6,
+        "popularityScore": 90.0
+      },
+      {
+        "rank": 6,
+        "channelId": "DE_PROSIEBEN",
+        "canonicalName": "ProSieben",
+        "marketShare": 3.2,
+        "popularityScore": 88.0
+      },
+      {
+        "rank": 7,
+        "channelId": "DE_WDR_FERNSEHEN",
+        "canonicalName": "WDR Fernsehen",
+        "marketShare": 2.8,
+        "popularityScore": 86.0
+      },
+      {
+        "rank": 8,
+        "channelId": "DE_ZDFNEO",
+        "canonicalName": "ZDFneo",
+        "marketShare": 2.7,
+        "popularityScore": 85.0
+      },
+      {
+        "rank": 9,
+        "channelId": "DE_KABEL_EINS",
+        "canonicalName": "Kabel Eins",
+        "marketShare": 2.6,
+        "popularityScore": 84.0
+      },
+      {
+        "rank": 10,
+        "channelId": "DE_MDR_FERNSEHEN",
+        "canonicalName": "MDR Fernsehen",
+        "marketShare": 2.5,
+        "popularityScore": 83.0
+      },
+      {
+        "rank": 11,
+        "channelId": "DE_NDR_FERNSEHEN",
+        "canonicalName": "NDR Fernsehen",
+        "marketShare": 2.4,
+        "popularityScore": 82.0
+      },
+      {
+        "rank": 12,
+        "channelId": "DE_SWR_FERNSEHEN",
+        "canonicalName": "SWR Fernsehen",
+        "marketShare": 2.3,
+        "popularityScore": 81.0
+      },
+      {
+        "rank": 13,
+        "channelId": "DE_RTL_ZWEI",
+        "canonicalName": "RTL ZWEI",
+        "marketShare": 2.2,
+        "popularityScore": 80.5
+      },
+      {
+        "rank": 14,
+        "channelId": "DE_BR_FERNSEHEN",
+        "canonicalName": "BR Fernsehen",
+        "marketShare": 2.1,
+        "popularityScore": 80.0
+      },
+      {
+        "rank": 15,
+        "channelId": "DE_NITRO",
+        "canonicalName": "NITRO",
+        "marketShare": 2.0,
+        "popularityScore": 78.0
+      },
+      {
+        "rank": 16,
+        "channelId": "DE_ZDFINFO",
+        "canonicalName": "ZDFinfo",
+        "marketShare": 1.8,
+        "popularityScore": 76.0
+      },
+      {
+        "rank": 17,
+        "channelId": "DE_SUPER_RTL",
+        "canonicalName": "SUPER RTL",
+        "marketShare": 1.5,
+        "popularityScore": 75.0
+      },
+      {
+        "rank": 17,
+        "channelId": "DE_SAT1_GOLD",
+        "canonicalName": "SAT.1 Gold",
+        "marketShare": 1.6,
+        "popularityScore": 75.0
+      },
+      {
+        "rank": 18,
+        "channelId": "DE_RTLUP",
+        "canonicalName": "RTLup",
+        "marketShare": 1.6,
+        "popularityScore": 74.0
+      },
+      {
+        "rank": 18,
+        "channelId": "DE_DMAX",
+        "canonicalName": "DMAX",
+        "marketShare": 1.5,
+        "popularityScore": 74.5
+      },
+      {
+        "rank": 19,
+        "channelId": "DE_KIKA",
+        "canonicalName": "KiKA",
+        "marketShare": 1.4,
+        "popularityScore": 73.0
+      },
+      {
+        "rank": 20,
+        "channelId": "DE_3SAT",
+        "canonicalName": "3sat",
+        "marketShare": 1.4,
+        "popularityScore": 72.0
+      },
+      {
+        "rank": 21,
+        "channelId": "DE_WELT",
+        "canonicalName": "WELT",
+        "marketShare": 1.3,
+        "popularityScore": 71.0
+      },
+      {
+        "rank": 22,
+        "channelId": "DE_NTV",
+        "canonicalName": "ntv",
+        "marketShare": 1.2,
+        "popularityScore": 70.5
+      },
+      {
+        "rank": 23,
+        "channelId": "DE_ARTE",
+        "canonicalName": "arte",
+        "marketShare": 1.2,
+        "popularityScore": 70.0
+      },
+      {
+        "rank": 24,
+        "channelId": "DE_SIXX",
+        "canonicalName": "sixx",
+        "marketShare": 1.1,
+        "popularityScore": 68.0
+      },
+      {
+        "rank": 25,
+        "channelId": "DE_KABEL_EINS_DOKU",
+        "canonicalName": "Kabel Eins Doku",
+        "marketShare": 1.1,
+        "popularityScore": 67.0
+      },
+      {
+        "rank": 26,
+        "channelId": "DE_PROSIEBEN_MAXX",
+        "canonicalName": "ProSieben MAXX",
+        "marketShare": 1.0,
+        "popularityScore": 66.0
+      },
+      {
+        "rank": 26,
+        "channelId": "DE_DISNEY_CHANNEL",
+        "canonicalName": "Disney Channel",
+        "marketShare": 1.0,
+        "popularityScore": 66.5
+      },
+      {
+        "rank": 27,
+        "channelId": "DE_PHOENIX",
+        "canonicalName": "Phoenix",
+        "marketShare": 1.0,
+        "popularityScore": 65.0
+      },
+      {
+        "rank": 28,
+        "channelId": "DE_ONE",
+        "canonicalName": "ONE",
+        "marketShare": 1.0,
+        "popularityScore": 64.0
+      },
+      {
+        "rank": 29,
+        "channelId": "DE_HR_FERNSEHEN",
+        "canonicalName": "hr-fernsehen",
+        "marketShare": 0.9,
+        "popularityScore": 63.0
+      },
+      {
+        "rank": 30,
+        "channelId": "DE_RBB_FERNSEHEN",
+        "canonicalName": "rbb Fernsehen",
+        "marketShare": 0.8,
+        "popularityScore": 62.0
+      },
+      {
+        "rank": 31,
+        "channelId": "DE_SPORT1",
+        "canonicalName": "SPORT1",
+        "marketShare": 0.7,
+        "popularityScore": 61.5
+      },
+      {
+        "rank": 32,
+        "channelId": "DE_TLC",
+        "canonicalName": "TLC",
+        "marketShare": 0.6,
+        "popularityScore": 60.5
+      },
+      {
+        "rank": 32,
+        "channelId": "DE_EUROSPORT_1",
+        "canonicalName": "Eurosport 1",
+        "marketShare": 0.6,
+        "popularityScore": 60.8
+      },
+      {
+        "rank": 33,
+        "channelId": "DE_TELE5",
+        "canonicalName": "Tele 5",
+        "marketShare": 0.6,
+        "popularityScore": 60.0
+      },
+      {
+        "rank": 34,
+        "channelId": "DE_VOXUP",
+        "canonicalName": "VOXup",
+        "marketShare": 0.6,
+        "popularityScore": 59.0
+      },
+      {
+        "rank": 35,
+        "channelId": "DE_TAGESSCHAU24",
+        "canonicalName": "tagesschau24",
+        "marketShare": 0.5,
+        "popularityScore": 58.0
+      },
+      {
+        "rank": 35,
+        "channelId": "DE_COMEDY_CENTRAL",
+        "canonicalName": "Comedy Central",
+        "marketShare": 0.5,
+        "popularityScore": 57.0
+      },
+      {
+        "rank": 36,
+        "channelId": "DE_ARD_ALPHA",
+        "canonicalName": "ARD-alpha",
+        "marketShare": 0.3,
+        "popularityScore": 52.0
+      },
+      {
+        "rank": 37,
+        "channelId": "DE_RADIO_BREMEN_TV",
+        "canonicalName": "Radio Bremen TV",
+        "marketShare": 0.3,
+        "popularityScore": 50.0
+      },
+      {
+        "rank": 38,
+        "channelId": "DE_SR_FERNSEHEN",
+        "canonicalName": "SR Fernsehen",
+        "marketShare": 0.3,
+        "popularityScore": 51.0
+      },
+      {
+        "rank": 39,
+        "channelId": "DE_SKY_SPORT_NEWS",
+        "canonicalName": "Sky Sport News",
+        "marketShare": 0.3,
+        "popularityScore": 50.0
+      },
+      {
+        "rank": 40,
+        "channelId": "DE_MTV",
+        "canonicalName": "MTV",
+        "marketShare": 0.2,
+        "popularityScore": 48.0
+      },
+      {
+        "rank": 41,
+        "channelId": "DE_SERVUSTV_DE",
+        "canonicalName": "ServusTV Deutschland",
+        "marketShare": 0.2,
+        "popularityScore": 45.0
+      }
+    ]
+  },
+  "AT": {
+    "country": "Österreich",
+    "source": "Teletest / ORF Jahresbericht 2025",
+    "ranking": [
+      {
+        "rank": 1,
+        "channelId": "AT_ORF_2",
+        "canonicalName": "ORF 2",
+        "marketShare": 20.8,
+        "popularityScore": 100.0
+      },
+      {
+        "rank": 2,
+        "channelId": "AT_ORF_1",
+        "canonicalName": "ORF 1",
+        "marketShare": 10.8,
+        "popularityScore": 97.0
+      },
+      {
+        "rank": 3,
+        "channelId": "AT_SERVUSTV",
+        "canonicalName": "ServusTV",
+        "marketShare": 4.7,
+        "popularityScore": 90.0
+      },
+      {
+        "rank": 4,
+        "channelId": "AT_PULS_4",
+        "canonicalName": "PULS 4",
+        "marketShare": 2.7,
+        "popularityScore": 86.0
+      },
+      {
+        "rank": 5,
+        "channelId": "AT_ATV",
+        "canonicalName": "ATV",
+        "marketShare": 2.6,
+        "popularityScore": 85.0
+      },
+      {
+        "rank": 6,
+        "channelId": "AT_ORF_III",
+        "canonicalName": "ORF III",
+        "marketShare": 2.5,
+        "popularityScore": 82.0
+      },
+      {
+        "rank": 7,
+        "channelId": "AT_OE24_TV",
+        "canonicalName": "oe24.TV",
+        "marketShare": 1.5,
+        "popularityScore": 78.0
+      },
+      {
+        "rank": 8,
+        "channelId": "AT_PULS_24",
+        "canonicalName": "PULS 24",
+        "marketShare": 1.1,
+        "popularityScore": 76.0
+      },
+      {
+        "rank": 9,
+        "channelId": "AT_ATV2",
+        "canonicalName": "ATV II",
+        "marketShare": 1.0,
+        "popularityScore": 74.0
+      },
+      {
+        "rank": 10,
+        "channelId": "AT_ORF_SPORT_PLUS",
+        "canonicalName": "ORF SPORT+",
+        "marketShare": 0.6,
+        "popularityScore": 70.0
+      },
+      {
+        "rank": 11,
+        "channelId": "AT_ORF_2_WIEN",
+        "canonicalName": "ORF 2 Wien",
+        "marketShare": 0.6,
+        "popularityScore": 65.0
+      },
+      {
+        "rank": 12,
+        "channelId": "AT_ORF_2_BURGENLAND",
+        "canonicalName": "ORF 2 Burgenland",
+        "marketShare": 0.4,
+        "popularityScore": 60.0
+      },
+      {
+        "rank": 13,
+        "channelId": "AT_ORF_2_KAERNTEN",
+        "canonicalName": "ORF 2 Kärnten",
+        "marketShare": 0.4,
+        "popularityScore": 60.0
+      },
+      {
+        "rank": 14,
+        "channelId": "AT_ORF_2_NIEDEROESTERREICH",
+        "canonicalName": "ORF 2 Niederösterreich",
+        "marketShare": 0.5,
+        "popularityScore": 62.0
+      },
+      {
+        "rank": 15,
+        "channelId": "AT_ORF_2_OBEROESTERREICH",
+        "canonicalName": "ORF 2 Oberösterreich",
+        "marketShare": 0.5,
+        "popularityScore": 62.0
+      },
+      {
+        "rank": 16,
+        "channelId": "AT_ORF_2_SALZBURG",
+        "canonicalName": "ORF 2 Salzburg",
+        "marketShare": 0.4,
+        "popularityScore": 60.0
+      },
+      {
+        "rank": 17,
+        "channelId": "AT_ORF_2_STEIERMARK",
+        "canonicalName": "ORF 2 Steiermark",
+        "marketShare": 0.5,
+        "popularityScore": 61.0
+      },
+      {
+        "rank": 18,
+        "channelId": "AT_ORF_2_TIROL",
+        "canonicalName": "ORF 2 Tirol",
+        "marketShare": 0.4,
+        "popularityScore": 60.0
+      },
+      {
+        "rank": 19,
+        "channelId": "AT_ORF_2_VORARLBERG",
+        "canonicalName": "ORF 2 Vorarlberg",
+        "marketShare": 0.4,
+        "popularityScore": 59.0
+      },
+      {
+        "rank": 20,
+        "channelId": "AT_KURIER_TV",
+        "canonicalName": "KURIER TV",
+        "marketShare": 0.4,
+        "popularityScore": 58.0
+      },
+      {
+        "rank": 21,
+        "channelId": "AT_KRONE_TV",
+        "canonicalName": "Krone TV",
+        "marketShare": 0.4,
+        "popularityScore": 57.0
+      },
+      {
+        "rank": 22,
+        "channelId": "AT_W24",
+        "canonicalName": "W24",
+        "marketShare": 0.3,
+        "popularityScore": 55.0
+      },
+      {
+        "rank": 23,
+        "channelId": "AT_LAOLA1",
+        "canonicalName": "LAOLA1",
+        "marketShare": 0.3,
+        "popularityScore": 55.0
+      },
+      {
+        "rank": 24,
+        "channelId": "AT_RED_BULL_TV",
+        "canonicalName": "Red Bull TV",
+        "marketShare": 0.3,
+        "popularityScore": 54.0
+      },
+      {
+        "rank": 25,
+        "channelId": "AT_STEIERMARK_TV",
+        "canonicalName": "Steiermark TV",
+        "marketShare": 0.2,
+        "popularityScore": 50.0
+      },
+      {
+        "rank": 26,
+        "channelId": "AT_TIROL_TV",
+        "canonicalName": "Tirol TV",
+        "marketShare": 0.2,
+        "popularityScore": 50.0
+      },
+      {
+        "rank": 27,
+        "channelId": "AT_LT1",
+        "canonicalName": "LT1",
+        "marketShare": 0.2,
+        "popularityScore": 49.0
+      },
+      {
+        "rank": 30,
+        "channelId": "AT_RTL_AUSTRIA",
+        "canonicalName": "RTL Austria",
+        "marketShare": 4.5,
+        "popularityScore": 84.0
+      },
+      {
+        "rank": 31,
+        "channelId": "AT_SAT1_OESTERREICH",
+        "canonicalName": "SAT.1 Österreich",
+        "marketShare": 3.2,
+        "popularityScore": 80.0
+      },
+      {
+        "rank": 32,
+        "channelId": "AT_PROSIEBEN_AUSTRIA",
+        "canonicalName": "ProSieben Austria",
+        "marketShare": 2.5,
+        "popularityScore": 78.0
+      },
+      {
+        "rank": 33,
+        "channelId": "AT_VOX_AUSTRIA",
+        "canonicalName": "VOX Austria",
+        "marketShare": 2.4,
+        "popularityScore": 77.0
+      }
+    ]
+  },
+  "CH": {
+    "country": "Schweiz",
+    "source": "Mediapulse TV Data 2024-2025",
+    "ranking": [
+      {
+        "rank": 1,
+        "channelId": "CH_SRF_1",
+        "canonicalName": "SRF 1",
+        "marketShare": 19.2,
+        "popularityScore": 100.0,
+        "region": "DE-CH"
+      },
+      {
+        "rank": 2,
+        "channelId": "CH_SRF_ZWEI",
+        "canonicalName": "SRF zwei",
+        "marketShare": 9.1,
+        "popularityScore": 94.0,
+        "region": "DE-CH"
+      },
+      {
+        "rank": 3,
+        "channelId": "CH_3_PLUS",
+        "canonicalName": "3+",
+        "marketShare": 2.5,
+        "popularityScore": 85.0,
+        "region": "DE-CH"
+      },
+      {
+        "rank": 4,
+        "channelId": "CH_TV24",
+        "canonicalName": "TV24",
+        "marketShare": 1.4,
+        "popularityScore": 78.0,
+        "region": "DE-CH"
+      },
+      {
+        "rank": 5,
+        "channelId": "CH_SRF_INFO",
+        "canonicalName": "SRF info",
+        "marketShare": 1.2,
+        "popularityScore": 75.0,
+        "region": "DE-CH"
+      },
+      {
+        "rank": 6,
+        "channelId": "CH_4_PLUS",
+        "canonicalName": "4+",
+        "marketShare": 1.0,
+        "popularityScore": 73.0,
+        "region": "DE-CH"
+      },
+      {
+        "rank": 7,
+        "channelId": "CH_PULS_8",
+        "canonicalName": "Puls 8",
+        "marketShare": 0.9,
+        "popularityScore": 72.0,
+        "region": "DE-CH"
+      },
+      {
+        "rank": 8,
+        "channelId": "CH_5_PLUS",
+        "canonicalName": "5+",
+        "marketShare": 0.6,
+        "popularityScore": 68.0,
+        "region": "DE-CH"
+      },
+      {
+        "rank": 9,
+        "channelId": "CH_TV25",
+        "canonicalName": "TV25",
+        "marketShare": 0.6,
+        "popularityScore": 67.0,
+        "region": "DE-CH"
+      },
+      {
+        "rank": 10,
+        "channelId": "CH_TELEZUERI",
+        "canonicalName": "TeleZüri",
+        "marketShare": 0.6,
+        "popularityScore": 66.0,
+        "region": "DE-CH"
+      },
+      {
+        "rank": 11,
+        "channelId": "CH_TELEBAERN",
+        "canonicalName": "TeleBärn",
+        "marketShare": 0.4,
+        "popularityScore": 63.0,
+        "region": "DE-CH"
+      },
+      {
+        "rank": 12,
+        "channelId": "CH_TELE_M1",
+        "canonicalName": "Tele M1",
+        "marketShare": 0.4,
+        "popularityScore": 63.0,
+        "region": "DE-CH"
+      },
+      {
+        "rank": 13,
+        "channelId": "CH_TELEBASEL",
+        "canonicalName": "Telebasel",
+        "marketShare": 0.3,
+        "popularityScore": 62.0,
+        "region": "DE-CH"
+      },
+      {
+        "rank": 14,
+        "channelId": "CH_6_PLUS",
+        "canonicalName": "6+",
+        "marketShare": 0.3,
+        "popularityScore": 60.0,
+        "region": "DE-CH"
+      },
+      {
+        "rank": 15,
+        "channelId": "CH_STAR_TV",
+        "canonicalName": "Star TV",
+        "marketShare": 0.2,
+        "popularityScore": 58.0,
+        "region": "DE-CH"
+      },
+      {
+        "rank": 16,
+        "channelId": "CH_S1",
+        "canonicalName": "S1",
+        "marketShare": 0.2,
+        "popularityScore": 57.0,
+        "region": "DE-CH"
+      },
+      {
+        "rank": 17,
+        "channelId": "CH_TELE_TOP",
+        "canonicalName": "Tele Top",
+        "marketShare": 0.2,
+        "popularityScore": 56.0,
+        "region": "DE-CH"
+      },
+      {
+        "rank": 18,
+        "channelId": "CH_7_PLUS",
+        "canonicalName": "7+",
+        "marketShare": 0.2,
+        "popularityScore": 55.0,
+        "region": "DE-CH"
+      },
+      {
+        "rank": 20,
+        "channelId": "CH_RTS_1",
+        "canonicalName": "RTS 1",
+        "marketShare": 21.5,
+        "popularityScore": 95.0,
+        "region": "FR-CH"
+      },
+      {
+        "rank": 21,
+        "channelId": "CH_RTS_2",
+        "canonicalName": "RTS 2",
+        "marketShare": 7.8,
+        "popularityScore": 88.0,
+        "region": "FR-CH"
+      },
+      {
+        "rank": 24,
+        "channelId": "CH_RTS_INFO",
+        "canonicalName": "RTS Info",
+        "marketShare": 1.0,
+        "popularityScore": 70.0,
+        "region": "FR-CH"
+      },
+      {
+        "rank": 25,
+        "channelId": "CH_LEMAN_BLEU",
+        "canonicalName": "Léman Bleu",
+        "marketShare": 0.7,
+        "popularityScore": 65.0,
+        "region": "FR-CH"
+      },
+      {
+        "rank": 30,
+        "channelId": "CH_RSI_LA_1",
+        "canonicalName": "RSI LA 1",
+        "marketShare": 18.5,
+        "popularityScore": 95.0,
+        "region": "IT-CH"
+      },
+      {
+        "rank": 31,
+        "channelId": "CH_RSI_LA_2",
+        "canonicalName": "RSI LA 2",
+        "marketShare": 6.5,
+        "popularityScore": 86.0,
+        "region": "IT-CH"
+      },
+      {
+        "rank": 40,
+        "channelId": "CH_RTR",
+        "canonicalName": "RTR",
+        "marketShare": 0.2,
+        "popularityScore": 50.0,
+        "region": "RM-CH"
+      },
+      {
+        "rank": 45,
+        "channelId": "CH_RTL_SCHWEIZ",
+        "canonicalName": "RTL Schweiz",
+        "marketShare": 1.8,
+        "popularityScore": 75.0,
+        "region": "DE-CH"
+      },
+      {
+        "rank": 46,
+        "channelId": "CH_SAT1_SCHWEIZ",
+        "canonicalName": "SAT.1 Schweiz",
+        "marketShare": 1.5,
+        "popularityScore": 74.0,
+        "region": "DE-CH"
+      },
+      {
+        "rank": 47,
+        "channelId": "CH_PROSIEBEN_SCHWEIZ",
+        "canonicalName": "ProSieben Schweiz",
+        "marketShare": 1.3,
+        "popularityScore": 72.0,
+        "region": "DE-CH"
+      }
+    ]
+  }
+}

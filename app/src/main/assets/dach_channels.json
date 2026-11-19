@@ -1,0 +1,4434 @@
+{
+  "version": "1.0.0",
+  "updatedAt": "2026-09-23",
+  "totalCount": 105,
+  "countries": [
+    "DE",
+    "AT",
+    "CH"
+  ],
+  "channels": [
+    {
+      "channelId": "DE_ARD_DAS_ERSTE",
+      "canonicalName": "Das Erste",
+      "shortName": "ARD",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-NAT",
+      "language": "de",
+      "category": "Public",
+      "genre": "Vollprogramm",
+      "popularityRank": 2,
+      "popularityScore": 98.0,
+      "marketShare": 11.9,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "ARD",
+        "Das Erste HD",
+        "Das Erste FHD",
+        "Das Erste UHD",
+        "ARD HD",
+        "DE: Das Erste",
+        "DE| Das Erste HD",
+        "DE: ARD HD"
+      ],
+      "keywords": [
+        "ard",
+        "das erste",
+        "erste deutsche fernsehen"
+      ],
+      "tvgIds": [
+        "DasErste.de",
+        "ard.de"
+      ],
+      "tvgNamePatterns": [
+        "das erste*",
+        "ard hd*"
+      ],
+      "matchPatterns": [
+        "(?i)\\b(das\\s*erste|ard)\\b"
+      ],
+      "excludePatterns": [
+        "(?i)\\b(ard\\s*alpha|radio)\\b"
+      ],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_ZDF",
+      "canonicalName": "ZDF",
+      "shortName": "ZDF",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-NAT",
+      "language": "de",
+      "category": "Public",
+      "genre": "Vollprogramm",
+      "popularityRank": 1,
+      "popularityScore": 100.0,
+      "marketShare": 14.6,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "ZDF HD",
+        "ZDF FHD",
+        "ZDF UHD",
+        "DE: ZDF",
+        "DE: ZDF HD",
+        "DE| ZDF HD"
+      ],
+      "keywords": [
+        "zdf",
+        "zweites deutsches fernsehen"
+      ],
+      "tvgIds": [
+        "ZDF.de"
+      ],
+      "tvgNamePatterns": [
+        "zdf*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bzdf\\b"
+      ],
+      "excludePatterns": [
+        "(?i)\\b(zdfneo|zdfinfo|neo|info)\\b"
+      ],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_3SAT",
+      "canonicalName": "3sat",
+      "shortName": "3sat",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-NAT",
+      "language": "de",
+      "category": "Public",
+      "genre": "Kultur",
+      "popularityRank": 20,
+      "popularityScore": 72.0,
+      "marketShare": 1.4,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "3sat HD",
+        "3sat FHD",
+        "DE: 3sat",
+        "DE| 3sat HD"
+      ],
+      "keywords": [
+        "3sat",
+        "dreisat",
+        "kultur"
+      ],
+      "tvgIds": [
+        "3sat.de"
+      ],
+      "tvgNamePatterns": [
+        "3sat*"
+      ],
+      "matchPatterns": [
+        "(?i)\\b3sat\\b"
+      ],
+      "excludePatterns": [
+        "(?i)\\b3\\+\\b"
+      ],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_ARTE",
+      "canonicalName": "arte",
+      "shortName": "arte",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-NAT",
+      "language": "de",
+      "category": "Public",
+      "genre": "Kultur",
+      "popularityRank": 23,
+      "popularityScore": 70.0,
+      "marketShare": 1.2,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "arte HD",
+        "arte FHD",
+        "DE: arte",
+        "DE: ARTE HD"
+      ],
+      "keywords": [
+        "arte",
+        "kulturkanal"
+      ],
+      "tvgIds": [
+        "arte.de"
+      ],
+      "tvgNamePatterns": [
+        "arte*"
+      ],
+      "matchPatterns": [
+        "(?i)\\barte\\b"
+      ],
+      "excludePatterns": [
+        "(?i)\\bfrance\\b"
+      ],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_PHOENIX",
+      "canonicalName": "Phoenix",
+      "shortName": "Phoenix",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-NAT",
+      "language": "de",
+      "category": "Public",
+      "genre": "News",
+      "popularityRank": 27,
+      "popularityScore": 65.0,
+      "marketShare": 1.0,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "Phoenix HD",
+        "Phoenix FHD",
+        "DE: Phoenix",
+        "DE: PHOENIX HD"
+      ],
+      "keywords": [
+        "phoenix",
+        "ereigniskanal",
+        "politik"
+      ],
+      "tvgIds": [
+        "phoenix.de"
+      ],
+      "tvgNamePatterns": [
+        "phoenix*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bphoenix\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_ZDFNEO",
+      "canonicalName": "ZDFneo",
+      "shortName": "neo",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-NAT",
+      "language": "de",
+      "category": "Public",
+      "genre": "Entertainment",
+      "popularityRank": 8,
+      "popularityScore": 85.0,
+      "marketShare": 2.7,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "ZDF neo",
+        "ZDFneo HD",
+        "ZDFneo FHD",
+        "DE: ZDFneo",
+        "DE: ZDF neo HD"
+      ],
+      "keywords": [
+        "zdfneo",
+        "zdf neo"
+      ],
+      "tvgIds": [
+        "zdfneo.de"
+      ],
+      "tvgNamePatterns": [
+        "zdfneo*",
+        "zdf neo*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bzdf\\s*neo\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_ZDFINFO",
+      "canonicalName": "ZDFinfo",
+      "shortName": "info",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-NAT",
+      "language": "de",
+      "category": "Public",
+      "genre": "Documentary",
+      "popularityRank": 16,
+      "popularityScore": 76.0,
+      "marketShare": 1.8,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "ZDF info",
+        "ZDFinfo HD",
+        "ZDFinfo FHD",
+        "DE: ZDFinfo",
+        "DE: ZDF info HD"
+      ],
+      "keywords": [
+        "zdfinfo",
+        "zdf info",
+        "doku"
+      ],
+      "tvgIds": [
+        "zdfinfo.de"
+      ],
+      "tvgNamePatterns": [
+        "zdfinfo*",
+        "zdf info*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bzdf\\s*info\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_ONE",
+      "canonicalName": "ONE",
+      "shortName": "ONE",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-NAT",
+      "language": "de",
+      "category": "Public",
+      "genre": "Entertainment",
+      "popularityRank": 28,
+      "popularityScore": 64.0,
+      "marketShare": 1.0,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "ONE HD",
+        "ARD ONE",
+        "ARD ONE HD",
+        "DE: ONE",
+        "DE: ONE HD"
+      ],
+      "keywords": [
+        "one",
+        "ard one",
+        "einsfestival"
+      ],
+      "tvgIds": [
+        "one.ard.de"
+      ],
+      "tvgNamePatterns": [
+        "one*"
+      ],
+      "matchPatterns": [
+        "(?i)\\b(ard\\s*one|one\\s*hd)\\b"
+      ],
+      "excludePatterns": [
+        "(?i)\\b(formula\\s*one|one1)\\b"
+      ],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_KIKA",
+      "canonicalName": "KiKA",
+      "shortName": "KiKA",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-NAT",
+      "language": "de",
+      "category": "Public",
+      "genre": "Kids",
+      "popularityRank": 19,
+      "popularityScore": 73.0,
+      "marketShare": 1.4,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "KiKA HD",
+        "KiKA FHD",
+        "DE: KiKA",
+        "DE: KIKA HD"
+      ],
+      "keywords": [
+        "kika",
+        "kinderkanal"
+      ],
+      "tvgIds": [
+        "kika.de"
+      ],
+      "tvgNamePatterns": [
+        "kika*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bkika\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_TAGESSCHAU24",
+      "canonicalName": "tagesschau24",
+      "shortName": "tagesschau24",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-NAT",
+      "language": "de",
+      "category": "Public",
+      "genre": "News",
+      "popularityRank": 35,
+      "popularityScore": 58.0,
+      "marketShare": 0.5,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "tagesschau 24",
+        "tagesschau24 HD",
+        "DE: tagesschau24"
+      ],
+      "keywords": [
+        "tagesschau24",
+        "tagesschau 24",
+        "eins extra"
+      ],
+      "tvgIds": [
+        "tagesschau24.de"
+      ],
+      "tvgNamePatterns": [
+        "tagesschau24*"
+      ],
+      "matchPatterns": [
+        "(?i)\\btagesschau\\s*24\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_ARD_ALPHA",
+      "canonicalName": "ARD-alpha",
+      "shortName": "ARD-alpha",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-NAT",
+      "language": "de",
+      "category": "Public",
+      "genre": "Education",
+      "popularityRank": 36,
+      "popularityScore": 52.0,
+      "marketShare": 0.3,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "ARD alpha",
+        "ARD-alpha HD",
+        "DE: ARD alpha"
+      ],
+      "keywords": [
+        "ard-alpha",
+        "ard alpha",
+        "br-alpha"
+      ],
+      "tvgIds": [
+        "alpha.ard.de"
+      ],
+      "tvgNamePatterns": [
+        "ard alpha*",
+        "ard-alpha*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bard[- ]?alpha\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_BR_FERNSEHEN",
+      "canonicalName": "BR Fernsehen",
+      "shortName": "BR",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-BY",
+      "language": "de",
+      "category": "Regional",
+      "genre": "Regional",
+      "popularityRank": 14,
+      "popularityScore": 80.0,
+      "marketShare": 2.1,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "BR Fernsehen HD",
+        "BR HD",
+        "BR Nord HD",
+        "BR Süd HD",
+        "DE: BR Fernsehen",
+        "Bayerisches Fernsehen"
+      ],
+      "keywords": [
+        "br",
+        "bayerischer rundfunk",
+        "bayern"
+      ],
+      "tvgIds": [
+        "br.de"
+      ],
+      "tvgNamePatterns": [
+        "br fernsehen*"
+      ],
+      "matchPatterns": [
+        "(?i)\\b(br\\s*fernsehen|bayerisches\\s*fernsehen)\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": false,
+      "isRegional": true,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_HR_FERNSEHEN",
+      "canonicalName": "hr-fernsehen",
+      "shortName": "HR",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-HE",
+      "language": "de",
+      "category": "Regional",
+      "genre": "Regional",
+      "popularityRank": 29,
+      "popularityScore": 63.0,
+      "marketShare": 0.9,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "hr Fernsehen HD",
+        "hr HD",
+        "hr-fernsehen HD",
+        "DE: hr-fernsehen",
+        "Hessischer Rundfunk"
+      ],
+      "keywords": [
+        "hr",
+        "hr3",
+        "hessen"
+      ],
+      "tvgIds": [
+        "hr.de"
+      ],
+      "tvgNamePatterns": [
+        "hr fernsehen*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bhr[- ]?fernsehen\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": false,
+      "isRegional": true,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_MDR_FERNSEHEN",
+      "canonicalName": "MDR Fernsehen",
+      "shortName": "MDR",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-SN",
+      "language": "de",
+      "category": "Regional",
+      "genre": "Regional",
+      "popularityRank": 10,
+      "popularityScore": 83.0,
+      "marketShare": 2.5,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "MDR Fernsehen HD",
+        "MDR HD",
+        "MDR Sachsen HD",
+        "MDR Thüringen HD",
+        "MDR S-Anhalt HD",
+        "DE: MDR"
+      ],
+      "keywords": [
+        "mdr",
+        "mitteldeutscher rundfunk",
+        "sachsen",
+        "thueringen"
+      ],
+      "tvgIds": [
+        "mdr.de"
+      ],
+      "tvgNamePatterns": [
+        "mdr fernsehen*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bmdr(\\s*fernsehen)?\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": false,
+      "isRegional": true,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_NDR_FERNSEHEN",
+      "canonicalName": "NDR Fernsehen",
+      "shortName": "NDR",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-HH",
+      "language": "de",
+      "category": "Regional",
+      "genre": "Regional",
+      "popularityRank": 11,
+      "popularityScore": 82.0,
+      "marketShare": 2.4,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "NDR Fernsehen HD",
+        "NDR HD",
+        "NDR Hamburg HD",
+        "NDR NDS HD",
+        "NDR SH HD",
+        "NDR MV HD",
+        "DE: NDR"
+      ],
+      "keywords": [
+        "ndr",
+        "norddeutscher rundfunk",
+        "hamburg",
+        "niedersachsen"
+      ],
+      "tvgIds": [
+        "ndr.de"
+      ],
+      "tvgNamePatterns": [
+        "ndr fernsehen*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bndr(\\s*fernsehen)?\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": false,
+      "isRegional": true,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_RADIO_BREMEN_TV",
+      "canonicalName": "Radio Bremen TV",
+      "shortName": "RB TV",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-HB",
+      "language": "de",
+      "category": "Regional",
+      "genre": "Regional",
+      "popularityRank": 37,
+      "popularityScore": 50.0,
+      "marketShare": 0.3,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "Radio Bremen HD",
+        "RB TV HD",
+        "DE: Radio Bremen TV"
+      ],
+      "keywords": [
+        "radio bremen tv",
+        "rb tv",
+        "bremen"
+      ],
+      "tvgIds": [
+        "radiobremen.de"
+      ],
+      "tvgNamePatterns": [
+        "radio bremen*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bradio\\s*bremen(\\s*tv)?\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": false,
+      "isRegional": true,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_RBB_FERNSEHEN",
+      "canonicalName": "rbb Fernsehen",
+      "shortName": "rbb",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-BE",
+      "language": "de",
+      "category": "Regional",
+      "genre": "Regional",
+      "popularityRank": 30,
+      "popularityScore": 62.0,
+      "marketShare": 0.8,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "rbb Fernsehen HD",
+        "rbb HD",
+        "rbb Berlin HD",
+        "rbb Brandenburg HD",
+        "DE: rbb"
+      ],
+      "keywords": [
+        "rbb",
+        "berlin",
+        "brandenburg"
+      ],
+      "tvgIds": [
+        "rbb.de"
+      ],
+      "tvgNamePatterns": [
+        "rbb fernsehen*"
+      ],
+      "matchPatterns": [
+        "(?i)\\brbb(\\s*fernsehen)?\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": false,
+      "isRegional": true,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_SR_FERNSEHEN",
+      "canonicalName": "SR Fernsehen",
+      "shortName": "SR",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-SL",
+      "language": "de",
+      "category": "Regional",
+      "genre": "Regional",
+      "popularityRank": 38,
+      "popularityScore": 51.0,
+      "marketShare": 0.3,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "SR Fernsehen HD",
+        "SR HD",
+        "DE: SR Fernsehen"
+      ],
+      "keywords": [
+        "sr",
+        "saarlaendischer rundfunk",
+        "saarland"
+      ],
+      "tvgIds": [
+        "sr.de"
+      ],
+      "tvgNamePatterns": [
+        "sr fernsehen*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bsr\\s*fernsehen\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": false,
+      "isRegional": true,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_SWR_FERNSEHEN",
+      "canonicalName": "SWR Fernsehen",
+      "shortName": "SWR",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-BW",
+      "language": "de",
+      "category": "Regional",
+      "genre": "Regional",
+      "popularityRank": 12,
+      "popularityScore": 81.0,
+      "marketShare": 2.3,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "SWR Fernsehen HD",
+        "SWR HD",
+        "SWR BW HD",
+        "SWR RP HD",
+        "DE: SWR Fernsehen"
+      ],
+      "keywords": [
+        "swr",
+        "suedwestrundfunk",
+        "baden-wuerttemberg",
+        "rheinland-pfalz"
+      ],
+      "tvgIds": [
+        "swr.de"
+      ],
+      "tvgNamePatterns": [
+        "swr fernsehen*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bswr(\\s*fernsehen)?\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": false,
+      "isRegional": true,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_WDR_FERNSEHEN",
+      "canonicalName": "WDR Fernsehen",
+      "shortName": "WDR",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-NW",
+      "language": "de",
+      "category": "Regional",
+      "genre": "Regional",
+      "popularityRank": 7,
+      "popularityScore": 86.0,
+      "marketShare": 2.8,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "WDR Fernsehen HD",
+        "WDR HD",
+        "WDR Köln HD",
+        "WDR Dortmund HD",
+        "WDR Düsseldorf HD",
+        "DE: WDR"
+      ],
+      "keywords": [
+        "wdr",
+        "westdeutscher rundfunk",
+        "koeln",
+        "nrw"
+      ],
+      "tvgIds": [
+        "wdr.de"
+      ],
+      "tvgNamePatterns": [
+        "wdr fernsehen*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bwdr(\\s*fernsehen)?\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": false,
+      "isRegional": true,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_RTL",
+      "canonicalName": "RTL",
+      "shortName": "RTL",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-NAT",
+      "language": "de",
+      "category": "Private",
+      "genre": "Vollprogramm",
+      "popularityRank": 3,
+      "popularityScore": 95.0,
+      "marketShare": 8.0,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "RTL Television",
+        "RTL HD",
+        "RTL FHD",
+        "RTL UHD",
+        "DE: RTL HD",
+        "DE| RTL HD"
+      ],
+      "keywords": [
+        "rtl",
+        "rtl television"
+      ],
+      "tvgIds": [
+        "RTL.de"
+      ],
+      "tvgNamePatterns": [
+        "rtl*"
+      ],
+      "matchPatterns": [
+        "(?i)\\brtl(\\s*television)?\\b"
+      ],
+      "excludePatterns": [
+        "(?i)\\b(austria|schweiz|ch|at|rtl\\s*2|rtl\\s*zwei|nitro|up)\\b"
+      ],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_RTL_ZWEI",
+      "canonicalName": "RTL ZWEI",
+      "shortName": "RTL2",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-NAT",
+      "language": "de",
+      "category": "Private",
+      "genre": "Entertainment",
+      "popularityRank": 13,
+      "popularityScore": 80.5,
+      "marketShare": 2.2,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "RTL 2",
+        "RTL2",
+        "RTL ZWEI HD",
+        "RTL 2 HD",
+        "DE: RTL ZWEI HD"
+      ],
+      "keywords": [
+        "rtl2",
+        "rtl zwei"
+      ],
+      "tvgIds": [
+        "RTL2.de"
+      ],
+      "tvgNamePatterns": [
+        "rtl 2*",
+        "rtl zwei*"
+      ],
+      "matchPatterns": [
+        "(?i)\\brtl\\s*(zwei|2)\\b"
+      ],
+      "excludePatterns": [
+        "(?i)\\b(austria|schweiz|ch|at)\\b"
+      ],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_RTLUP",
+      "canonicalName": "RTLup",
+      "shortName": "RTLup",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-NAT",
+      "language": "de",
+      "category": "Private",
+      "genre": "Entertainment",
+      "popularityRank": 18,
+      "popularityScore": 74.0,
+      "marketShare": 1.6,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "RTL Plus",
+        "RTL up",
+        "RTLup HD",
+        "DE: RTLup"
+      ],
+      "keywords": [
+        "rtlup",
+        "rtl plus"
+      ],
+      "tvgIds": [
+        "RTLup.de"
+      ],
+      "tvgNamePatterns": [
+        "rtlup*"
+      ],
+      "matchPatterns": [
+        "(?i)\\brtl\\s*(up|plus)\\b"
+      ],
+      "excludePatterns": [
+        "(?i)\\b(austria|schweiz)\\b"
+      ],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_NITRO",
+      "canonicalName": "NITRO",
+      "shortName": "NITRO",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-NAT",
+      "language": "de",
+      "category": "Private",
+      "genre": "Entertainment",
+      "popularityRank": 15,
+      "popularityScore": 78.0,
+      "marketShare": 2.0,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "RTL NITRO",
+        "NITRO HD",
+        "DE: NITRO HD",
+        "DE| NITRO HD"
+      ],
+      "keywords": [
+        "nitro",
+        "rtl nitro"
+      ],
+      "tvgIds": [
+        "nitro.de"
+      ],
+      "tvgNamePatterns": [
+        "nitro*"
+      ],
+      "matchPatterns": [
+        "(?i)\\b(rtl\\s*)?nitro\\b"
+      ],
+      "excludePatterns": [
+        "(?i)\\b(austria|schweiz)\\b"
+      ],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_SUPER_RTL",
+      "canonicalName": "SUPER RTL",
+      "shortName": "SUPER RTL",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-NAT",
+      "language": "de",
+      "category": "Private",
+      "genre": "Kids",
+      "popularityRank": 17,
+      "popularityScore": 75.0,
+      "marketShare": 1.5,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "Super RTL HD",
+        "Super RTL FHD",
+        "TOGGO",
+        "DE: Super RTL"
+      ],
+      "keywords": [
+        "super rtl",
+        "toggo"
+      ],
+      "tvgIds": [
+        "superrtl.de"
+      ],
+      "tvgNamePatterns": [
+        "super rtl*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bsuper\\s*rtl\\b"
+      ],
+      "excludePatterns": [
+        "(?i)\\b(austria|schweiz)\\b"
+      ],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_VOX",
+      "canonicalName": "VOX",
+      "shortName": "VOX",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-NAT",
+      "language": "de",
+      "category": "Private",
+      "genre": "Vollprogramm",
+      "popularityRank": 5,
+      "popularityScore": 90.0,
+      "marketShare": 4.6,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "VOX HD",
+        "VOX FHD",
+        "VOX UHD",
+        "DE: VOX HD",
+        "DE| VOX HD"
+      ],
+      "keywords": [
+        "vox"
+      ],
+      "tvgIds": [
+        "vox.de"
+      ],
+      "tvgNamePatterns": [
+        "vox*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bvox\\b"
+      ],
+      "excludePatterns": [
+        "(?i)\\b(austria|schweiz|ch|at|voxup|vox\\s*up)\\b"
+      ],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_VOXUP",
+      "canonicalName": "VOXup",
+      "shortName": "VOXup",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-NAT",
+      "language": "de",
+      "category": "Private",
+      "genre": "Entertainment",
+      "popularityRank": 34,
+      "popularityScore": 59.0,
+      "marketShare": 0.6,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "VOX up",
+        "VOXup HD",
+        "DE: VOXup"
+      ],
+      "keywords": [
+        "voxup",
+        "vox up"
+      ],
+      "tvgIds": [
+        "voxup.de"
+      ],
+      "tvgNamePatterns": [
+        "voxup*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bvox\\s*up\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_SAT1",
+      "canonicalName": "SAT.1",
+      "shortName": "SAT.1",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-NAT",
+      "language": "de",
+      "category": "Private",
+      "genre": "Vollprogramm",
+      "popularityRank": 4,
+      "popularityScore": 91.0,
+      "marketShare": 4.7,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "SAT 1",
+        "SAT.1 HD",
+        "SAT.1 FHD",
+        "SAT 1 HD",
+        "DE: SAT.1 HD",
+        "DE| SAT.1 HD"
+      ],
+      "keywords": [
+        "sat.1",
+        "sat 1"
+      ],
+      "tvgIds": [
+        "sat1.de"
+      ],
+      "tvgNamePatterns": [
+        "sat.1*",
+        "sat 1*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bsat[\\. ]*1\\b"
+      ],
+      "excludePatterns": [
+        "(?i)\\b(austria|oesterreich|schweiz|gold|bayern|nrw)\\b"
+      ],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_SAT1_GOLD",
+      "canonicalName": "SAT.1 Gold",
+      "shortName": "SAT.1 Gold",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-NAT",
+      "language": "de",
+      "category": "Private",
+      "genre": "Entertainment",
+      "popularityRank": 17,
+      "popularityScore": 75.0,
+      "marketShare": 1.6,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "SAT 1 Gold",
+        "SAT.1 Gold HD",
+        "DE: SAT.1 Gold"
+      ],
+      "keywords": [
+        "sat.1 gold",
+        "sat 1 gold"
+      ],
+      "tvgIds": [
+        "sat1gold.de"
+      ],
+      "tvgNamePatterns": [
+        "sat.1 gold*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bsat[\\. ]*1\\s*gold\\b"
+      ],
+      "excludePatterns": [
+        "(?i)\\b(austria|schweiz)\\b"
+      ],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_PROSIEBEN",
+      "canonicalName": "ProSieben",
+      "shortName": "Pro7",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-NAT",
+      "language": "de",
+      "category": "Private",
+      "genre": "Vollprogramm",
+      "popularityRank": 6,
+      "popularityScore": 88.0,
+      "marketShare": 3.2,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "Pro 7",
+        "Pro7",
+        "ProSieben HD",
+        "ProSieben FHD",
+        "Pro 7 HD",
+        "DE: ProSieben HD"
+      ],
+      "keywords": [
+        "prosieben",
+        "pro 7",
+        "pro7"
+      ],
+      "tvgIds": [
+        "prosieben.de"
+      ],
+      "tvgNamePatterns": [
+        "prosieben*",
+        "pro 7*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bpro\\s*(sieben|7)\\b"
+      ],
+      "excludePatterns": [
+        "(?i)\\b(austria|schweiz|maxx)\\b"
+      ],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_PROSIEBEN_MAXX",
+      "canonicalName": "ProSieben MAXX",
+      "shortName": "Pro7 MAXX",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-NAT",
+      "language": "de",
+      "category": "Private",
+      "genre": "Entertainment",
+      "popularityRank": 26,
+      "popularityScore": 66.0,
+      "marketShare": 1.0,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "Pro 7 MAXX",
+        "ProSieben MAXX HD",
+        "DE: ProSieben MAXX"
+      ],
+      "keywords": [
+        "prosieben maxx",
+        "pro7 maxx"
+      ],
+      "tvgIds": [
+        "prosiebenmaxx.de"
+      ],
+      "tvgNamePatterns": [
+        "prosieben maxx*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bpro\\s*(sieben|7)\\s*maxx\\b"
+      ],
+      "excludePatterns": [
+        "(?i)\\b(austria|schweiz)\\b"
+      ],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_KABEL_EINS",
+      "canonicalName": "Kabel Eins",
+      "shortName": "Kabel 1",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-NAT",
+      "language": "de",
+      "category": "Private",
+      "genre": "Entertainment",
+      "popularityRank": 9,
+      "popularityScore": 84.0,
+      "marketShare": 2.6,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "Kabel 1",
+        "Kabel1",
+        "Kabel Eins HD",
+        "Kabel 1 HD",
+        "DE: Kabel Eins HD"
+      ],
+      "keywords": [
+        "kabel eins",
+        "kabel 1"
+      ],
+      "tvgIds": [
+        "kabeleins.de"
+      ],
+      "tvgNamePatterns": [
+        "kabel eins*",
+        "kabel 1*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bkabel\\s*(eins|1)\\b"
+      ],
+      "excludePatterns": [
+        "(?i)\\b(austria|schweiz|doku)\\b"
+      ],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_KABEL_EINS_DOKU",
+      "canonicalName": "Kabel Eins Doku",
+      "shortName": "K1 Doku",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-NAT",
+      "language": "de",
+      "category": "Private",
+      "genre": "Documentary",
+      "popularityRank": 25,
+      "popularityScore": 67.0,
+      "marketShare": 1.1,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "Kabel 1 Doku",
+        "Kabel Eins Doku HD",
+        "DE: Kabel Eins Doku"
+      ],
+      "keywords": [
+        "kabel eins doku",
+        "kabel 1 doku"
+      ],
+      "tvgIds": [
+        "kabeleinsdoku.de"
+      ],
+      "tvgNamePatterns": [
+        "kabel eins doku*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bkabel\\s*(eins|1)\\s*doku\\b"
+      ],
+      "excludePatterns": [
+        "(?i)\\b(austria|schweiz)\\b"
+      ],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_SIXX",
+      "canonicalName": "sixx",
+      "shortName": "sixx",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-NAT",
+      "language": "de",
+      "category": "Private",
+      "genre": "Entertainment",
+      "popularityRank": 24,
+      "popularityScore": 68.0,
+      "marketShare": 1.1,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "sixx HD",
+        "sixx FHD",
+        "DE: sixx HD",
+        "DE| sixx HD"
+      ],
+      "keywords": [
+        "sixx"
+      ],
+      "tvgIds": [
+        "sixx.de"
+      ],
+      "tvgNamePatterns": [
+        "sixx*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bsixx\\b"
+      ],
+      "excludePatterns": [
+        "(?i)\\b(austria|schweiz)\\b"
+      ],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_TELE5",
+      "canonicalName": "Tele 5",
+      "shortName": "Tele 5",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-NAT",
+      "language": "de",
+      "category": "Private",
+      "genre": "Entertainment",
+      "popularityRank": 33,
+      "popularityScore": 60.0,
+      "marketShare": 0.6,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "Tele 5 HD",
+        "DE: Tele 5"
+      ],
+      "keywords": [
+        "tele 5",
+        "tele5"
+      ],
+      "tvgIds": [
+        "tele5.de"
+      ],
+      "tvgNamePatterns": [
+        "tele 5*"
+      ],
+      "matchPatterns": [
+        "(?i)\\btele\\s*5\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_WELT",
+      "canonicalName": "WELT",
+      "shortName": "WELT",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-NAT",
+      "language": "de",
+      "category": "News",
+      "genre": "Nachrichten",
+      "popularityRank": 21,
+      "popularityScore": 71.0,
+      "marketShare": 1.3,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "WELT HD",
+        "N24",
+        "WELT Nachrichtensender",
+        "DE: WELT HD"
+      ],
+      "keywords": [
+        "welt",
+        "n24",
+        "nachrichten"
+      ],
+      "tvgIds": [
+        "welt.de"
+      ],
+      "tvgNamePatterns": [
+        "welt*"
+      ],
+      "matchPatterns": [
+        "(?i)\\b(welt(\\s*hd)?|n24)\\b"
+      ],
+      "excludePatterns": [
+        "(?i)\\b(wetter|kino|reise)\\b"
+      ],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_NTV",
+      "canonicalName": "ntv",
+      "shortName": "ntv",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-NAT",
+      "language": "de",
+      "category": "News",
+      "genre": "Nachrichten",
+      "popularityRank": 22,
+      "popularityScore": 70.5,
+      "marketShare": 1.2,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "n-tv",
+        "ntv HD",
+        "n-tv HD",
+        "DE: ntv HD"
+      ],
+      "keywords": [
+        "ntv",
+        "n-tv",
+        "nachrichten"
+      ],
+      "tvgIds": [
+        "ntv.de"
+      ],
+      "tvgNamePatterns": [
+        "ntv*",
+        "n-tv*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bn[- ]?tv\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_DMAX",
+      "canonicalName": "DMAX",
+      "shortName": "DMAX",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-NAT",
+      "language": "de",
+      "category": "Documentary",
+      "genre": "Dokumentation",
+      "popularityRank": 18,
+      "popularityScore": 74.5,
+      "marketShare": 1.5,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "DMAX HD",
+        "DMAX FHD",
+        "DE: DMAX HD"
+      ],
+      "keywords": [
+        "dmax"
+      ],
+      "tvgIds": [
+        "dmax.de"
+      ],
+      "tvgNamePatterns": [
+        "dmax*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bdmax\\b"
+      ],
+      "excludePatterns": [
+        "(?i)\\b(austria|schweiz)\\b"
+      ],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_TLC",
+      "canonicalName": "TLC",
+      "shortName": "TLC",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-NAT",
+      "language": "de",
+      "category": "Documentary",
+      "genre": "Lifestyle",
+      "popularityRank": 32,
+      "popularityScore": 60.5,
+      "marketShare": 0.6,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "TLC HD",
+        "DE: TLC HD"
+      ],
+      "keywords": [
+        "tlc"
+      ],
+      "tvgIds": [
+        "tlc.de"
+      ],
+      "tvgNamePatterns": [
+        "tlc*"
+      ],
+      "matchPatterns": [
+        "(?i)\\btlc\\b"
+      ],
+      "excludePatterns": [
+        "(?i)\\b(austria|schweiz)\\b"
+      ],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_SPORT1",
+      "canonicalName": "SPORT1",
+      "shortName": "SPORT1",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-NAT",
+      "language": "de",
+      "category": "Sport",
+      "genre": "Sport",
+      "popularityRank": 31,
+      "popularityScore": 61.5,
+      "marketShare": 0.7,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "Sport 1",
+        "SPORT1 HD",
+        "Sport 1 HD",
+        "DE: SPORT1"
+      ],
+      "keywords": [
+        "sport1",
+        "sport 1",
+        "dsf"
+      ],
+      "tvgIds": [
+        "sport1.de"
+      ],
+      "tvgNamePatterns": [
+        "sport1*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bsport\\s*1\\b"
+      ],
+      "excludePatterns": [
+        "(?i)\\b(plus|extra)\\b"
+      ],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_EUROSPORT_1",
+      "canonicalName": "Eurosport 1",
+      "shortName": "Eurosport 1",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-NAT",
+      "language": "de",
+      "category": "Sport",
+      "genre": "Sport",
+      "popularityRank": 32,
+      "popularityScore": 60.8,
+      "marketShare": 0.6,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "Eurosport",
+        "Eurosport 1 HD",
+        "Eurosport 1 Deutschland",
+        "DE: Eurosport 1"
+      ],
+      "keywords": [
+        "eurosport 1",
+        "eurosport"
+      ],
+      "tvgIds": [
+        "eurosport1.de"
+      ],
+      "tvgNamePatterns": [
+        "eurosport 1*"
+      ],
+      "matchPatterns": [
+        "(?i)\\beurosport(\\s*1)?\\b"
+      ],
+      "excludePatterns": [
+        "(?i)\\b(2|player|uk|france)\\b"
+      ],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_SKY_SPORT_NEWS",
+      "canonicalName": "Sky Sport News",
+      "shortName": "Sky Sport News",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-NAT",
+      "language": "de",
+      "category": "Sport",
+      "genre": "Sportnachrichten",
+      "popularityRank": 39,
+      "popularityScore": 50.0,
+      "marketShare": 0.3,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "Sky Sport News HD",
+        "DE: Sky Sport News HD"
+      ],
+      "keywords": [
+        "sky sport news",
+        "ssnhd"
+      ],
+      "tvgIds": [
+        "skysportnews.de"
+      ],
+      "tvgNamePatterns": [
+        "sky sport news*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bsky\\s*sport\\s*news\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_DISNEY_CHANNEL",
+      "canonicalName": "Disney Channel",
+      "shortName": "Disney",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-NAT",
+      "language": "de",
+      "category": "Kids",
+      "genre": "Kinder",
+      "popularityRank": 26,
+      "popularityScore": 66.5,
+      "marketShare": 1.0,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "Disney Channel HD",
+        "DE: Disney Channel HD"
+      ],
+      "keywords": [
+        "disney channel"
+      ],
+      "tvgIds": [
+        "disneychannel.de"
+      ],
+      "tvgNamePatterns": [
+        "disney channel*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bdisney\\s*channel\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_COMEDY_CENTRAL",
+      "canonicalName": "Comedy Central",
+      "shortName": "Comedy Central",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-NAT",
+      "language": "de",
+      "category": "Entertainment",
+      "genre": "Comedy",
+      "popularityRank": 35,
+      "popularityScore": 57.0,
+      "marketShare": 0.5,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "Comedy Central HD",
+        "DE: Comedy Central"
+      ],
+      "keywords": [
+        "comedy central"
+      ],
+      "tvgIds": [
+        "comedycentral.de"
+      ],
+      "tvgNamePatterns": [
+        "comedy central*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bcomedy\\s*central\\b"
+      ],
+      "excludePatterns": [
+        "(?i)\\b(austria|schweiz)\\b"
+      ],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_MTV",
+      "canonicalName": "MTV",
+      "shortName": "MTV",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-NAT",
+      "language": "de",
+      "category": "Entertainment",
+      "genre": "Musik",
+      "popularityRank": 40,
+      "popularityScore": 48.0,
+      "marketShare": 0.2,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "MTV HD",
+        "MTV Germany",
+        "DE: MTV HD"
+      ],
+      "keywords": [
+        "mtv"
+      ],
+      "tvgIds": [
+        "mtv.de"
+      ],
+      "tvgNamePatterns": [
+        "mtv*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bmtv(\\s*germany)?\\b"
+      ],
+      "excludePatterns": [
+        "(?i)\\b(live|hits|80s|90s|00s)\\b"
+      ],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "DE_SERVUSTV_DE",
+      "canonicalName": "ServusTV Deutschland",
+      "shortName": "ServusTV DE",
+      "countryCode": "DE",
+      "countryName": "Deutschland",
+      "region": "DE-NAT",
+      "language": "de",
+      "category": "Private",
+      "genre": "Dokumentation",
+      "popularityRank": 41,
+      "popularityScore": 45.0,
+      "marketShare": 0.2,
+      "marketShareYear": 2024,
+      "marketShareSource": "AGF Videoforschung 2024",
+      "aliases": [
+        "Servus TV DE",
+        "ServusTV DE HD",
+        "DE: ServusTV"
+      ],
+      "keywords": [
+        "servustv deutschland",
+        "servustv de"
+      ],
+      "tvgIds": [
+        "servustv.de"
+      ],
+      "tvgNamePatterns": [
+        "servustv de*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bservus\\s*tv\\s*(de|deutschland)\\b"
+      ],
+      "excludePatterns": [
+        "(?i)\\b(oesterreich|austria|at)\\b"
+      ],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "AT_ORF_1",
+      "canonicalName": "ORF 1",
+      "shortName": "ORF 1",
+      "countryCode": "AT",
+      "countryName": "Österreich",
+      "region": "AT-NAT",
+      "language": "de",
+      "category": "ORF",
+      "genre": "Vollprogramm",
+      "popularityRank": 2,
+      "popularityScore": 97.0,
+      "marketShare": 10.8,
+      "marketShareYear": 2025,
+      "marketShareSource": "Teletest / ORF Jahresbericht 2025",
+      "aliases": [
+        "ORF1",
+        "ORF 1 HD",
+        "ORF1 HD",
+        "ORF 1 FHD",
+        "AT: ORF 1 HD",
+        "AT| ORF 1 HD",
+        "AT: ORF1"
+      ],
+      "keywords": [
+        "orf1",
+        "orf 1",
+        "orf eins"
+      ],
+      "tvgIds": [
+        "ORF1.at"
+      ],
+      "tvgNamePatterns": [
+        "orf 1*",
+        "orf1*"
+      ],
+      "matchPatterns": [
+        "(?i)\\borf\\s*(1|eins)\\b"
+      ],
+      "excludePatterns": [
+        "(?i)\\b(orf\\s*2|orf\\s*3|orf\\s*iii|sport)\\b"
+      ],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "AT_ORF_2",
+      "canonicalName": "ORF 2",
+      "shortName": "ORF 2",
+      "countryCode": "AT",
+      "countryName": "Österreich",
+      "region": "AT-NAT",
+      "language": "de",
+      "category": "ORF",
+      "genre": "Vollprogramm",
+      "popularityRank": 1,
+      "popularityScore": 100.0,
+      "marketShare": 20.8,
+      "marketShareYear": 2025,
+      "marketShareSource": "Teletest / ORF Jahresbericht 2025",
+      "aliases": [
+        "ORF2",
+        "ORF 2 HD",
+        "ORF2 HD",
+        "ORF 2 Europe",
+        "AT: ORF 2 HD",
+        "AT| ORF 2 HD"
+      ],
+      "keywords": [
+        "orf2",
+        "orf 2"
+      ],
+      "tvgIds": [
+        "ORF2.at"
+      ],
+      "tvgNamePatterns": [
+        "orf 2*",
+        "orf2*"
+      ],
+      "matchPatterns": [
+        "(?i)\\borf\\s*2\\b"
+      ],
+      "excludePatterns": [
+        "(?i)\\b(burgenland|kaernten|niederoesterreich|oberoesterreich|salzburg|steiermark|tirol|vorarlberg|wien)\\b"
+      ],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "AT_ORF_2_BURGENLAND",
+      "canonicalName": "ORF 2 Burgenland",
+      "shortName": "ORF 2 B",
+      "countryCode": "AT",
+      "countryName": "Österreich",
+      "region": "AT-BG",
+      "language": "de",
+      "category": "ORF",
+      "genre": "Regional",
+      "popularityRank": 12,
+      "popularityScore": 60.0,
+      "marketShare": 0.4,
+      "marketShareYear": 2025,
+      "marketShareSource": "Teletest / ORF Jahresbericht 2025",
+      "aliases": [
+        "ORF 2 B HD",
+        "ORF 2 Burgenland HD",
+        "AT: ORF 2 Burgenland"
+      ],
+      "keywords": [
+        "orf 2 burgenland"
+      ],
+      "tvgIds": [
+        "ORF2B.at"
+      ],
+      "tvgNamePatterns": [
+        "orf 2 burgenland*"
+      ],
+      "matchPatterns": [
+        "(?i)\\borf\\s*2\\s*burgenland\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": false,
+      "isRegional": true,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "AT_ORF_2_KAERNTEN",
+      "canonicalName": "ORF 2 Kärnten",
+      "shortName": "ORF 2 K",
+      "countryCode": "AT",
+      "countryName": "Österreich",
+      "region": "AT-KA",
+      "language": "de",
+      "category": "ORF",
+      "genre": "Regional",
+      "popularityRank": 13,
+      "popularityScore": 60.0,
+      "marketShare": 0.4,
+      "marketShareYear": 2025,
+      "marketShareSource": "Teletest / ORF Jahresbericht 2025",
+      "aliases": [
+        "ORF 2 K HD",
+        "ORF 2 Kärnten HD",
+        "ORF 2 Kaernten",
+        "AT: ORF 2 Kärnten"
+      ],
+      "keywords": [
+        "orf 2 kaernten",
+        "orf 2 kärnten"
+      ],
+      "tvgIds": [
+        "ORF2K.at"
+      ],
+      "tvgNamePatterns": [
+        "orf 2 k*"
+      ],
+      "matchPatterns": [
+        "(?i)\\borf\\s*2\\s*k[aä]rnten\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": false,
+      "isRegional": true,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "AT_ORF_2_NIEDEROESTERREICH",
+      "canonicalName": "ORF 2 Niederösterreich",
+      "shortName": "ORF 2 NÖ",
+      "countryCode": "AT",
+      "countryName": "Österreich",
+      "region": "AT-NO",
+      "language": "de",
+      "category": "ORF",
+      "genre": "Regional",
+      "popularityRank": 14,
+      "popularityScore": 62.0,
+      "marketShare": 0.5,
+      "marketShareYear": 2025,
+      "marketShareSource": "Teletest / ORF Jahresbericht 2025",
+      "aliases": [
+        "ORF 2 NÖ HD",
+        "ORF 2 NÖ",
+        "ORF 2 Niederösterreich HD",
+        "AT: ORF 2 NÖ"
+      ],
+      "keywords": [
+        "orf 2 niederoesterreich",
+        "orf 2 nö"
+      ],
+      "tvgIds": [
+        "ORF2N.at"
+      ],
+      "tvgNamePatterns": [
+        "orf 2 n*"
+      ],
+      "matchPatterns": [
+        "(?i)\\borf\\s*2\\s*(nieder[oö]sterreich|n[oö])\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": false,
+      "isRegional": true,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "AT_ORF_2_OBEROESTERREICH",
+      "canonicalName": "ORF 2 Oberösterreich",
+      "shortName": "ORF 2 OÖ",
+      "countryCode": "AT",
+      "countryName": "Österreich",
+      "region": "AT-OO",
+      "language": "de",
+      "category": "ORF",
+      "genre": "Regional",
+      "popularityRank": 15,
+      "popularityScore": 62.0,
+      "marketShare": 0.5,
+      "marketShareYear": 2025,
+      "marketShareSource": "Teletest / ORF Jahresbericht 2025",
+      "aliases": [
+        "ORF 2 OÖ HD",
+        "ORF 2 OÖ",
+        "ORF 2 Oberösterreich HD",
+        "AT: ORF 2 OÖ"
+      ],
+      "keywords": [
+        "orf 2 oberoesterreich",
+        "orf 2 oö"
+      ],
+      "tvgIds": [
+        "ORF2O.at"
+      ],
+      "tvgNamePatterns": [
+        "orf 2 o*"
+      ],
+      "matchPatterns": [
+        "(?i)\\borf\\s*2\\s*(ober[oö]sterreich|o[oö])\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": false,
+      "isRegional": true,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "AT_ORF_2_SALZBURG",
+      "canonicalName": "ORF 2 Salzburg",
+      "shortName": "ORF 2 S",
+      "countryCode": "AT",
+      "countryName": "Österreich",
+      "region": "AT-SB",
+      "language": "de",
+      "category": "ORF",
+      "genre": "Regional",
+      "popularityRank": 16,
+      "popularityScore": 60.0,
+      "marketShare": 0.4,
+      "marketShareYear": 2025,
+      "marketShareSource": "Teletest / ORF Jahresbericht 2025",
+      "aliases": [
+        "ORF 2 S HD",
+        "ORF 2 Salzburg HD",
+        "AT: ORF 2 Salzburg"
+      ],
+      "keywords": [
+        "orf 2 salzburg"
+      ],
+      "tvgIds": [
+        "ORF2S.at"
+      ],
+      "tvgNamePatterns": [
+        "orf 2 salzburg*"
+      ],
+      "matchPatterns": [
+        "(?i)\\borf\\s*2\\s*salzburg\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": false,
+      "isRegional": true,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "AT_ORF_2_STEIERMARK",
+      "canonicalName": "ORF 2 Steiermark",
+      "shortName": "ORF 2 St",
+      "countryCode": "AT",
+      "countryName": "Österreich",
+      "region": "AT-ST",
+      "language": "de",
+      "category": "ORF",
+      "genre": "Regional",
+      "popularityRank": 17,
+      "popularityScore": 61.0,
+      "marketShare": 0.5,
+      "marketShareYear": 2025,
+      "marketShareSource": "Teletest / ORF Jahresbericht 2025",
+      "aliases": [
+        "ORF 2 St HD",
+        "ORF 2 Steiermark HD",
+        "AT: ORF 2 Steiermark"
+      ],
+      "keywords": [
+        "orf 2 steiermark"
+      ],
+      "tvgIds": [
+        "ORF2ST.at"
+      ],
+      "tvgNamePatterns": [
+        "orf 2 steiermark*"
+      ],
+      "matchPatterns": [
+        "(?i)\\borf\\s*2\\s*steiermark\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": false,
+      "isRegional": true,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "AT_ORF_2_TIROL",
+      "canonicalName": "ORF 2 Tirol",
+      "shortName": "ORF 2 T",
+      "countryCode": "AT",
+      "countryName": "Österreich",
+      "region": "AT-TI",
+      "language": "de",
+      "category": "ORF",
+      "genre": "Regional",
+      "popularityRank": 18,
+      "popularityScore": 60.0,
+      "marketShare": 0.4,
+      "marketShareYear": 2025,
+      "marketShareSource": "Teletest / ORF Jahresbericht 2025",
+      "aliases": [
+        "ORF 2 T HD",
+        "ORF 2 Tirol HD",
+        "AT: ORF 2 Tirol"
+      ],
+      "keywords": [
+        "orf 2 tirol"
+      ],
+      "tvgIds": [
+        "ORF2T.at"
+      ],
+      "tvgNamePatterns": [
+        "orf 2 tirol*"
+      ],
+      "matchPatterns": [
+        "(?i)\\borf\\s*2\\s*tirol\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": false,
+      "isRegional": true,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "AT_ORF_2_VORARLBERG",
+      "canonicalName": "ORF 2 Vorarlberg",
+      "shortName": "ORF 2 V",
+      "countryCode": "AT",
+      "countryName": "Österreich",
+      "region": "AT-VB",
+      "language": "de",
+      "category": "ORF",
+      "genre": "Regional",
+      "popularityRank": 19,
+      "popularityScore": 59.0,
+      "marketShare": 0.4,
+      "marketShareYear": 2025,
+      "marketShareSource": "Teletest / ORF Jahresbericht 2025",
+      "aliases": [
+        "ORF 2 V HD",
+        "ORF 2 Vorarlberg HD",
+        "AT: ORF 2 Vorarlberg"
+      ],
+      "keywords": [
+        "orf 2 vorarlberg"
+      ],
+      "tvgIds": [
+        "ORF2V.at"
+      ],
+      "tvgNamePatterns": [
+        "orf 2 vorarlberg*"
+      ],
+      "matchPatterns": [
+        "(?i)\\borf\\s*2\\s*vorarlberg\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": false,
+      "isRegional": true,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "AT_ORF_2_WIEN",
+      "canonicalName": "ORF 2 Wien",
+      "shortName": "ORF 2 W",
+      "countryCode": "AT",
+      "countryName": "Österreich",
+      "region": "AT-WI",
+      "language": "de",
+      "category": "ORF",
+      "genre": "Regional",
+      "popularityRank": 11,
+      "popularityScore": 65.0,
+      "marketShare": 0.6,
+      "marketShareYear": 2025,
+      "marketShareSource": "Teletest / ORF Jahresbericht 2025",
+      "aliases": [
+        "ORF 2 W HD",
+        "ORF 2 Wien HD",
+        "AT: ORF 2 Wien"
+      ],
+      "keywords": [
+        "orf 2 wien"
+      ],
+      "tvgIds": [
+        "ORF2W.at"
+      ],
+      "tvgNamePatterns": [
+        "orf 2 wien*"
+      ],
+      "matchPatterns": [
+        "(?i)\\borf\\s*2\\s*wien\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": false,
+      "isRegional": true,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "AT_ORF_III",
+      "canonicalName": "ORF III",
+      "shortName": "ORF 3",
+      "countryCode": "AT",
+      "countryName": "Österreich",
+      "region": "AT-NAT",
+      "language": "de",
+      "category": "ORF",
+      "genre": "Kultur",
+      "popularityRank": 6,
+      "popularityScore": 82.0,
+      "marketShare": 2.5,
+      "marketShareYear": 2025,
+      "marketShareSource": "Teletest / ORF Jahresbericht 2025",
+      "aliases": [
+        "ORF 3",
+        "ORF3",
+        "ORF III HD",
+        "ORF 3 HD",
+        "AT: ORF III HD",
+        "AT: ORF 3"
+      ],
+      "keywords": [
+        "orf iii",
+        "orf 3",
+        "orf drei",
+        "kultur und information"
+      ],
+      "tvgIds": [
+        "ORF3.at"
+      ],
+      "tvgNamePatterns": [
+        "orf 3*",
+        "orf iii*"
+      ],
+      "matchPatterns": [
+        "(?i)\\borf\\s*(3|iii)\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "AT_ORF_SPORT_PLUS",
+      "canonicalName": "ORF SPORT+",
+      "shortName": "ORF Sport+",
+      "countryCode": "AT",
+      "countryName": "Österreich",
+      "region": "AT-NAT",
+      "language": "de",
+      "category": "ORF",
+      "genre": "Sport",
+      "popularityRank": 10,
+      "popularityScore": 70.0,
+      "marketShare": 0.6,
+      "marketShareYear": 2025,
+      "marketShareSource": "Teletest / ORF Jahresbericht 2025",
+      "aliases": [
+        "ORF Sport Plus",
+        "ORF Sport + HD",
+        "ORF Sport Plus HD",
+        "AT: ORF SPORT+ HD"
+      ],
+      "keywords": [
+        "orf sport+",
+        "orf sport plus"
+      ],
+      "tvgIds": [
+        "ORFSport.at"
+      ],
+      "tvgNamePatterns": [
+        "orf sport*"
+      ],
+      "matchPatterns": [
+        "(?i)\\borf\\s*sport\\s*(\\+|plus)?\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "AT_SERVUSTV",
+      "canonicalName": "ServusTV",
+      "shortName": "ServusTV",
+      "countryCode": "AT",
+      "countryName": "Österreich",
+      "region": "AT-NAT",
+      "language": "de",
+      "category": "Private",
+      "genre": "Vollprogramm",
+      "popularityRank": 3,
+      "popularityScore": 90.0,
+      "marketShare": 4.7,
+      "marketShareYear": 2025,
+      "marketShareSource": "Teletest / ORF Jahresbericht 2025",
+      "aliases": [
+        "ServusTV HD",
+        "ServusTV Österreich",
+        "Servus TV Österreich HD",
+        "AT: ServusTV HD",
+        "AT| ServusTV HD"
+      ],
+      "keywords": [
+        "servustv",
+        "servus tv"
+      ],
+      "tvgIds": [
+        "ServusTV.at"
+      ],
+      "tvgNamePatterns": [
+        "servustv*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bservus\\s*tv(\\s*[oö]sterreich)?\\b"
+      ],
+      "excludePatterns": [
+        "(?i)\\b(de|deutschland)\\b"
+      ],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "AT_PULS_4",
+      "canonicalName": "PULS 4",
+      "shortName": "PULS 4",
+      "countryCode": "AT",
+      "countryName": "Österreich",
+      "region": "AT-NAT",
+      "language": "de",
+      "category": "Private",
+      "genre": "Vollprogramm",
+      "popularityRank": 4,
+      "popularityScore": 86.0,
+      "marketShare": 2.7,
+      "marketShareYear": 2025,
+      "marketShareSource": "Teletest / ORF Jahresbericht 2025",
+      "aliases": [
+        "PULS4",
+        "PULS 4 HD",
+        "PULS4 HD",
+        "AT: PULS 4 HD",
+        "AT| PULS 4 HD"
+      ],
+      "keywords": [
+        "puls 4",
+        "puls4"
+      ],
+      "tvgIds": [
+        "Puls4.at"
+      ],
+      "tvgNamePatterns": [
+        "puls 4*",
+        "puls4*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bpuls\\s*4\\b"
+      ],
+      "excludePatterns": [
+        "(?i)\\b(24|8)\\b"
+      ],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "AT_ATV",
+      "canonicalName": "ATV",
+      "shortName": "ATV",
+      "countryCode": "AT",
+      "countryName": "Österreich",
+      "region": "AT-NAT",
+      "language": "de",
+      "category": "Private",
+      "genre": "Vollprogramm",
+      "popularityRank": 5,
+      "popularityScore": 85.0,
+      "marketShare": 2.6,
+      "marketShareYear": 2025,
+      "marketShareSource": "Teletest / ORF Jahresbericht 2025",
+      "aliases": [
+        "ATV HD",
+        "ATV Österreich",
+        "AT: ATV HD",
+        "AT| ATV HD"
+      ],
+      "keywords": [
+        "atv"
+      ],
+      "tvgIds": [
+        "ATV.at"
+      ],
+      "tvgNamePatterns": [
+        "atv*"
+      ],
+      "matchPatterns": [
+        "(?i)\\batv\\b"
+      ],
+      "excludePatterns": [
+        "(?i)\\b(2|ii|smart)\\b"
+      ],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "AT_ATV2",
+      "canonicalName": "ATV II",
+      "shortName": "ATV 2",
+      "countryCode": "AT",
+      "countryName": "Österreich",
+      "region": "AT-NAT",
+      "language": "de",
+      "category": "Private",
+      "genre": "Entertainment",
+      "popularityRank": 9,
+      "popularityScore": 74.0,
+      "marketShare": 1.0,
+      "marketShareYear": 2025,
+      "marketShareSource": "Teletest / ORF Jahresbericht 2025",
+      "aliases": [
+        "ATV2",
+        "ATV 2",
+        "ATV II HD",
+        "ATV 2 HD",
+        "AT: ATV2 HD"
+      ],
+      "keywords": [
+        "atv 2",
+        "atv2",
+        "atv ii"
+      ],
+      "tvgIds": [
+        "ATV2.at"
+      ],
+      "tvgNamePatterns": [
+        "atv 2*",
+        "atv2*",
+        "atv ii*"
+      ],
+      "matchPatterns": [
+        "(?i)\\batv\\s*(2|ii)\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "AT_PULS_24",
+      "canonicalName": "PULS 24",
+      "shortName": "PULS 24",
+      "countryCode": "AT",
+      "countryName": "Österreich",
+      "region": "AT-NAT",
+      "language": "de",
+      "category": "Private",
+      "genre": "News",
+      "popularityRank": 8,
+      "popularityScore": 76.0,
+      "marketShare": 1.1,
+      "marketShareYear": 2025,
+      "marketShareSource": "Teletest / ORF Jahresbericht 2025",
+      "aliases": [
+        "PULS24",
+        "PULS 24 HD",
+        "PULS24 HD",
+        "AT: PULS 24 HD"
+      ],
+      "keywords": [
+        "puls 24",
+        "puls24",
+        "nachrichten"
+      ],
+      "tvgIds": [
+        "Puls24.at"
+      ],
+      "tvgNamePatterns": [
+        "puls 24*",
+        "puls24*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bpuls\\s*24\\b"
+      ],
+      "excludePatterns": [
+        "(?i)\\b(4|8)\\b"
+      ],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "AT_OE24_TV",
+      "canonicalName": "oe24.TV",
+      "shortName": "oe24",
+      "countryCode": "AT",
+      "countryName": "Österreich",
+      "region": "AT-NAT",
+      "language": "de",
+      "category": "Private",
+      "genre": "News",
+      "popularityRank": 7,
+      "popularityScore": 78.0,
+      "marketShare": 1.5,
+      "marketShareYear": 2025,
+      "marketShareSource": "Teletest / ORF Jahresbericht 2025",
+      "aliases": [
+        "oe24",
+        "oe24 TV",
+        "oe24.TV HD",
+        "AT: oe24.TV HD"
+      ],
+      "keywords": [
+        "oe24",
+        "oe24.tv"
+      ],
+      "tvgIds": [
+        "oe24.at"
+      ],
+      "tvgNamePatterns": [
+        "oe24*"
+      ],
+      "matchPatterns": [
+        "(?i)\\boe24([\\. ]*tv)?\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "AT_KURIER_TV",
+      "canonicalName": "KURIER TV",
+      "shortName": "KURIER TV",
+      "countryCode": "AT",
+      "countryName": "Österreich",
+      "region": "AT-NAT",
+      "language": "de",
+      "category": "Private",
+      "genre": "News",
+      "popularityRank": 20,
+      "popularityScore": 58.0,
+      "marketShare": 0.4,
+      "marketShareYear": 2025,
+      "marketShareSource": "Teletest / ORF Jahresbericht 2025",
+      "aliases": [
+        "Kurier TV HD",
+        "AT: KURIER TV"
+      ],
+      "keywords": [
+        "kurier tv",
+        "schau tv kurier"
+      ],
+      "tvgIds": [
+        "kuriertv.at"
+      ],
+      "tvgNamePatterns": [
+        "kurier tv*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bkurier\\s*tv\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "AT_KRONE_TV",
+      "canonicalName": "Krone TV",
+      "shortName": "krone.tv",
+      "countryCode": "AT",
+      "countryName": "Österreich",
+      "region": "AT-NAT",
+      "language": "de",
+      "category": "Private",
+      "genre": "News",
+      "popularityRank": 21,
+      "popularityScore": 57.0,
+      "marketShare": 0.4,
+      "marketShareYear": 2025,
+      "marketShareSource": "Teletest / ORF Jahresbericht 2025",
+      "aliases": [
+        "krone.tv",
+        "Krone TV HD",
+        "AT: Krone TV"
+      ],
+      "keywords": [
+        "krone tv",
+        "krone.tv"
+      ],
+      "tvgIds": [
+        "kronetv.at"
+      ],
+      "tvgNamePatterns": [
+        "krone tv*",
+        "krone.tv*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bkrone([\\. ]*tv)?\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "AT_W24",
+      "canonicalName": "W24",
+      "shortName": "W24",
+      "countryCode": "AT",
+      "countryName": "Österreich",
+      "region": "AT-WI",
+      "language": "de",
+      "category": "Regional",
+      "genre": "Regional",
+      "popularityRank": 22,
+      "popularityScore": 55.0,
+      "marketShare": 0.3,
+      "marketShareYear": 2025,
+      "marketShareSource": "Teletest / ORF Jahresbericht 2025",
+      "aliases": [
+        "W24 HD",
+        "W24 Wien",
+        "AT: W24 HD"
+      ],
+      "keywords": [
+        "w24",
+        "wien fernsehen"
+      ],
+      "tvgIds": [
+        "w24.at"
+      ],
+      "tvgNamePatterns": [
+        "w24*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bw24\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": false,
+      "isRegional": true,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "AT_LAOLA1",
+      "canonicalName": "LAOLA1",
+      "shortName": "LAOLA1",
+      "countryCode": "AT",
+      "countryName": "Österreich",
+      "region": "AT-NAT",
+      "language": "de",
+      "category": "Sport",
+      "genre": "Sport",
+      "popularityRank": 23,
+      "popularityScore": 55.0,
+      "marketShare": 0.3,
+      "marketShareYear": 2025,
+      "marketShareSource": "Teletest / ORF Jahresbericht 2025",
+      "aliases": [
+        "LAOLA1.TV",
+        "LAOLA1 HD",
+        "AT: LAOLA1 HD"
+      ],
+      "keywords": [
+        "laola1",
+        "laola1.tv"
+      ],
+      "tvgIds": [
+        "laola1.at"
+      ],
+      "tvgNamePatterns": [
+        "laola1*"
+      ],
+      "matchPatterns": [
+        "(?i)\\blaola\\s*1([\\. ]*tv)?\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "AT_RED_BULL_TV",
+      "canonicalName": "Red Bull TV",
+      "shortName": "Red Bull TV",
+      "countryCode": "AT",
+      "countryName": "Österreich",
+      "region": "AT-NAT",
+      "language": "de",
+      "category": "Sport",
+      "genre": "Extreme Sport",
+      "popularityRank": 24,
+      "popularityScore": 54.0,
+      "marketShare": 0.3,
+      "marketShareYear": 2025,
+      "marketShareSource": "Teletest / ORF Jahresbericht 2025",
+      "aliases": [
+        "Red Bull TV HD",
+        "AT: Red Bull TV"
+      ],
+      "keywords": [
+        "red bull tv"
+      ],
+      "tvgIds": [
+        "redbulltv.at"
+      ],
+      "tvgNamePatterns": [
+        "red bull tv*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bred\\s*bull\\s*tv\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "AT_STEIERMARK_TV",
+      "canonicalName": "Steiermark TV",
+      "shortName": "Steiermark TV",
+      "countryCode": "AT",
+      "countryName": "Österreich",
+      "region": "AT-ST",
+      "language": "de",
+      "category": "Regional",
+      "genre": "Regional",
+      "popularityRank": 25,
+      "popularityScore": 50.0,
+      "marketShare": 0.2,
+      "marketShareYear": 2025,
+      "marketShareSource": "Teletest / ORF Jahresbericht 2025",
+      "aliases": [
+        "Kanal 3 Steiermark",
+        "Steiermark TV HD",
+        "AT: Steiermark TV"
+      ],
+      "keywords": [
+        "steiermark tv",
+        "kanal 3"
+      ],
+      "tvgIds": [
+        "steiermarktv.at"
+      ],
+      "tvgNamePatterns": [
+        "steiermark tv*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bsteiermark\\s*tv\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": false,
+      "isRegional": true,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "AT_TIROL_TV",
+      "canonicalName": "Tirol TV",
+      "shortName": "Tirol TV",
+      "countryCode": "AT",
+      "countryName": "Österreich",
+      "region": "AT-TI",
+      "language": "de",
+      "category": "Regional",
+      "genre": "Regional",
+      "popularityRank": 26,
+      "popularityScore": 50.0,
+      "marketShare": 0.2,
+      "marketShareYear": 2025,
+      "marketShareSource": "Teletest / ORF Jahresbericht 2025",
+      "aliases": [
+        "Tirol TV HD",
+        "AT: Tirol TV"
+      ],
+      "keywords": [
+        "tirol tv"
+      ],
+      "tvgIds": [
+        "tiroltv.at"
+      ],
+      "tvgNamePatterns": [
+        "tirol tv*"
+      ],
+      "matchPatterns": [
+        "(?i)\\btirol\\s*tv\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": false,
+      "isRegional": true,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "AT_LT1",
+      "canonicalName": "LT1",
+      "shortName": "LT1",
+      "countryCode": "AT",
+      "countryName": "Österreich",
+      "region": "AT-OO",
+      "language": "de",
+      "category": "Regional",
+      "genre": "Regional",
+      "popularityRank": 27,
+      "popularityScore": 49.0,
+      "marketShare": 0.2,
+      "marketShareYear": 2025,
+      "marketShareSource": "Teletest / ORF Jahresbericht 2025",
+      "aliases": [
+        "LT1 OÖ",
+        "LT1 HD",
+        "AT: LT1 HD"
+      ],
+      "keywords": [
+        "lt1",
+        "lt1 oberoesterreich"
+      ],
+      "tvgIds": [
+        "lt1.at"
+      ],
+      "tvgNamePatterns": [
+        "lt1*"
+      ],
+      "matchPatterns": [
+        "(?i)\\blt1\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": false,
+      "isRegional": true,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "AT_RTL_AUSTRIA",
+      "canonicalName": "RTL Austria",
+      "shortName": "RTL AT",
+      "countryCode": "AT",
+      "countryName": "Österreich",
+      "region": "AT-NAT",
+      "language": "de",
+      "category": "Private",
+      "genre": "Vollprogramm",
+      "popularityRank": 30,
+      "popularityScore": 84.0,
+      "marketShare": 4.5,
+      "marketShareYear": 2025,
+      "marketShareSource": "Teletest 2025",
+      "aliases": [
+        "RTL Österreich",
+        "RTL AT HD",
+        "AT: RTL HD"
+      ],
+      "keywords": [
+        "rtl austria",
+        "rtl oesterreich"
+      ],
+      "tvgIds": [
+        "rtl.at"
+      ],
+      "tvgNamePatterns": [
+        "rtl austria*"
+      ],
+      "matchPatterns": [
+        "(?i)\\brtl\\s*(austria|[oö]sterreich|at)\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "AT_SAT1_OESTERREICH",
+      "canonicalName": "SAT.1 Österreich",
+      "shortName": "SAT.1 AT",
+      "countryCode": "AT",
+      "countryName": "Österreich",
+      "region": "AT-NAT",
+      "language": "de",
+      "category": "Private",
+      "genre": "Vollprogramm",
+      "popularityRank": 31,
+      "popularityScore": 80.0,
+      "marketShare": 3.2,
+      "marketShareYear": 2025,
+      "marketShareSource": "Teletest 2025",
+      "aliases": [
+        "SAT 1 Österreich",
+        "SAT.1 Austria",
+        "SAT.1 AT HD",
+        "AT: SAT.1 HD"
+      ],
+      "keywords": [
+        "sat.1 oesterreich",
+        "sat 1 austria"
+      ],
+      "tvgIds": [
+        "sat1.at"
+      ],
+      "tvgNamePatterns": [
+        "sat.1 austria*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bsat[\\. ]*1\\s*(austria|[oö]sterreich|at)\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "AT_PROSIEBEN_AUSTRIA",
+      "canonicalName": "ProSieben Austria",
+      "shortName": "Pro7 AT",
+      "countryCode": "AT",
+      "countryName": "Österreich",
+      "region": "AT-NAT",
+      "language": "de",
+      "category": "Private",
+      "genre": "Vollprogramm",
+      "popularityRank": 32,
+      "popularityScore": 78.0,
+      "marketShare": 2.5,
+      "marketShareYear": 2025,
+      "marketShareSource": "Teletest 2025",
+      "aliases": [
+        "Pro 7 Austria",
+        "Pro7 AT",
+        "ProSieben AT HD",
+        "AT: ProSieben HD"
+      ],
+      "keywords": [
+        "prosieben austria",
+        "pro7 at"
+      ],
+      "tvgIds": [
+        "prosieben.at"
+      ],
+      "tvgNamePatterns": [
+        "prosieben austria*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bpro\\s*(sieben|7)\\s*(austria|[oö]sterreich|at)\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "AT_VOX_AUSTRIA",
+      "canonicalName": "VOX Austria",
+      "shortName": "VOX AT",
+      "countryCode": "AT",
+      "countryName": "Österreich",
+      "region": "AT-NAT",
+      "language": "de",
+      "category": "Private",
+      "genre": "Vollprogramm",
+      "popularityRank": 33,
+      "popularityScore": 77.0,
+      "marketShare": 2.4,
+      "marketShareYear": 2025,
+      "marketShareSource": "Teletest 2025",
+      "aliases": [
+        "VOX Österreich",
+        "VOX AT HD",
+        "AT: VOX HD"
+      ],
+      "keywords": [
+        "vox austria",
+        "vox oesterreich"
+      ],
+      "tvgIds": [
+        "vox.at"
+      ],
+      "tvgNamePatterns": [
+        "vox austria*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bvox\\s*(austria|[oö]sterreich|at)\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "CH_SRF_1",
+      "canonicalName": "SRF 1",
+      "shortName": "SRF 1",
+      "countryCode": "CH",
+      "countryName": "Schweiz",
+      "region": "DE-CH",
+      "language": "de",
+      "category": "SRF",
+      "genre": "Vollprogramm",
+      "popularityRank": 1,
+      "popularityScore": 100.0,
+      "marketShare": 19.2,
+      "marketShareYear": 2024,
+      "marketShareSource": "Mediapulse TV Data 2024",
+      "aliases": [
+        "SRF1",
+        "SRF 1 HD",
+        "SRF1 HD",
+        "CH: SRF 1 HD",
+        "CH| SRF 1 HD"
+      ],
+      "keywords": [
+        "srf 1",
+        "srf1",
+        "sf 1",
+        "schweizer fernsehen"
+      ],
+      "tvgIds": [
+        "SRF1.ch"
+      ],
+      "tvgNamePatterns": [
+        "srf 1*",
+        "srf1*"
+      ],
+      "matchPatterns": [
+        "(?i)\\b(srf|sf)\\s*1\\b"
+      ],
+      "excludePatterns": [
+        "(?i)\\b(zwei|2|info)\\b"
+      ],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "CH_SRF_ZWEI",
+      "canonicalName": "SRF zwei",
+      "shortName": "SRF 2",
+      "countryCode": "CH",
+      "countryName": "Schweiz",
+      "region": "DE-CH",
+      "language": "de",
+      "category": "SRF",
+      "genre": "Vollprogramm",
+      "popularityRank": 2,
+      "popularityScore": 94.0,
+      "marketShare": 9.1,
+      "marketShareYear": 2024,
+      "marketShareSource": "Mediapulse TV Data 2024",
+      "aliases": [
+        "SRF 2",
+        "SRF2",
+        "SRF zwei HD",
+        "SRF 2 HD",
+        "CH: SRF zwei HD",
+        "CH| SRF 2 HD"
+      ],
+      "keywords": [
+        "srf zwei",
+        "srf 2",
+        "srf2",
+        "sf zwei",
+        "sf2"
+      ],
+      "tvgIds": [
+        "SRFzwei.ch"
+      ],
+      "tvgNamePatterns": [
+        "srf 2*",
+        "srf zwei*"
+      ],
+      "matchPatterns": [
+        "(?i)\\b(srf|sf)\\s*(2|zwei)\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "CH_SRF_INFO",
+      "canonicalName": "SRF info",
+      "shortName": "SRF info",
+      "countryCode": "CH",
+      "countryName": "Schweiz",
+      "region": "DE-CH",
+      "language": "de",
+      "category": "SRF",
+      "genre": "News",
+      "popularityRank": 5,
+      "popularityScore": 75.0,
+      "marketShare": 1.2,
+      "marketShareYear": 2024,
+      "marketShareSource": "Mediapulse TV Data 2024",
+      "aliases": [
+        "SRFinfo",
+        "SRF info HD",
+        "CH: SRF info HD"
+      ],
+      "keywords": [
+        "srf info",
+        "srfinfo",
+        "sf info"
+      ],
+      "tvgIds": [
+        "SRFinfo.ch"
+      ],
+      "tvgNamePatterns": [
+        "srf info*"
+      ],
+      "matchPatterns": [
+        "(?i)\\b(srf|sf)\\s*info\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "CH_3_PLUS",
+      "canonicalName": "3+",
+      "shortName": "3+",
+      "countryCode": "CH",
+      "countryName": "Schweiz",
+      "region": "DE-CH",
+      "language": "de",
+      "category": "Private",
+      "genre": "Entertainment",
+      "popularityRank": 3,
+      "popularityScore": 85.0,
+      "marketShare": 2.5,
+      "marketShareYear": 2024,
+      "marketShareSource": "Mediapulse TV Data 2024",
+      "aliases": [
+        "3plus",
+        "3 Plus",
+        "3+ HD",
+        "CH: 3+ HD",
+        "CH| 3+ HD"
+      ],
+      "keywords": [
+        "3+",
+        "3plus",
+        "3 plus"
+      ],
+      "tvgIds": [
+        "3plus.ch"
+      ],
+      "tvgNamePatterns": [
+        "3+*"
+      ],
+      "matchPatterns": [
+        "(?i)\\b(3\\+|3\\s*plus)\\b"
+      ],
+      "excludePatterns": [
+        "(?i)\\b3sat\\b"
+      ],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "CH_4_PLUS",
+      "canonicalName": "4+",
+      "shortName": "4+",
+      "countryCode": "CH",
+      "countryName": "Schweiz",
+      "region": "DE-CH",
+      "language": "de",
+      "category": "Private",
+      "genre": "Entertainment",
+      "popularityRank": 6,
+      "popularityScore": 73.0,
+      "marketShare": 1.0,
+      "marketShareYear": 2024,
+      "marketShareSource": "Mediapulse TV Data 2024",
+      "aliases": [
+        "4plus",
+        "4 Plus",
+        "4+ HD",
+        "CH: 4+ HD"
+      ],
+      "keywords": [
+        "4+",
+        "4plus",
+        "4 plus"
+      ],
+      "tvgIds": [
+        "4plus.ch"
+      ],
+      "tvgNamePatterns": [
+        "4+*"
+      ],
+      "matchPatterns": [
+        "(?i)\\b(4\\+|4\\s*plus)\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "CH_5_PLUS",
+      "canonicalName": "5+",
+      "shortName": "5+",
+      "countryCode": "CH",
+      "countryName": "Schweiz",
+      "region": "DE-CH",
+      "language": "de",
+      "category": "Private",
+      "genre": "Entertainment",
+      "popularityRank": 8,
+      "popularityScore": 68.0,
+      "marketShare": 0.6,
+      "marketShareYear": 2024,
+      "marketShareSource": "Mediapulse TV Data 2024",
+      "aliases": [
+        "5plus",
+        "5 Plus",
+        "5+ HD",
+        "CH: 5+ HD"
+      ],
+      "keywords": [
+        "5+",
+        "5plus",
+        "5 plus"
+      ],
+      "tvgIds": [
+        "5plus.ch"
+      ],
+      "tvgNamePatterns": [
+        "5+*"
+      ],
+      "matchPatterns": [
+        "(?i)\\b(5\\+|5\\s*plus)\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "CH_6_PLUS",
+      "canonicalName": "6+",
+      "shortName": "6+",
+      "countryCode": "CH",
+      "countryName": "Schweiz",
+      "region": "DE-CH",
+      "language": "de",
+      "category": "Private",
+      "genre": "Entertainment",
+      "popularityRank": 14,
+      "popularityScore": 60.0,
+      "marketShare": 0.3,
+      "marketShareYear": 2024,
+      "marketShareSource": "Mediapulse TV Data 2024",
+      "aliases": [
+        "6plus",
+        "6 Plus",
+        "6+ HD",
+        "CH: 6+ HD"
+      ],
+      "keywords": [
+        "6+",
+        "6plus",
+        "6 plus"
+      ],
+      "tvgIds": [
+        "6plus.ch"
+      ],
+      "tvgNamePatterns": [
+        "6+*"
+      ],
+      "matchPatterns": [
+        "(?i)\\b(6\\+|6\\s*plus)\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "CH_7_PLUS",
+      "canonicalName": "7+",
+      "shortName": "7+",
+      "countryCode": "CH",
+      "countryName": "Schweiz",
+      "region": "DE-CH",
+      "language": "de",
+      "category": "Private",
+      "genre": "Entertainment",
+      "popularityRank": 18,
+      "popularityScore": 55.0,
+      "marketShare": 0.2,
+      "marketShareYear": 2024,
+      "marketShareSource": "Mediapulse TV Data 2024",
+      "aliases": [
+        "7plus",
+        "7 Plus",
+        "7+ HD",
+        "CH: 7+ HD"
+      ],
+      "keywords": [
+        "7+",
+        "7plus",
+        "7 plus"
+      ],
+      "tvgIds": [
+        "7plus.ch"
+      ],
+      "tvgNamePatterns": [
+        "7+*"
+      ],
+      "matchPatterns": [
+        "(?i)\\b(7\\+|7\\s*plus)\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "CH_PULS_8",
+      "canonicalName": "Puls 8",
+      "shortName": "Puls 8",
+      "countryCode": "CH",
+      "countryName": "Schweiz",
+      "region": "DE-CH",
+      "language": "de",
+      "category": "Private",
+      "genre": "Entertainment",
+      "popularityRank": 7,
+      "popularityScore": 72.0,
+      "marketShare": 0.9,
+      "marketShareYear": 2024,
+      "marketShareSource": "Mediapulse TV Data 2024",
+      "aliases": [
+        "Puls8",
+        "Puls 8 HD",
+        "CH: Puls 8 HD"
+      ],
+      "keywords": [
+        "puls 8",
+        "puls8"
+      ],
+      "tvgIds": [
+        "puls8.ch"
+      ],
+      "tvgNamePatterns": [
+        "puls 8*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bpuls\\s*8\\b"
+      ],
+      "excludePatterns": [
+        "(?i)\\b(4|24)\\b"
+      ],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "CH_TV24",
+      "canonicalName": "TV24",
+      "shortName": "TV24",
+      "countryCode": "CH",
+      "countryName": "Schweiz",
+      "region": "DE-CH",
+      "language": "de",
+      "category": "Private",
+      "genre": "Entertainment",
+      "popularityRank": 4,
+      "popularityScore": 78.0,
+      "marketShare": 1.4,
+      "marketShareYear": 2024,
+      "marketShareSource": "Mediapulse TV Data 2024",
+      "aliases": [
+        "TV 24",
+        "TV24 HD",
+        "CH: TV24 HD"
+      ],
+      "keywords": [
+        "tv24",
+        "tv 24"
+      ],
+      "tvgIds": [
+        "tv24.ch"
+      ],
+      "tvgNamePatterns": [
+        "tv24*"
+      ],
+      "matchPatterns": [
+        "(?i)\\btv\\s*24\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "CH_TV25",
+      "canonicalName": "TV25",
+      "shortName": "TV25",
+      "countryCode": "CH",
+      "countryName": "Schweiz",
+      "region": "DE-CH",
+      "language": "de",
+      "category": "Private",
+      "genre": "Entertainment",
+      "popularityRank": 9,
+      "popularityScore": 67.0,
+      "marketShare": 0.6,
+      "marketShareYear": 2024,
+      "marketShareSource": "Mediapulse TV Data 2024",
+      "aliases": [
+        "TV 25",
+        "TV25 HD",
+        "CH: TV25 HD"
+      ],
+      "keywords": [
+        "tv25",
+        "tv 25"
+      ],
+      "tvgIds": [
+        "tv25.ch"
+      ],
+      "tvgNamePatterns": [
+        "tv25*"
+      ],
+      "matchPatterns": [
+        "(?i)\\btv\\s*25\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "CH_STAR_TV",
+      "canonicalName": "Star TV",
+      "shortName": "Star TV",
+      "countryCode": "CH",
+      "countryName": "Schweiz",
+      "region": "DE-CH",
+      "language": "de",
+      "category": "Private",
+      "genre": "Entertainment",
+      "popularityRank": 15,
+      "popularityScore": 58.0,
+      "marketShare": 0.2,
+      "marketShareYear": 2024,
+      "marketShareSource": "Mediapulse TV Data 2024",
+      "aliases": [
+        "Star TV HD",
+        "CH: Star TV"
+      ],
+      "keywords": [
+        "star tv",
+        "kino und film"
+      ],
+      "tvgIds": [
+        "startv.ch"
+      ],
+      "tvgNamePatterns": [
+        "star tv*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bstar\\s*tv\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "CH_S1",
+      "canonicalName": "S1",
+      "shortName": "S1",
+      "countryCode": "CH",
+      "countryName": "Schweiz",
+      "region": "DE-CH",
+      "language": "de",
+      "category": "Private",
+      "genre": "Entertainment",
+      "popularityRank": 16,
+      "popularityScore": 57.0,
+      "marketShare": 0.2,
+      "marketShareYear": 2024,
+      "marketShareSource": "Mediapulse TV Data 2024",
+      "aliases": [
+        "S1 TV",
+        "Schweiz 1",
+        "CH: S1 HD"
+      ],
+      "keywords": [
+        "s1",
+        "schweiz 1"
+      ],
+      "tvgIds": [
+        "s1.ch"
+      ],
+      "tvgNamePatterns": [
+        "s1*"
+      ],
+      "matchPatterns": [
+        "(?i)\\b(s1(\\s*tv)?|schweiz\\s*1)\\b"
+      ],
+      "excludePatterns": [
+        "(?i)\\bsat\\b"
+      ],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "CH_TELEZUERI",
+      "canonicalName": "TeleZüri",
+      "shortName": "TeleZüri",
+      "countryCode": "CH",
+      "countryName": "Schweiz",
+      "region": "DE-CH",
+      "language": "de",
+      "category": "Regional",
+      "genre": "Regional",
+      "popularityRank": 10,
+      "popularityScore": 66.0,
+      "marketShare": 0.6,
+      "marketShareYear": 2024,
+      "marketShareSource": "Mediapulse TV Data 2024",
+      "aliases": [
+        "Tele Zueri",
+        "Tele Züri HD",
+        "CH: TeleZüri HD"
+      ],
+      "keywords": [
+        "telezueri",
+        "telezüri",
+        "zuerich"
+      ],
+      "tvgIds": [
+        "telezueri.ch"
+      ],
+      "tvgNamePatterns": [
+        "telezueri*",
+        "telezüri*"
+      ],
+      "matchPatterns": [
+        "(?i)\\btele\\s*z[uü]ri\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": false,
+      "isRegional": true,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "CH_TELEBAERN",
+      "canonicalName": "TeleBärn",
+      "shortName": "TeleBärn",
+      "countryCode": "CH",
+      "countryName": "Schweiz",
+      "region": "DE-CH",
+      "language": "de",
+      "category": "Regional",
+      "genre": "Regional",
+      "popularityRank": 11,
+      "popularityScore": 63.0,
+      "marketShare": 0.4,
+      "marketShareYear": 2024,
+      "marketShareSource": "Mediapulse TV Data 2024",
+      "aliases": [
+        "Tele Baern",
+        "TeleBärn HD",
+        "CH: TeleBärn HD"
+      ],
+      "keywords": [
+        "telebaern",
+        "telebärn",
+        "bern"
+      ],
+      "tvgIds": [
+        "telebaern.ch"
+      ],
+      "tvgNamePatterns": [
+        "telebaern*"
+      ],
+      "matchPatterns": [
+        "(?i)\\btele\\s*b[aä]rn\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": false,
+      "isRegional": true,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "CH_TELE_M1",
+      "canonicalName": "Tele M1",
+      "shortName": "Tele M1",
+      "countryCode": "CH",
+      "countryName": "Schweiz",
+      "region": "DE-CH",
+      "language": "de",
+      "category": "Regional",
+      "genre": "Regional",
+      "popularityRank": 12,
+      "popularityScore": 63.0,
+      "marketShare": 0.4,
+      "marketShareYear": 2024,
+      "marketShareSource": "Mediapulse TV Data 2024",
+      "aliases": [
+        "Tele M1 HD",
+        "CH: Tele M1"
+      ],
+      "keywords": [
+        "tele m1",
+        "mittelland",
+        "aarau"
+      ],
+      "tvgIds": [
+        "telem1.ch"
+      ],
+      "tvgNamePatterns": [
+        "tele m1*"
+      ],
+      "matchPatterns": [
+        "(?i)\\btele\\s*m1\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": false,
+      "isRegional": true,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "CH_TELEBASEL",
+      "canonicalName": "Telebasel",
+      "shortName": "Telebasel",
+      "countryCode": "CH",
+      "countryName": "Schweiz",
+      "region": "DE-CH",
+      "language": "de",
+      "category": "Regional",
+      "genre": "Regional",
+      "popularityRank": 13,
+      "popularityScore": 62.0,
+      "marketShare": 0.3,
+      "marketShareYear": 2024,
+      "marketShareSource": "Mediapulse TV Data 2024",
+      "aliases": [
+        "Tele Basel",
+        "Telebasel HD",
+        "CH: Telebasel"
+      ],
+      "keywords": [
+        "telebasel",
+        "tele basel"
+      ],
+      "tvgIds": [
+        "telebasel.ch"
+      ],
+      "tvgNamePatterns": [
+        "telebasel*"
+      ],
+      "matchPatterns": [
+        "(?i)\\btele\\s*basel\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": false,
+      "isRegional": true,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "CH_TELE_TOP",
+      "canonicalName": "Tele Top",
+      "shortName": "Tele Top",
+      "countryCode": "CH",
+      "countryName": "Schweiz",
+      "region": "DE-CH",
+      "language": "de",
+      "category": "Regional",
+      "genre": "Regional",
+      "popularityRank": 17,
+      "popularityScore": 56.0,
+      "marketShare": 0.2,
+      "marketShareYear": 2024,
+      "marketShareSource": "Mediapulse TV Data 2024",
+      "aliases": [
+        "Tele Top HD",
+        "CH: Tele Top"
+      ],
+      "keywords": [
+        "tele top",
+        "winterthur",
+        "thurgau"
+      ],
+      "tvgIds": [
+        "teletop.ch"
+      ],
+      "tvgNamePatterns": [
+        "tele top*"
+      ],
+      "matchPatterns": [
+        "(?i)\\btele\\s*top\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": false,
+      "isRegional": true,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "CH_RTS_1",
+      "canonicalName": "RTS 1",
+      "shortName": "RTS 1",
+      "countryCode": "CH",
+      "countryName": "Schweiz",
+      "region": "FR-CH",
+      "language": "fr",
+      "category": "RTS",
+      "genre": "Vollprogramm",
+      "popularityRank": 20,
+      "popularityScore": 95.0,
+      "marketShare": 21.5,
+      "marketShareYear": 2024,
+      "marketShareSource": "Mediapulse Romandie 2024",
+      "aliases": [
+        "RTS Un",
+        "RTS 1 HD",
+        "RTS Un HD",
+        "CH: RTS 1 HD",
+        "CH| RTS 1 HD"
+      ],
+      "keywords": [
+        "rts 1",
+        "rts un",
+        "romandie"
+      ],
+      "tvgIds": [
+        "RTS1.ch"
+      ],
+      "tvgNamePatterns": [
+        "rts 1*",
+        "rts un*"
+      ],
+      "matchPatterns": [
+        "(?i)\\brts\\s*(1|un)\\b"
+      ],
+      "excludePatterns": [
+        "(?i)\\b(deux|2|info)\\b"
+      ],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "CH_RTS_2",
+      "canonicalName": "RTS 2",
+      "shortName": "RTS 2",
+      "countryCode": "CH",
+      "countryName": "Schweiz",
+      "region": "FR-CH",
+      "language": "fr",
+      "category": "RTS",
+      "genre": "Vollprogramm",
+      "popularityRank": 21,
+      "popularityScore": 88.0,
+      "marketShare": 7.8,
+      "marketShareYear": 2024,
+      "marketShareSource": "Mediapulse Romandie 2024",
+      "aliases": [
+        "RTS Deux",
+        "RTS 2 HD",
+        "RTS Deux HD",
+        "CH: RTS 2 HD"
+      ],
+      "keywords": [
+        "rts 2",
+        "rts deux"
+      ],
+      "tvgIds": [
+        "RTS2.ch"
+      ],
+      "tvgNamePatterns": [
+        "rts 2*",
+        "rts deux*"
+      ],
+      "matchPatterns": [
+        "(?i)\\brts\\s*(2|deux)\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "CH_RTS_INFO",
+      "canonicalName": "RTS Info",
+      "shortName": "RTS Info",
+      "countryCode": "CH",
+      "countryName": "Schweiz",
+      "region": "FR-CH",
+      "language": "fr",
+      "category": "RTS",
+      "genre": "News",
+      "popularityRank": 24,
+      "popularityScore": 70.0,
+      "marketShare": 1.0,
+      "marketShareYear": 2024,
+      "marketShareSource": "Mediapulse Romandie 2024",
+      "aliases": [
+        "RTS Info HD",
+        "CH: RTS Info"
+      ],
+      "keywords": [
+        "rts info",
+        "information romandie"
+      ],
+      "tvgIds": [
+        "RTSInfo.ch"
+      ],
+      "tvgNamePatterns": [
+        "rts info*"
+      ],
+      "matchPatterns": [
+        "(?i)\\brts\\s*info\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "CH_LEMAN_BLEU",
+      "canonicalName": "Léman Bleu",
+      "shortName": "Léman Bleu",
+      "countryCode": "CH",
+      "countryName": "Schweiz",
+      "region": "FR-CH",
+      "language": "fr",
+      "category": "Regional",
+      "genre": "Regional",
+      "popularityRank": 25,
+      "popularityScore": 65.0,
+      "marketShare": 0.7,
+      "marketShareYear": 2024,
+      "marketShareSource": "Mediapulse Romandie 2024",
+      "aliases": [
+        "Leman Bleu",
+        "Léman Bleu HD",
+        "CH: Léman Bleu"
+      ],
+      "keywords": [
+        "leman bleu",
+        "léman bleu",
+        "geneve"
+      ],
+      "tvgIds": [
+        "lemanbleu.ch"
+      ],
+      "tvgNamePatterns": [
+        "leman bleu*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bl[eé]man\\s*bleu\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": false,
+      "isRegional": true,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "CH_RSI_LA_1",
+      "canonicalName": "RSI LA 1",
+      "shortName": "LA 1",
+      "countryCode": "CH",
+      "countryName": "Schweiz",
+      "region": "IT-CH",
+      "language": "it",
+      "category": "RSI",
+      "genre": "Vollprogramm",
+      "popularityRank": 30,
+      "popularityScore": 95.0,
+      "marketShare": 18.5,
+      "marketShareYear": 2024,
+      "marketShareSource": "Mediapulse Svizzera italiana 2024",
+      "aliases": [
+        "RSI LA1",
+        "RSI LA 1 HD",
+        "CH: RSI LA 1 HD",
+        "CH| RSI LA 1 HD"
+      ],
+      "keywords": [
+        "rsi la 1",
+        "rsi la1",
+        "tessin",
+        "svizzera italiana"
+      ],
+      "tvgIds": [
+        "RSILA1.ch"
+      ],
+      "tvgNamePatterns": [
+        "rsi la 1*",
+        "rsi la1*"
+      ],
+      "matchPatterns": [
+        "(?i)\\brsi\\s*la\\s*1\\b"
+      ],
+      "excludePatterns": [
+        "(?i)\\bla\\s*2\\b"
+      ],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "CH_RSI_LA_2",
+      "canonicalName": "RSI LA 2",
+      "shortName": "LA 2",
+      "countryCode": "CH",
+      "countryName": "Schweiz",
+      "region": "IT-CH",
+      "language": "it",
+      "category": "RSI",
+      "genre": "Vollprogramm",
+      "popularityRank": 31,
+      "popularityScore": 86.0,
+      "marketShare": 6.5,
+      "marketShareYear": 2024,
+      "marketShareSource": "Mediapulse Svizzera italiana 2024",
+      "aliases": [
+        "RSI LA2",
+        "RSI LA 2 HD",
+        "CH: RSI LA 2 HD"
+      ],
+      "keywords": [
+        "rsi la 2",
+        "rsi la2"
+      ],
+      "tvgIds": [
+        "RSILA2.ch"
+      ],
+      "tvgNamePatterns": [
+        "rsi la 2*",
+        "rsi la2*"
+      ],
+      "matchPatterns": [
+        "(?i)\\brsi\\s*la\\s*2\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "CH_RTR",
+      "canonicalName": "RTR",
+      "shortName": "RTR",
+      "countryCode": "CH",
+      "countryName": "Schweiz",
+      "region": "RM-CH",
+      "language": "rm",
+      "category": "SRF",
+      "genre": "Regional",
+      "popularityRank": 40,
+      "popularityScore": 50.0,
+      "marketShare": 0.2,
+      "marketShareYear": 2024,
+      "marketShareSource": "Mediapulse 2024",
+      "aliases": [
+        "RTR Telesguard",
+        "RTR TV",
+        "CH: RTR"
+      ],
+      "keywords": [
+        "rtr",
+        "telesguard",
+        "rumantsch",
+        "grischun"
+      ],
+      "tvgIds": [
+        "rtr.ch"
+      ],
+      "tvgNamePatterns": [
+        "rtr*"
+      ],
+      "matchPatterns": [
+        "(?i)\\brtr(\\s*telesguard)?\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": false,
+      "isRegional": true,
+      "isPublicService": true,
+      "isPrivate": false,
+      "logo": ""
+    },
+    {
+      "channelId": "CH_RTL_SCHWEIZ",
+      "canonicalName": "RTL Schweiz",
+      "shortName": "RTL CH",
+      "countryCode": "CH",
+      "countryName": "Schweiz",
+      "region": "DE-CH",
+      "language": "de",
+      "category": "Private",
+      "genre": "Vollprogramm",
+      "popularityRank": 45,
+      "popularityScore": 75.0,
+      "marketShare": 1.8,
+      "marketShareYear": 2024,
+      "marketShareSource": "Mediapulse 2024",
+      "aliases": [
+        "RTL CH HD",
+        "CH: RTL HD"
+      ],
+      "keywords": [
+        "rtl schweiz",
+        "rtl ch"
+      ],
+      "tvgIds": [
+        "rtl.ch"
+      ],
+      "tvgNamePatterns": [
+        "rtl schweiz*"
+      ],
+      "matchPatterns": [
+        "(?i)\\brtl\\s*(schweiz|ch)\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "CH_SAT1_SCHWEIZ",
+      "canonicalName": "SAT.1 Schweiz",
+      "shortName": "SAT.1 CH",
+      "countryCode": "CH",
+      "countryName": "Schweiz",
+      "region": "DE-CH",
+      "language": "de",
+      "category": "Private",
+      "genre": "Vollprogramm",
+      "popularityRank": 46,
+      "popularityScore": 74.0,
+      "marketShare": 1.5,
+      "marketShareYear": 2024,
+      "marketShareSource": "Mediapulse 2024",
+      "aliases": [
+        "SAT 1 Schweiz",
+        "SAT.1 CH HD",
+        "CH: SAT.1 HD"
+      ],
+      "keywords": [
+        "sat.1 schweiz",
+        "sat 1 schweiz"
+      ],
+      "tvgIds": [
+        "sat1.ch"
+      ],
+      "tvgNamePatterns": [
+        "sat.1 schweiz*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bsat[\\. ]*1\\s*(schweiz|ch)\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    },
+    {
+      "channelId": "CH_PROSIEBEN_SCHWEIZ",
+      "canonicalName": "ProSieben Schweiz",
+      "shortName": "Pro7 CH",
+      "countryCode": "CH",
+      "countryName": "Schweiz",
+      "region": "DE-CH",
+      "language": "de",
+      "category": "Private",
+      "genre": "Vollprogramm",
+      "popularityRank": 47,
+      "popularityScore": 72.0,
+      "marketShare": 1.3,
+      "marketShareYear": 2024,
+      "marketShareSource": "Mediapulse 2024",
+      "aliases": [
+        "Pro 7 Schweiz",
+        "ProSieben CH HD",
+        "CH: ProSieben HD"
+      ],
+      "keywords": [
+        "prosieben schweiz",
+        "pro7 ch"
+      ],
+      "tvgIds": [
+        "prosieben.ch"
+      ],
+      "tvgNamePatterns": [
+        "prosieben schweiz*"
+      ],
+      "matchPatterns": [
+        "(?i)\\bpro\\s*(sieben|7)\\s*(schweiz|ch)\\b"
+      ],
+      "excludePatterns": [],
+      "isNational": true,
+      "isRegional": false,
+      "isPublicService": false,
+      "isPrivate": true,
+      "logo": ""
+    }
+  ]
+}

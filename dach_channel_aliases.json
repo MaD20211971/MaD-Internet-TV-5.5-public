@@ -1,0 +1,2836 @@
+{
+  "version": "1.0.0",
+  "totalAliases": 402,
+  "aliases": [
+    {
+      "alias": "ARD",
+      "channelId": "DE_ARD_DAS_ERSTE",
+      "canonicalName": "Das Erste",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "Das Erste HD",
+      "channelId": "DE_ARD_DAS_ERSTE",
+      "canonicalName": "Das Erste",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "Das Erste FHD",
+      "channelId": "DE_ARD_DAS_ERSTE",
+      "canonicalName": "Das Erste",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "Das Erste UHD",
+      "channelId": "DE_ARD_DAS_ERSTE",
+      "canonicalName": "Das Erste",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "ARD HD",
+      "channelId": "DE_ARD_DAS_ERSTE",
+      "canonicalName": "Das Erste",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: Das Erste",
+      "channelId": "DE_ARD_DAS_ERSTE",
+      "canonicalName": "Das Erste",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE| Das Erste HD",
+      "channelId": "DE_ARD_DAS_ERSTE",
+      "canonicalName": "Das Erste",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: ARD HD",
+      "channelId": "DE_ARD_DAS_ERSTE",
+      "canonicalName": "Das Erste",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "ZDF HD",
+      "channelId": "DE_ZDF",
+      "canonicalName": "ZDF",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "ZDF FHD",
+      "channelId": "DE_ZDF",
+      "canonicalName": "ZDF",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "ZDF UHD",
+      "channelId": "DE_ZDF",
+      "canonicalName": "ZDF",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: ZDF",
+      "channelId": "DE_ZDF",
+      "canonicalName": "ZDF",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: ZDF HD",
+      "channelId": "DE_ZDF",
+      "canonicalName": "ZDF",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE| ZDF HD",
+      "channelId": "DE_ZDF",
+      "canonicalName": "ZDF",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "3sat HD",
+      "channelId": "DE_3SAT",
+      "canonicalName": "3sat",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "3sat FHD",
+      "channelId": "DE_3SAT",
+      "canonicalName": "3sat",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: 3sat",
+      "channelId": "DE_3SAT",
+      "canonicalName": "3sat",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE| 3sat HD",
+      "channelId": "DE_3SAT",
+      "canonicalName": "3sat",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "arte HD",
+      "channelId": "DE_ARTE",
+      "canonicalName": "arte",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "arte FHD",
+      "channelId": "DE_ARTE",
+      "canonicalName": "arte",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: arte",
+      "channelId": "DE_ARTE",
+      "canonicalName": "arte",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: ARTE HD",
+      "channelId": "DE_ARTE",
+      "canonicalName": "arte",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "Phoenix HD",
+      "channelId": "DE_PHOENIX",
+      "canonicalName": "Phoenix",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "Phoenix FHD",
+      "channelId": "DE_PHOENIX",
+      "canonicalName": "Phoenix",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: Phoenix",
+      "channelId": "DE_PHOENIX",
+      "canonicalName": "Phoenix",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: PHOENIX HD",
+      "channelId": "DE_PHOENIX",
+      "canonicalName": "Phoenix",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "ZDF neo",
+      "channelId": "DE_ZDFNEO",
+      "canonicalName": "ZDFneo",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "ZDFneo HD",
+      "channelId": "DE_ZDFNEO",
+      "canonicalName": "ZDFneo",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "ZDFneo FHD",
+      "channelId": "DE_ZDFNEO",
+      "canonicalName": "ZDFneo",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: ZDFneo",
+      "channelId": "DE_ZDFNEO",
+      "canonicalName": "ZDFneo",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: ZDF neo HD",
+      "channelId": "DE_ZDFNEO",
+      "canonicalName": "ZDFneo",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "ZDF info",
+      "channelId": "DE_ZDFINFO",
+      "canonicalName": "ZDFinfo",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "ZDFinfo HD",
+      "channelId": "DE_ZDFINFO",
+      "canonicalName": "ZDFinfo",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "ZDFinfo FHD",
+      "channelId": "DE_ZDFINFO",
+      "canonicalName": "ZDFinfo",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: ZDFinfo",
+      "channelId": "DE_ZDFINFO",
+      "canonicalName": "ZDFinfo",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: ZDF info HD",
+      "channelId": "DE_ZDFINFO",
+      "canonicalName": "ZDFinfo",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "ONE HD",
+      "channelId": "DE_ONE",
+      "canonicalName": "ONE",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "ARD ONE",
+      "channelId": "DE_ONE",
+      "canonicalName": "ONE",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "ARD ONE HD",
+      "channelId": "DE_ONE",
+      "canonicalName": "ONE",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: ONE",
+      "channelId": "DE_ONE",
+      "canonicalName": "ONE",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: ONE HD",
+      "channelId": "DE_ONE",
+      "canonicalName": "ONE",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "KiKA HD",
+      "channelId": "DE_KIKA",
+      "canonicalName": "KiKA",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "KiKA FHD",
+      "channelId": "DE_KIKA",
+      "canonicalName": "KiKA",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: KiKA",
+      "channelId": "DE_KIKA",
+      "canonicalName": "KiKA",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: KIKA HD",
+      "channelId": "DE_KIKA",
+      "canonicalName": "KiKA",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "tagesschau 24",
+      "channelId": "DE_TAGESSCHAU24",
+      "canonicalName": "tagesschau24",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "tagesschau24 HD",
+      "channelId": "DE_TAGESSCHAU24",
+      "canonicalName": "tagesschau24",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: tagesschau24",
+      "channelId": "DE_TAGESSCHAU24",
+      "canonicalName": "tagesschau24",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "ARD alpha",
+      "channelId": "DE_ARD_ALPHA",
+      "canonicalName": "ARD-alpha",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "ARD-alpha HD",
+      "channelId": "DE_ARD_ALPHA",
+      "canonicalName": "ARD-alpha",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: ARD alpha",
+      "channelId": "DE_ARD_ALPHA",
+      "canonicalName": "ARD-alpha",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "BR Fernsehen HD",
+      "channelId": "DE_BR_FERNSEHEN",
+      "canonicalName": "BR Fernsehen",
+      "countryCode": "DE",
+      "region": "DE-BY"
+    },
+    {
+      "alias": "BR HD",
+      "channelId": "DE_BR_FERNSEHEN",
+      "canonicalName": "BR Fernsehen",
+      "countryCode": "DE",
+      "region": "DE-BY"
+    },
+    {
+      "alias": "BR Nord HD",
+      "channelId": "DE_BR_FERNSEHEN",
+      "canonicalName": "BR Fernsehen",
+      "countryCode": "DE",
+      "region": "DE-BY"
+    },
+    {
+      "alias": "BR Süd HD",
+      "channelId": "DE_BR_FERNSEHEN",
+      "canonicalName": "BR Fernsehen",
+      "countryCode": "DE",
+      "region": "DE-BY"
+    },
+    {
+      "alias": "DE: BR Fernsehen",
+      "channelId": "DE_BR_FERNSEHEN",
+      "canonicalName": "BR Fernsehen",
+      "countryCode": "DE",
+      "region": "DE-BY"
+    },
+    {
+      "alias": "Bayerisches Fernsehen",
+      "channelId": "DE_BR_FERNSEHEN",
+      "canonicalName": "BR Fernsehen",
+      "countryCode": "DE",
+      "region": "DE-BY"
+    },
+    {
+      "alias": "hr Fernsehen HD",
+      "channelId": "DE_HR_FERNSEHEN",
+      "canonicalName": "hr-fernsehen",
+      "countryCode": "DE",
+      "region": "DE-HE"
+    },
+    {
+      "alias": "hr HD",
+      "channelId": "DE_HR_FERNSEHEN",
+      "canonicalName": "hr-fernsehen",
+      "countryCode": "DE",
+      "region": "DE-HE"
+    },
+    {
+      "alias": "hr-fernsehen HD",
+      "channelId": "DE_HR_FERNSEHEN",
+      "canonicalName": "hr-fernsehen",
+      "countryCode": "DE",
+      "region": "DE-HE"
+    },
+    {
+      "alias": "DE: hr-fernsehen",
+      "channelId": "DE_HR_FERNSEHEN",
+      "canonicalName": "hr-fernsehen",
+      "countryCode": "DE",
+      "region": "DE-HE"
+    },
+    {
+      "alias": "Hessischer Rundfunk",
+      "channelId": "DE_HR_FERNSEHEN",
+      "canonicalName": "hr-fernsehen",
+      "countryCode": "DE",
+      "region": "DE-HE"
+    },
+    {
+      "alias": "MDR Fernsehen HD",
+      "channelId": "DE_MDR_FERNSEHEN",
+      "canonicalName": "MDR Fernsehen",
+      "countryCode": "DE",
+      "region": "DE-SN"
+    },
+    {
+      "alias": "MDR HD",
+      "channelId": "DE_MDR_FERNSEHEN",
+      "canonicalName": "MDR Fernsehen",
+      "countryCode": "DE",
+      "region": "DE-SN"
+    },
+    {
+      "alias": "MDR Sachsen HD",
+      "channelId": "DE_MDR_FERNSEHEN",
+      "canonicalName": "MDR Fernsehen",
+      "countryCode": "DE",
+      "region": "DE-SN"
+    },
+    {
+      "alias": "MDR Thüringen HD",
+      "channelId": "DE_MDR_FERNSEHEN",
+      "canonicalName": "MDR Fernsehen",
+      "countryCode": "DE",
+      "region": "DE-SN"
+    },
+    {
+      "alias": "MDR S-Anhalt HD",
+      "channelId": "DE_MDR_FERNSEHEN",
+      "canonicalName": "MDR Fernsehen",
+      "countryCode": "DE",
+      "region": "DE-SN"
+    },
+    {
+      "alias": "DE: MDR",
+      "channelId": "DE_MDR_FERNSEHEN",
+      "canonicalName": "MDR Fernsehen",
+      "countryCode": "DE",
+      "region": "DE-SN"
+    },
+    {
+      "alias": "NDR Fernsehen HD",
+      "channelId": "DE_NDR_FERNSEHEN",
+      "canonicalName": "NDR Fernsehen",
+      "countryCode": "DE",
+      "region": "DE-HH"
+    },
+    {
+      "alias": "NDR HD",
+      "channelId": "DE_NDR_FERNSEHEN",
+      "canonicalName": "NDR Fernsehen",
+      "countryCode": "DE",
+      "region": "DE-HH"
+    },
+    {
+      "alias": "NDR Hamburg HD",
+      "channelId": "DE_NDR_FERNSEHEN",
+      "canonicalName": "NDR Fernsehen",
+      "countryCode": "DE",
+      "region": "DE-HH"
+    },
+    {
+      "alias": "NDR NDS HD",
+      "channelId": "DE_NDR_FERNSEHEN",
+      "canonicalName": "NDR Fernsehen",
+      "countryCode": "DE",
+      "region": "DE-HH"
+    },
+    {
+      "alias": "NDR SH HD",
+      "channelId": "DE_NDR_FERNSEHEN",
+      "canonicalName": "NDR Fernsehen",
+      "countryCode": "DE",
+      "region": "DE-HH"
+    },
+    {
+      "alias": "NDR MV HD",
+      "channelId": "DE_NDR_FERNSEHEN",
+      "canonicalName": "NDR Fernsehen",
+      "countryCode": "DE",
+      "region": "DE-HH"
+    },
+    {
+      "alias": "DE: NDR",
+      "channelId": "DE_NDR_FERNSEHEN",
+      "canonicalName": "NDR Fernsehen",
+      "countryCode": "DE",
+      "region": "DE-HH"
+    },
+    {
+      "alias": "Radio Bremen HD",
+      "channelId": "DE_RADIO_BREMEN_TV",
+      "canonicalName": "Radio Bremen TV",
+      "countryCode": "DE",
+      "region": "DE-HB"
+    },
+    {
+      "alias": "RB TV HD",
+      "channelId": "DE_RADIO_BREMEN_TV",
+      "canonicalName": "Radio Bremen TV",
+      "countryCode": "DE",
+      "region": "DE-HB"
+    },
+    {
+      "alias": "DE: Radio Bremen TV",
+      "channelId": "DE_RADIO_BREMEN_TV",
+      "canonicalName": "Radio Bremen TV",
+      "countryCode": "DE",
+      "region": "DE-HB"
+    },
+    {
+      "alias": "rbb Fernsehen HD",
+      "channelId": "DE_RBB_FERNSEHEN",
+      "canonicalName": "rbb Fernsehen",
+      "countryCode": "DE",
+      "region": "DE-BE"
+    },
+    {
+      "alias": "rbb HD",
+      "channelId": "DE_RBB_FERNSEHEN",
+      "canonicalName": "rbb Fernsehen",
+      "countryCode": "DE",
+      "region": "DE-BE"
+    },
+    {
+      "alias": "rbb Berlin HD",
+      "channelId": "DE_RBB_FERNSEHEN",
+      "canonicalName": "rbb Fernsehen",
+      "countryCode": "DE",
+      "region": "DE-BE"
+    },
+    {
+      "alias": "rbb Brandenburg HD",
+      "channelId": "DE_RBB_FERNSEHEN",
+      "canonicalName": "rbb Fernsehen",
+      "countryCode": "DE",
+      "region": "DE-BE"
+    },
+    {
+      "alias": "DE: rbb",
+      "channelId": "DE_RBB_FERNSEHEN",
+      "canonicalName": "rbb Fernsehen",
+      "countryCode": "DE",
+      "region": "DE-BE"
+    },
+    {
+      "alias": "SR Fernsehen HD",
+      "channelId": "DE_SR_FERNSEHEN",
+      "canonicalName": "SR Fernsehen",
+      "countryCode": "DE",
+      "region": "DE-SL"
+    },
+    {
+      "alias": "SR HD",
+      "channelId": "DE_SR_FERNSEHEN",
+      "canonicalName": "SR Fernsehen",
+      "countryCode": "DE",
+      "region": "DE-SL"
+    },
+    {
+      "alias": "DE: SR Fernsehen",
+      "channelId": "DE_SR_FERNSEHEN",
+      "canonicalName": "SR Fernsehen",
+      "countryCode": "DE",
+      "region": "DE-SL"
+    },
+    {
+      "alias": "SWR Fernsehen HD",
+      "channelId": "DE_SWR_FERNSEHEN",
+      "canonicalName": "SWR Fernsehen",
+      "countryCode": "DE",
+      "region": "DE-BW"
+    },
+    {
+      "alias": "SWR HD",
+      "channelId": "DE_SWR_FERNSEHEN",
+      "canonicalName": "SWR Fernsehen",
+      "countryCode": "DE",
+      "region": "DE-BW"
+    },
+    {
+      "alias": "SWR BW HD",
+      "channelId": "DE_SWR_FERNSEHEN",
+      "canonicalName": "SWR Fernsehen",
+      "countryCode": "DE",
+      "region": "DE-BW"
+    },
+    {
+      "alias": "SWR RP HD",
+      "channelId": "DE_SWR_FERNSEHEN",
+      "canonicalName": "SWR Fernsehen",
+      "countryCode": "DE",
+      "region": "DE-BW"
+    },
+    {
+      "alias": "DE: SWR Fernsehen",
+      "channelId": "DE_SWR_FERNSEHEN",
+      "canonicalName": "SWR Fernsehen",
+      "countryCode": "DE",
+      "region": "DE-BW"
+    },
+    {
+      "alias": "WDR Fernsehen HD",
+      "channelId": "DE_WDR_FERNSEHEN",
+      "canonicalName": "WDR Fernsehen",
+      "countryCode": "DE",
+      "region": "DE-NW"
+    },
+    {
+      "alias": "WDR HD",
+      "channelId": "DE_WDR_FERNSEHEN",
+      "canonicalName": "WDR Fernsehen",
+      "countryCode": "DE",
+      "region": "DE-NW"
+    },
+    {
+      "alias": "WDR Köln HD",
+      "channelId": "DE_WDR_FERNSEHEN",
+      "canonicalName": "WDR Fernsehen",
+      "countryCode": "DE",
+      "region": "DE-NW"
+    },
+    {
+      "alias": "WDR Dortmund HD",
+      "channelId": "DE_WDR_FERNSEHEN",
+      "canonicalName": "WDR Fernsehen",
+      "countryCode": "DE",
+      "region": "DE-NW"
+    },
+    {
+      "alias": "WDR Düsseldorf HD",
+      "channelId": "DE_WDR_FERNSEHEN",
+      "canonicalName": "WDR Fernsehen",
+      "countryCode": "DE",
+      "region": "DE-NW"
+    },
+    {
+      "alias": "DE: WDR",
+      "channelId": "DE_WDR_FERNSEHEN",
+      "canonicalName": "WDR Fernsehen",
+      "countryCode": "DE",
+      "region": "DE-NW"
+    },
+    {
+      "alias": "RTL Television",
+      "channelId": "DE_RTL",
+      "canonicalName": "RTL",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "RTL HD",
+      "channelId": "DE_RTL",
+      "canonicalName": "RTL",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "RTL FHD",
+      "channelId": "DE_RTL",
+      "canonicalName": "RTL",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "RTL UHD",
+      "channelId": "DE_RTL",
+      "canonicalName": "RTL",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: RTL HD",
+      "channelId": "DE_RTL",
+      "canonicalName": "RTL",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE| RTL HD",
+      "channelId": "DE_RTL",
+      "canonicalName": "RTL",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "RTL 2",
+      "channelId": "DE_RTL_ZWEI",
+      "canonicalName": "RTL ZWEI",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "RTL2",
+      "channelId": "DE_RTL_ZWEI",
+      "canonicalName": "RTL ZWEI",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "RTL ZWEI HD",
+      "channelId": "DE_RTL_ZWEI",
+      "canonicalName": "RTL ZWEI",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "RTL 2 HD",
+      "channelId": "DE_RTL_ZWEI",
+      "canonicalName": "RTL ZWEI",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: RTL ZWEI HD",
+      "channelId": "DE_RTL_ZWEI",
+      "canonicalName": "RTL ZWEI",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "RTL Plus",
+      "channelId": "DE_RTLUP",
+      "canonicalName": "RTLup",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "RTL up",
+      "channelId": "DE_RTLUP",
+      "canonicalName": "RTLup",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "RTLup HD",
+      "channelId": "DE_RTLUP",
+      "canonicalName": "RTLup",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: RTLup",
+      "channelId": "DE_RTLUP",
+      "canonicalName": "RTLup",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "RTL NITRO",
+      "channelId": "DE_NITRO",
+      "canonicalName": "NITRO",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "NITRO HD",
+      "channelId": "DE_NITRO",
+      "canonicalName": "NITRO",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: NITRO HD",
+      "channelId": "DE_NITRO",
+      "canonicalName": "NITRO",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE| NITRO HD",
+      "channelId": "DE_NITRO",
+      "canonicalName": "NITRO",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "Super RTL HD",
+      "channelId": "DE_SUPER_RTL",
+      "canonicalName": "SUPER RTL",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "Super RTL FHD",
+      "channelId": "DE_SUPER_RTL",
+      "canonicalName": "SUPER RTL",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "TOGGO",
+      "channelId": "DE_SUPER_RTL",
+      "canonicalName": "SUPER RTL",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: Super RTL",
+      "channelId": "DE_SUPER_RTL",
+      "canonicalName": "SUPER RTL",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "VOX HD",
+      "channelId": "DE_VOX",
+      "canonicalName": "VOX",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "VOX FHD",
+      "channelId": "DE_VOX",
+      "canonicalName": "VOX",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "VOX UHD",
+      "channelId": "DE_VOX",
+      "canonicalName": "VOX",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: VOX HD",
+      "channelId": "DE_VOX",
+      "canonicalName": "VOX",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE| VOX HD",
+      "channelId": "DE_VOX",
+      "canonicalName": "VOX",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "VOX up",
+      "channelId": "DE_VOXUP",
+      "canonicalName": "VOXup",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "VOXup HD",
+      "channelId": "DE_VOXUP",
+      "canonicalName": "VOXup",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: VOXup",
+      "channelId": "DE_VOXUP",
+      "canonicalName": "VOXup",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "SAT 1",
+      "channelId": "DE_SAT1",
+      "canonicalName": "SAT.1",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "SAT.1 HD",
+      "channelId": "DE_SAT1",
+      "canonicalName": "SAT.1",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "SAT.1 FHD",
+      "channelId": "DE_SAT1",
+      "canonicalName": "SAT.1",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "SAT 1 HD",
+      "channelId": "DE_SAT1",
+      "canonicalName": "SAT.1",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: SAT.1 HD",
+      "channelId": "DE_SAT1",
+      "canonicalName": "SAT.1",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE| SAT.1 HD",
+      "channelId": "DE_SAT1",
+      "canonicalName": "SAT.1",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "SAT 1 Gold",
+      "channelId": "DE_SAT1_GOLD",
+      "canonicalName": "SAT.1 Gold",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "SAT.1 Gold HD",
+      "channelId": "DE_SAT1_GOLD",
+      "canonicalName": "SAT.1 Gold",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: SAT.1 Gold",
+      "channelId": "DE_SAT1_GOLD",
+      "canonicalName": "SAT.1 Gold",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "Pro 7",
+      "channelId": "DE_PROSIEBEN",
+      "canonicalName": "ProSieben",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "Pro7",
+      "channelId": "DE_PROSIEBEN",
+      "canonicalName": "ProSieben",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "ProSieben HD",
+      "channelId": "DE_PROSIEBEN",
+      "canonicalName": "ProSieben",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "ProSieben FHD",
+      "channelId": "DE_PROSIEBEN",
+      "canonicalName": "ProSieben",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "Pro 7 HD",
+      "channelId": "DE_PROSIEBEN",
+      "canonicalName": "ProSieben",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: ProSieben HD",
+      "channelId": "DE_PROSIEBEN",
+      "canonicalName": "ProSieben",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "Pro 7 MAXX",
+      "channelId": "DE_PROSIEBEN_MAXX",
+      "canonicalName": "ProSieben MAXX",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "ProSieben MAXX HD",
+      "channelId": "DE_PROSIEBEN_MAXX",
+      "canonicalName": "ProSieben MAXX",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: ProSieben MAXX",
+      "channelId": "DE_PROSIEBEN_MAXX",
+      "canonicalName": "ProSieben MAXX",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "Kabel 1",
+      "channelId": "DE_KABEL_EINS",
+      "canonicalName": "Kabel Eins",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "Kabel1",
+      "channelId": "DE_KABEL_EINS",
+      "canonicalName": "Kabel Eins",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "Kabel Eins HD",
+      "channelId": "DE_KABEL_EINS",
+      "canonicalName": "Kabel Eins",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "Kabel 1 HD",
+      "channelId": "DE_KABEL_EINS",
+      "canonicalName": "Kabel Eins",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: Kabel Eins HD",
+      "channelId": "DE_KABEL_EINS",
+      "canonicalName": "Kabel Eins",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "Kabel 1 Doku",
+      "channelId": "DE_KABEL_EINS_DOKU",
+      "canonicalName": "Kabel Eins Doku",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "Kabel Eins Doku HD",
+      "channelId": "DE_KABEL_EINS_DOKU",
+      "canonicalName": "Kabel Eins Doku",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: Kabel Eins Doku",
+      "channelId": "DE_KABEL_EINS_DOKU",
+      "canonicalName": "Kabel Eins Doku",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "sixx HD",
+      "channelId": "DE_SIXX",
+      "canonicalName": "sixx",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "sixx FHD",
+      "channelId": "DE_SIXX",
+      "canonicalName": "sixx",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: sixx HD",
+      "channelId": "DE_SIXX",
+      "canonicalName": "sixx",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE| sixx HD",
+      "channelId": "DE_SIXX",
+      "canonicalName": "sixx",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "Tele 5 HD",
+      "channelId": "DE_TELE5",
+      "canonicalName": "Tele 5",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: Tele 5",
+      "channelId": "DE_TELE5",
+      "canonicalName": "Tele 5",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "WELT HD",
+      "channelId": "DE_WELT",
+      "canonicalName": "WELT",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "N24",
+      "channelId": "DE_WELT",
+      "canonicalName": "WELT",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "WELT Nachrichtensender",
+      "channelId": "DE_WELT",
+      "canonicalName": "WELT",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: WELT HD",
+      "channelId": "DE_WELT",
+      "canonicalName": "WELT",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "n-tv",
+      "channelId": "DE_NTV",
+      "canonicalName": "ntv",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "ntv HD",
+      "channelId": "DE_NTV",
+      "canonicalName": "ntv",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "n-tv HD",
+      "channelId": "DE_NTV",
+      "canonicalName": "ntv",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: ntv HD",
+      "channelId": "DE_NTV",
+      "canonicalName": "ntv",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DMAX HD",
+      "channelId": "DE_DMAX",
+      "canonicalName": "DMAX",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DMAX FHD",
+      "channelId": "DE_DMAX",
+      "canonicalName": "DMAX",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: DMAX HD",
+      "channelId": "DE_DMAX",
+      "canonicalName": "DMAX",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "TLC HD",
+      "channelId": "DE_TLC",
+      "canonicalName": "TLC",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: TLC HD",
+      "channelId": "DE_TLC",
+      "canonicalName": "TLC",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "Sport 1",
+      "channelId": "DE_SPORT1",
+      "canonicalName": "SPORT1",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "SPORT1 HD",
+      "channelId": "DE_SPORT1",
+      "canonicalName": "SPORT1",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "Sport 1 HD",
+      "channelId": "DE_SPORT1",
+      "canonicalName": "SPORT1",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: SPORT1",
+      "channelId": "DE_SPORT1",
+      "canonicalName": "SPORT1",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "Eurosport",
+      "channelId": "DE_EUROSPORT_1",
+      "canonicalName": "Eurosport 1",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "Eurosport 1 HD",
+      "channelId": "DE_EUROSPORT_1",
+      "canonicalName": "Eurosport 1",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "Eurosport 1 Deutschland",
+      "channelId": "DE_EUROSPORT_1",
+      "canonicalName": "Eurosport 1",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: Eurosport 1",
+      "channelId": "DE_EUROSPORT_1",
+      "canonicalName": "Eurosport 1",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "Sky Sport News HD",
+      "channelId": "DE_SKY_SPORT_NEWS",
+      "canonicalName": "Sky Sport News",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: Sky Sport News HD",
+      "channelId": "DE_SKY_SPORT_NEWS",
+      "canonicalName": "Sky Sport News",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "Disney Channel HD",
+      "channelId": "DE_DISNEY_CHANNEL",
+      "canonicalName": "Disney Channel",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: Disney Channel HD",
+      "channelId": "DE_DISNEY_CHANNEL",
+      "canonicalName": "Disney Channel",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "Comedy Central HD",
+      "channelId": "DE_COMEDY_CENTRAL",
+      "canonicalName": "Comedy Central",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: Comedy Central",
+      "channelId": "DE_COMEDY_CENTRAL",
+      "canonicalName": "Comedy Central",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "MTV HD",
+      "channelId": "DE_MTV",
+      "canonicalName": "MTV",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "MTV Germany",
+      "channelId": "DE_MTV",
+      "canonicalName": "MTV",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: MTV HD",
+      "channelId": "DE_MTV",
+      "canonicalName": "MTV",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "Servus TV DE",
+      "channelId": "DE_SERVUSTV_DE",
+      "canonicalName": "ServusTV Deutschland",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "ServusTV DE HD",
+      "channelId": "DE_SERVUSTV_DE",
+      "canonicalName": "ServusTV Deutschland",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "DE: ServusTV",
+      "channelId": "DE_SERVUSTV_DE",
+      "canonicalName": "ServusTV Deutschland",
+      "countryCode": "DE",
+      "region": "DE-NAT"
+    },
+    {
+      "alias": "ORF1",
+      "channelId": "AT_ORF_1",
+      "canonicalName": "ORF 1",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "ORF 1 HD",
+      "channelId": "AT_ORF_1",
+      "canonicalName": "ORF 1",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "ORF1 HD",
+      "channelId": "AT_ORF_1",
+      "canonicalName": "ORF 1",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "ORF 1 FHD",
+      "channelId": "AT_ORF_1",
+      "canonicalName": "ORF 1",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "AT: ORF 1 HD",
+      "channelId": "AT_ORF_1",
+      "canonicalName": "ORF 1",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "AT| ORF 1 HD",
+      "channelId": "AT_ORF_1",
+      "canonicalName": "ORF 1",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "AT: ORF1",
+      "channelId": "AT_ORF_1",
+      "canonicalName": "ORF 1",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "ORF2",
+      "channelId": "AT_ORF_2",
+      "canonicalName": "ORF 2",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "ORF 2 HD",
+      "channelId": "AT_ORF_2",
+      "canonicalName": "ORF 2",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "ORF2 HD",
+      "channelId": "AT_ORF_2",
+      "canonicalName": "ORF 2",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "ORF 2 Europe",
+      "channelId": "AT_ORF_2",
+      "canonicalName": "ORF 2",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "AT: ORF 2 HD",
+      "channelId": "AT_ORF_2",
+      "canonicalName": "ORF 2",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "AT| ORF 2 HD",
+      "channelId": "AT_ORF_2",
+      "canonicalName": "ORF 2",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "ORF 2 B HD",
+      "channelId": "AT_ORF_2_BURGENLAND",
+      "canonicalName": "ORF 2 Burgenland",
+      "countryCode": "AT",
+      "region": "AT-BG"
+    },
+    {
+      "alias": "ORF 2 Burgenland HD",
+      "channelId": "AT_ORF_2_BURGENLAND",
+      "canonicalName": "ORF 2 Burgenland",
+      "countryCode": "AT",
+      "region": "AT-BG"
+    },
+    {
+      "alias": "AT: ORF 2 Burgenland",
+      "channelId": "AT_ORF_2_BURGENLAND",
+      "canonicalName": "ORF 2 Burgenland",
+      "countryCode": "AT",
+      "region": "AT-BG"
+    },
+    {
+      "alias": "ORF 2 K HD",
+      "channelId": "AT_ORF_2_KAERNTEN",
+      "canonicalName": "ORF 2 Kärnten",
+      "countryCode": "AT",
+      "region": "AT-KA"
+    },
+    {
+      "alias": "ORF 2 Kärnten HD",
+      "channelId": "AT_ORF_2_KAERNTEN",
+      "canonicalName": "ORF 2 Kärnten",
+      "countryCode": "AT",
+      "region": "AT-KA"
+    },
+    {
+      "alias": "ORF 2 Kaernten",
+      "channelId": "AT_ORF_2_KAERNTEN",
+      "canonicalName": "ORF 2 Kärnten",
+      "countryCode": "AT",
+      "region": "AT-KA"
+    },
+    {
+      "alias": "AT: ORF 2 Kärnten",
+      "channelId": "AT_ORF_2_KAERNTEN",
+      "canonicalName": "ORF 2 Kärnten",
+      "countryCode": "AT",
+      "region": "AT-KA"
+    },
+    {
+      "alias": "ORF 2 NÖ HD",
+      "channelId": "AT_ORF_2_NIEDEROESTERREICH",
+      "canonicalName": "ORF 2 Niederösterreich",
+      "countryCode": "AT",
+      "region": "AT-NO"
+    },
+    {
+      "alias": "ORF 2 NÖ",
+      "channelId": "AT_ORF_2_NIEDEROESTERREICH",
+      "canonicalName": "ORF 2 Niederösterreich",
+      "countryCode": "AT",
+      "region": "AT-NO"
+    },
+    {
+      "alias": "ORF 2 Niederösterreich HD",
+      "channelId": "AT_ORF_2_NIEDEROESTERREICH",
+      "canonicalName": "ORF 2 Niederösterreich",
+      "countryCode": "AT",
+      "region": "AT-NO"
+    },
+    {
+      "alias": "AT: ORF 2 NÖ",
+      "channelId": "AT_ORF_2_NIEDEROESTERREICH",
+      "canonicalName": "ORF 2 Niederösterreich",
+      "countryCode": "AT",
+      "region": "AT-NO"
+    },
+    {
+      "alias": "ORF 2 OÖ HD",
+      "channelId": "AT_ORF_2_OBEROESTERREICH",
+      "canonicalName": "ORF 2 Oberösterreich",
+      "countryCode": "AT",
+      "region": "AT-OO"
+    },
+    {
+      "alias": "ORF 2 OÖ",
+      "channelId": "AT_ORF_2_OBEROESTERREICH",
+      "canonicalName": "ORF 2 Oberösterreich",
+      "countryCode": "AT",
+      "region": "AT-OO"
+    },
+    {
+      "alias": "ORF 2 Oberösterreich HD",
+      "channelId": "AT_ORF_2_OBEROESTERREICH",
+      "canonicalName": "ORF 2 Oberösterreich",
+      "countryCode": "AT",
+      "region": "AT-OO"
+    },
+    {
+      "alias": "AT: ORF 2 OÖ",
+      "channelId": "AT_ORF_2_OBEROESTERREICH",
+      "canonicalName": "ORF 2 Oberösterreich",
+      "countryCode": "AT",
+      "region": "AT-OO"
+    },
+    {
+      "alias": "ORF 2 S HD",
+      "channelId": "AT_ORF_2_SALZBURG",
+      "canonicalName": "ORF 2 Salzburg",
+      "countryCode": "AT",
+      "region": "AT-SB"
+    },
+    {
+      "alias": "ORF 2 Salzburg HD",
+      "channelId": "AT_ORF_2_SALZBURG",
+      "canonicalName": "ORF 2 Salzburg",
+      "countryCode": "AT",
+      "region": "AT-SB"
+    },
+    {
+      "alias": "AT: ORF 2 Salzburg",
+      "channelId": "AT_ORF_2_SALZBURG",
+      "canonicalName": "ORF 2 Salzburg",
+      "countryCode": "AT",
+      "region": "AT-SB"
+    },
+    {
+      "alias": "ORF 2 St HD",
+      "channelId": "AT_ORF_2_STEIERMARK",
+      "canonicalName": "ORF 2 Steiermark",
+      "countryCode": "AT",
+      "region": "AT-ST"
+    },
+    {
+      "alias": "ORF 2 Steiermark HD",
+      "channelId": "AT_ORF_2_STEIERMARK",
+      "canonicalName": "ORF 2 Steiermark",
+      "countryCode": "AT",
+      "region": "AT-ST"
+    },
+    {
+      "alias": "AT: ORF 2 Steiermark",
+      "channelId": "AT_ORF_2_STEIERMARK",
+      "canonicalName": "ORF 2 Steiermark",
+      "countryCode": "AT",
+      "region": "AT-ST"
+    },
+    {
+      "alias": "ORF 2 T HD",
+      "channelId": "AT_ORF_2_TIROL",
+      "canonicalName": "ORF 2 Tirol",
+      "countryCode": "AT",
+      "region": "AT-TI"
+    },
+    {
+      "alias": "ORF 2 Tirol HD",
+      "channelId": "AT_ORF_2_TIROL",
+      "canonicalName": "ORF 2 Tirol",
+      "countryCode": "AT",
+      "region": "AT-TI"
+    },
+    {
+      "alias": "AT: ORF 2 Tirol",
+      "channelId": "AT_ORF_2_TIROL",
+      "canonicalName": "ORF 2 Tirol",
+      "countryCode": "AT",
+      "region": "AT-TI"
+    },
+    {
+      "alias": "ORF 2 V HD",
+      "channelId": "AT_ORF_2_VORARLBERG",
+      "canonicalName": "ORF 2 Vorarlberg",
+      "countryCode": "AT",
+      "region": "AT-VB"
+    },
+    {
+      "alias": "ORF 2 Vorarlberg HD",
+      "channelId": "AT_ORF_2_VORARLBERG",
+      "canonicalName": "ORF 2 Vorarlberg",
+      "countryCode": "AT",
+      "region": "AT-VB"
+    },
+    {
+      "alias": "AT: ORF 2 Vorarlberg",
+      "channelId": "AT_ORF_2_VORARLBERG",
+      "canonicalName": "ORF 2 Vorarlberg",
+      "countryCode": "AT",
+      "region": "AT-VB"
+    },
+    {
+      "alias": "ORF 2 W HD",
+      "channelId": "AT_ORF_2_WIEN",
+      "canonicalName": "ORF 2 Wien",
+      "countryCode": "AT",
+      "region": "AT-WI"
+    },
+    {
+      "alias": "ORF 2 Wien HD",
+      "channelId": "AT_ORF_2_WIEN",
+      "canonicalName": "ORF 2 Wien",
+      "countryCode": "AT",
+      "region": "AT-WI"
+    },
+    {
+      "alias": "AT: ORF 2 Wien",
+      "channelId": "AT_ORF_2_WIEN",
+      "canonicalName": "ORF 2 Wien",
+      "countryCode": "AT",
+      "region": "AT-WI"
+    },
+    {
+      "alias": "ORF 3",
+      "channelId": "AT_ORF_III",
+      "canonicalName": "ORF III",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "ORF3",
+      "channelId": "AT_ORF_III",
+      "canonicalName": "ORF III",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "ORF III HD",
+      "channelId": "AT_ORF_III",
+      "canonicalName": "ORF III",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "ORF 3 HD",
+      "channelId": "AT_ORF_III",
+      "canonicalName": "ORF III",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "AT: ORF III HD",
+      "channelId": "AT_ORF_III",
+      "canonicalName": "ORF III",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "AT: ORF 3",
+      "channelId": "AT_ORF_III",
+      "canonicalName": "ORF III",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "ORF Sport Plus",
+      "channelId": "AT_ORF_SPORT_PLUS",
+      "canonicalName": "ORF SPORT+",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "ORF Sport + HD",
+      "channelId": "AT_ORF_SPORT_PLUS",
+      "canonicalName": "ORF SPORT+",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "ORF Sport Plus HD",
+      "channelId": "AT_ORF_SPORT_PLUS",
+      "canonicalName": "ORF SPORT+",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "AT: ORF SPORT+ HD",
+      "channelId": "AT_ORF_SPORT_PLUS",
+      "canonicalName": "ORF SPORT+",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "ServusTV HD",
+      "channelId": "AT_SERVUSTV",
+      "canonicalName": "ServusTV",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "ServusTV Österreich",
+      "channelId": "AT_SERVUSTV",
+      "canonicalName": "ServusTV",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "Servus TV Österreich HD",
+      "channelId": "AT_SERVUSTV",
+      "canonicalName": "ServusTV",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "AT: ServusTV HD",
+      "channelId": "AT_SERVUSTV",
+      "canonicalName": "ServusTV",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "AT| ServusTV HD",
+      "channelId": "AT_SERVUSTV",
+      "canonicalName": "ServusTV",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "PULS4",
+      "channelId": "AT_PULS_4",
+      "canonicalName": "PULS 4",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "PULS 4 HD",
+      "channelId": "AT_PULS_4",
+      "canonicalName": "PULS 4",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "PULS4 HD",
+      "channelId": "AT_PULS_4",
+      "canonicalName": "PULS 4",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "AT: PULS 4 HD",
+      "channelId": "AT_PULS_4",
+      "canonicalName": "PULS 4",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "AT| PULS 4 HD",
+      "channelId": "AT_PULS_4",
+      "canonicalName": "PULS 4",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "ATV HD",
+      "channelId": "AT_ATV",
+      "canonicalName": "ATV",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "ATV Österreich",
+      "channelId": "AT_ATV",
+      "canonicalName": "ATV",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "AT: ATV HD",
+      "channelId": "AT_ATV",
+      "canonicalName": "ATV",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "AT| ATV HD",
+      "channelId": "AT_ATV",
+      "canonicalName": "ATV",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "ATV2",
+      "channelId": "AT_ATV2",
+      "canonicalName": "ATV II",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "ATV 2",
+      "channelId": "AT_ATV2",
+      "canonicalName": "ATV II",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "ATV II HD",
+      "channelId": "AT_ATV2",
+      "canonicalName": "ATV II",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "ATV 2 HD",
+      "channelId": "AT_ATV2",
+      "canonicalName": "ATV II",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "AT: ATV2 HD",
+      "channelId": "AT_ATV2",
+      "canonicalName": "ATV II",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "PULS24",
+      "channelId": "AT_PULS_24",
+      "canonicalName": "PULS 24",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "PULS 24 HD",
+      "channelId": "AT_PULS_24",
+      "canonicalName": "PULS 24",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "PULS24 HD",
+      "channelId": "AT_PULS_24",
+      "canonicalName": "PULS 24",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "AT: PULS 24 HD",
+      "channelId": "AT_PULS_24",
+      "canonicalName": "PULS 24",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "oe24",
+      "channelId": "AT_OE24_TV",
+      "canonicalName": "oe24.TV",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "oe24 TV",
+      "channelId": "AT_OE24_TV",
+      "canonicalName": "oe24.TV",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "oe24.TV HD",
+      "channelId": "AT_OE24_TV",
+      "canonicalName": "oe24.TV",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "AT: oe24.TV HD",
+      "channelId": "AT_OE24_TV",
+      "canonicalName": "oe24.TV",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "Kurier TV HD",
+      "channelId": "AT_KURIER_TV",
+      "canonicalName": "KURIER TV",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "AT: KURIER TV",
+      "channelId": "AT_KURIER_TV",
+      "canonicalName": "KURIER TV",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "krone.tv",
+      "channelId": "AT_KRONE_TV",
+      "canonicalName": "Krone TV",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "Krone TV HD",
+      "channelId": "AT_KRONE_TV",
+      "canonicalName": "Krone TV",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "AT: Krone TV",
+      "channelId": "AT_KRONE_TV",
+      "canonicalName": "Krone TV",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "W24 HD",
+      "channelId": "AT_W24",
+      "canonicalName": "W24",
+      "countryCode": "AT",
+      "region": "AT-WI"
+    },
+    {
+      "alias": "W24 Wien",
+      "channelId": "AT_W24",
+      "canonicalName": "W24",
+      "countryCode": "AT",
+      "region": "AT-WI"
+    },
+    {
+      "alias": "AT: W24 HD",
+      "channelId": "AT_W24",
+      "canonicalName": "W24",
+      "countryCode": "AT",
+      "region": "AT-WI"
+    },
+    {
+      "alias": "LAOLA1.TV",
+      "channelId": "AT_LAOLA1",
+      "canonicalName": "LAOLA1",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "LAOLA1 HD",
+      "channelId": "AT_LAOLA1",
+      "canonicalName": "LAOLA1",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "AT: LAOLA1 HD",
+      "channelId": "AT_LAOLA1",
+      "canonicalName": "LAOLA1",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "Red Bull TV HD",
+      "channelId": "AT_RED_BULL_TV",
+      "canonicalName": "Red Bull TV",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "AT: Red Bull TV",
+      "channelId": "AT_RED_BULL_TV",
+      "canonicalName": "Red Bull TV",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "Kanal 3 Steiermark",
+      "channelId": "AT_STEIERMARK_TV",
+      "canonicalName": "Steiermark TV",
+      "countryCode": "AT",
+      "region": "AT-ST"
+    },
+    {
+      "alias": "Steiermark TV HD",
+      "channelId": "AT_STEIERMARK_TV",
+      "canonicalName": "Steiermark TV",
+      "countryCode": "AT",
+      "region": "AT-ST"
+    },
+    {
+      "alias": "AT: Steiermark TV",
+      "channelId": "AT_STEIERMARK_TV",
+      "canonicalName": "Steiermark TV",
+      "countryCode": "AT",
+      "region": "AT-ST"
+    },
+    {
+      "alias": "Tirol TV HD",
+      "channelId": "AT_TIROL_TV",
+      "canonicalName": "Tirol TV",
+      "countryCode": "AT",
+      "region": "AT-TI"
+    },
+    {
+      "alias": "AT: Tirol TV",
+      "channelId": "AT_TIROL_TV",
+      "canonicalName": "Tirol TV",
+      "countryCode": "AT",
+      "region": "AT-TI"
+    },
+    {
+      "alias": "LT1 OÖ",
+      "channelId": "AT_LT1",
+      "canonicalName": "LT1",
+      "countryCode": "AT",
+      "region": "AT-OO"
+    },
+    {
+      "alias": "LT1 HD",
+      "channelId": "AT_LT1",
+      "canonicalName": "LT1",
+      "countryCode": "AT",
+      "region": "AT-OO"
+    },
+    {
+      "alias": "AT: LT1 HD",
+      "channelId": "AT_LT1",
+      "canonicalName": "LT1",
+      "countryCode": "AT",
+      "region": "AT-OO"
+    },
+    {
+      "alias": "RTL Österreich",
+      "channelId": "AT_RTL_AUSTRIA",
+      "canonicalName": "RTL Austria",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "RTL AT HD",
+      "channelId": "AT_RTL_AUSTRIA",
+      "canonicalName": "RTL Austria",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "AT: RTL HD",
+      "channelId": "AT_RTL_AUSTRIA",
+      "canonicalName": "RTL Austria",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "SAT 1 Österreich",
+      "channelId": "AT_SAT1_OESTERREICH",
+      "canonicalName": "SAT.1 Österreich",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "SAT.1 Austria",
+      "channelId": "AT_SAT1_OESTERREICH",
+      "canonicalName": "SAT.1 Österreich",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "SAT.1 AT HD",
+      "channelId": "AT_SAT1_OESTERREICH",
+      "canonicalName": "SAT.1 Österreich",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "AT: SAT.1 HD",
+      "channelId": "AT_SAT1_OESTERREICH",
+      "canonicalName": "SAT.1 Österreich",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "Pro 7 Austria",
+      "channelId": "AT_PROSIEBEN_AUSTRIA",
+      "canonicalName": "ProSieben Austria",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "Pro7 AT",
+      "channelId": "AT_PROSIEBEN_AUSTRIA",
+      "canonicalName": "ProSieben Austria",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "ProSieben AT HD",
+      "channelId": "AT_PROSIEBEN_AUSTRIA",
+      "canonicalName": "ProSieben Austria",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "AT: ProSieben HD",
+      "channelId": "AT_PROSIEBEN_AUSTRIA",
+      "canonicalName": "ProSieben Austria",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "VOX Österreich",
+      "channelId": "AT_VOX_AUSTRIA",
+      "canonicalName": "VOX Austria",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "VOX AT HD",
+      "channelId": "AT_VOX_AUSTRIA",
+      "canonicalName": "VOX Austria",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "AT: VOX HD",
+      "channelId": "AT_VOX_AUSTRIA",
+      "canonicalName": "VOX Austria",
+      "countryCode": "AT",
+      "region": "AT-NAT"
+    },
+    {
+      "alias": "SRF1",
+      "channelId": "CH_SRF_1",
+      "canonicalName": "SRF 1",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "SRF 1 HD",
+      "channelId": "CH_SRF_1",
+      "canonicalName": "SRF 1",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "SRF1 HD",
+      "channelId": "CH_SRF_1",
+      "canonicalName": "SRF 1",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "CH: SRF 1 HD",
+      "channelId": "CH_SRF_1",
+      "canonicalName": "SRF 1",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "CH| SRF 1 HD",
+      "channelId": "CH_SRF_1",
+      "canonicalName": "SRF 1",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "SRF 2",
+      "channelId": "CH_SRF_ZWEI",
+      "canonicalName": "SRF zwei",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "SRF2",
+      "channelId": "CH_SRF_ZWEI",
+      "canonicalName": "SRF zwei",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "SRF zwei HD",
+      "channelId": "CH_SRF_ZWEI",
+      "canonicalName": "SRF zwei",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "SRF 2 HD",
+      "channelId": "CH_SRF_ZWEI",
+      "canonicalName": "SRF zwei",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "CH: SRF zwei HD",
+      "channelId": "CH_SRF_ZWEI",
+      "canonicalName": "SRF zwei",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "CH| SRF 2 HD",
+      "channelId": "CH_SRF_ZWEI",
+      "canonicalName": "SRF zwei",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "SRFinfo",
+      "channelId": "CH_SRF_INFO",
+      "canonicalName": "SRF info",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "SRF info HD",
+      "channelId": "CH_SRF_INFO",
+      "canonicalName": "SRF info",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "CH: SRF info HD",
+      "channelId": "CH_SRF_INFO",
+      "canonicalName": "SRF info",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "3plus",
+      "channelId": "CH_3_PLUS",
+      "canonicalName": "3+",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "3 Plus",
+      "channelId": "CH_3_PLUS",
+      "canonicalName": "3+",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "3+ HD",
+      "channelId": "CH_3_PLUS",
+      "canonicalName": "3+",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "CH: 3+ HD",
+      "channelId": "CH_3_PLUS",
+      "canonicalName": "3+",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "CH| 3+ HD",
+      "channelId": "CH_3_PLUS",
+      "canonicalName": "3+",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "4plus",
+      "channelId": "CH_4_PLUS",
+      "canonicalName": "4+",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "4 Plus",
+      "channelId": "CH_4_PLUS",
+      "canonicalName": "4+",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "4+ HD",
+      "channelId": "CH_4_PLUS",
+      "canonicalName": "4+",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "CH: 4+ HD",
+      "channelId": "CH_4_PLUS",
+      "canonicalName": "4+",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "5plus",
+      "channelId": "CH_5_PLUS",
+      "canonicalName": "5+",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "5 Plus",
+      "channelId": "CH_5_PLUS",
+      "canonicalName": "5+",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "5+ HD",
+      "channelId": "CH_5_PLUS",
+      "canonicalName": "5+",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "CH: 5+ HD",
+      "channelId": "CH_5_PLUS",
+      "canonicalName": "5+",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "6plus",
+      "channelId": "CH_6_PLUS",
+      "canonicalName": "6+",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "6 Plus",
+      "channelId": "CH_6_PLUS",
+      "canonicalName": "6+",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "6+ HD",
+      "channelId": "CH_6_PLUS",
+      "canonicalName": "6+",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "CH: 6+ HD",
+      "channelId": "CH_6_PLUS",
+      "canonicalName": "6+",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "7plus",
+      "channelId": "CH_7_PLUS",
+      "canonicalName": "7+",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "7 Plus",
+      "channelId": "CH_7_PLUS",
+      "canonicalName": "7+",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "7+ HD",
+      "channelId": "CH_7_PLUS",
+      "canonicalName": "7+",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "CH: 7+ HD",
+      "channelId": "CH_7_PLUS",
+      "canonicalName": "7+",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "Puls8",
+      "channelId": "CH_PULS_8",
+      "canonicalName": "Puls 8",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "Puls 8 HD",
+      "channelId": "CH_PULS_8",
+      "canonicalName": "Puls 8",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "CH: Puls 8 HD",
+      "channelId": "CH_PULS_8",
+      "canonicalName": "Puls 8",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "TV 24",
+      "channelId": "CH_TV24",
+      "canonicalName": "TV24",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "TV24 HD",
+      "channelId": "CH_TV24",
+      "canonicalName": "TV24",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "CH: TV24 HD",
+      "channelId": "CH_TV24",
+      "canonicalName": "TV24",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "TV 25",
+      "channelId": "CH_TV25",
+      "canonicalName": "TV25",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "TV25 HD",
+      "channelId": "CH_TV25",
+      "canonicalName": "TV25",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "CH: TV25 HD",
+      "channelId": "CH_TV25",
+      "canonicalName": "TV25",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "Star TV HD",
+      "channelId": "CH_STAR_TV",
+      "canonicalName": "Star TV",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "CH: Star TV",
+      "channelId": "CH_STAR_TV",
+      "canonicalName": "Star TV",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "S1 TV",
+      "channelId": "CH_S1",
+      "canonicalName": "S1",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "Schweiz 1",
+      "channelId": "CH_S1",
+      "canonicalName": "S1",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "CH: S1 HD",
+      "channelId": "CH_S1",
+      "canonicalName": "S1",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "Tele Zueri",
+      "channelId": "CH_TELEZUERI",
+      "canonicalName": "TeleZüri",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "Tele Züri HD",
+      "channelId": "CH_TELEZUERI",
+      "canonicalName": "TeleZüri",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "CH: TeleZüri HD",
+      "channelId": "CH_TELEZUERI",
+      "canonicalName": "TeleZüri",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "Tele Baern",
+      "channelId": "CH_TELEBAERN",
+      "canonicalName": "TeleBärn",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "TeleBärn HD",
+      "channelId": "CH_TELEBAERN",
+      "canonicalName": "TeleBärn",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "CH: TeleBärn HD",
+      "channelId": "CH_TELEBAERN",
+      "canonicalName": "TeleBärn",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "Tele M1 HD",
+      "channelId": "CH_TELE_M1",
+      "canonicalName": "Tele M1",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "CH: Tele M1",
+      "channelId": "CH_TELE_M1",
+      "canonicalName": "Tele M1",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "Tele Basel",
+      "channelId": "CH_TELEBASEL",
+      "canonicalName": "Telebasel",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "Telebasel HD",
+      "channelId": "CH_TELEBASEL",
+      "canonicalName": "Telebasel",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "CH: Telebasel",
+      "channelId": "CH_TELEBASEL",
+      "canonicalName": "Telebasel",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "Tele Top HD",
+      "channelId": "CH_TELE_TOP",
+      "canonicalName": "Tele Top",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "CH: Tele Top",
+      "channelId": "CH_TELE_TOP",
+      "canonicalName": "Tele Top",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "RTS Un",
+      "channelId": "CH_RTS_1",
+      "canonicalName": "RTS 1",
+      "countryCode": "CH",
+      "region": "FR-CH"
+    },
+    {
+      "alias": "RTS 1 HD",
+      "channelId": "CH_RTS_1",
+      "canonicalName": "RTS 1",
+      "countryCode": "CH",
+      "region": "FR-CH"
+    },
+    {
+      "alias": "RTS Un HD",
+      "channelId": "CH_RTS_1",
+      "canonicalName": "RTS 1",
+      "countryCode": "CH",
+      "region": "FR-CH"
+    },
+    {
+      "alias": "CH: RTS 1 HD",
+      "channelId": "CH_RTS_1",
+      "canonicalName": "RTS 1",
+      "countryCode": "CH",
+      "region": "FR-CH"
+    },
+    {
+      "alias": "CH| RTS 1 HD",
+      "channelId": "CH_RTS_1",
+      "canonicalName": "RTS 1",
+      "countryCode": "CH",
+      "region": "FR-CH"
+    },
+    {
+      "alias": "RTS Deux",
+      "channelId": "CH_RTS_2",
+      "canonicalName": "RTS 2",
+      "countryCode": "CH",
+      "region": "FR-CH"
+    },
+    {
+      "alias": "RTS 2 HD",
+      "channelId": "CH_RTS_2",
+      "canonicalName": "RTS 2",
+      "countryCode": "CH",
+      "region": "FR-CH"
+    },
+    {
+      "alias": "RTS Deux HD",
+      "channelId": "CH_RTS_2",
+      "canonicalName": "RTS 2",
+      "countryCode": "CH",
+      "region": "FR-CH"
+    },
+    {
+      "alias": "CH: RTS 2 HD",
+      "channelId": "CH_RTS_2",
+      "canonicalName": "RTS 2",
+      "countryCode": "CH",
+      "region": "FR-CH"
+    },
+    {
+      "alias": "RTS Info HD",
+      "channelId": "CH_RTS_INFO",
+      "canonicalName": "RTS Info",
+      "countryCode": "CH",
+      "region": "FR-CH"
+    },
+    {
+      "alias": "CH: RTS Info",
+      "channelId": "CH_RTS_INFO",
+      "canonicalName": "RTS Info",
+      "countryCode": "CH",
+      "region": "FR-CH"
+    },
+    {
+      "alias": "Leman Bleu",
+      "channelId": "CH_LEMAN_BLEU",
+      "canonicalName": "Léman Bleu",
+      "countryCode": "CH",
+      "region": "FR-CH"
+    },
+    {
+      "alias": "Léman Bleu HD",
+      "channelId": "CH_LEMAN_BLEU",
+      "canonicalName": "Léman Bleu",
+      "countryCode": "CH",
+      "region": "FR-CH"
+    },
+    {
+      "alias": "CH: Léman Bleu",
+      "channelId": "CH_LEMAN_BLEU",
+      "canonicalName": "Léman Bleu",
+      "countryCode": "CH",
+      "region": "FR-CH"
+    },
+    {
+      "alias": "RSI LA1",
+      "channelId": "CH_RSI_LA_1",
+      "canonicalName": "RSI LA 1",
+      "countryCode": "CH",
+      "region": "IT-CH"
+    },
+    {
+      "alias": "RSI LA 1 HD",
+      "channelId": "CH_RSI_LA_1",
+      "canonicalName": "RSI LA 1",
+      "countryCode": "CH",
+      "region": "IT-CH"
+    },
+    {
+      "alias": "CH: RSI LA 1 HD",
+      "channelId": "CH_RSI_LA_1",
+      "canonicalName": "RSI LA 1",
+      "countryCode": "CH",
+      "region": "IT-CH"
+    },
+    {
+      "alias": "CH| RSI LA 1 HD",
+      "channelId": "CH_RSI_LA_1",
+      "canonicalName": "RSI LA 1",
+      "countryCode": "CH",
+      "region": "IT-CH"
+    },
+    {
+      "alias": "RSI LA2",
+      "channelId": "CH_RSI_LA_2",
+      "canonicalName": "RSI LA 2",
+      "countryCode": "CH",
+      "region": "IT-CH"
+    },
+    {
+      "alias": "RSI LA 2 HD",
+      "channelId": "CH_RSI_LA_2",
+      "canonicalName": "RSI LA 2",
+      "countryCode": "CH",
+      "region": "IT-CH"
+    },
+    {
+      "alias": "CH: RSI LA 2 HD",
+      "channelId": "CH_RSI_LA_2",
+      "canonicalName": "RSI LA 2",
+      "countryCode": "CH",
+      "region": "IT-CH"
+    },
+    {
+      "alias": "RTR Telesguard",
+      "channelId": "CH_RTR",
+      "canonicalName": "RTR",
+      "countryCode": "CH",
+      "region": "RM-CH"
+    },
+    {
+      "alias": "RTR TV",
+      "channelId": "CH_RTR",
+      "canonicalName": "RTR",
+      "countryCode": "CH",
+      "region": "RM-CH"
+    },
+    {
+      "alias": "CH: RTR",
+      "channelId": "CH_RTR",
+      "canonicalName": "RTR",
+      "countryCode": "CH",
+      "region": "RM-CH"
+    },
+    {
+      "alias": "RTL CH HD",
+      "channelId": "CH_RTL_SCHWEIZ",
+      "canonicalName": "RTL Schweiz",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "CH: RTL HD",
+      "channelId": "CH_RTL_SCHWEIZ",
+      "canonicalName": "RTL Schweiz",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "SAT 1 Schweiz",
+      "channelId": "CH_SAT1_SCHWEIZ",
+      "canonicalName": "SAT.1 Schweiz",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "SAT.1 CH HD",
+      "channelId": "CH_SAT1_SCHWEIZ",
+      "canonicalName": "SAT.1 Schweiz",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "CH: SAT.1 HD",
+      "channelId": "CH_SAT1_SCHWEIZ",
+      "canonicalName": "SAT.1 Schweiz",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "Pro 7 Schweiz",
+      "channelId": "CH_PROSIEBEN_SCHWEIZ",
+      "canonicalName": "ProSieben Schweiz",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "ProSieben CH HD",
+      "channelId": "CH_PROSIEBEN_SCHWEIZ",
+      "canonicalName": "ProSieben Schweiz",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    },
+    {
+      "alias": "CH: ProSieben HD",
+      "channelId": "CH_PROSIEBEN_SCHWEIZ",
+      "canonicalName": "ProSieben Schweiz",
+      "countryCode": "CH",
+      "region": "DE-CH"
+    }
+  ],
+  "qualityTagsStripping": [
+    "HD",
+    "FHD",
+    "UHD",
+    "4K",
+    "SD",
+    "HEVC",
+    "H264",
+    "H265",
+    "1080P",
+    "720P",
+    "50FPS",
+    "60FPS",
+    "RAW",
+    "HDR"
+  ]
+}
