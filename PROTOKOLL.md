@@ -16,6 +16,24 @@
 
 ## Sektion 3 – CHRONOLOGISCHES LOG
 
+### 2026-11-19 – Web TV: PIN-Entfernung, 17 offizielle Mediatheken/Portale & Standardbrowser-Button
+- **Erledigte Aufgaben:**
+  - Beide Web-TV-PIN-Abfragen vollständig entfernt: Sperrbildschirm (`WebTvPinLockScreen`) + „Sperren“-Button in `WebStreamBrowserView.kt` sowie die Web-TV-PIN-Sperre in `SettingsView.kt`. Der allgemeine App-Installations-PIN (`1971`) und sonstige PINs bleiben unverändert aktiv.
+  - Alle bisherigen Web-TV-Altseiten (`2ix2.com`, `kool.to`, `kool.ws`, `movie2k.cx`, `megakino18.com`, `nydus.org`, `tele24seven.com`) aus `WebTvSitesManager.kt` und `WebStreamBrowserView.kt` restlos entfernt; `SharedPreferences`-Key auf `web_tv_sites_json_v2` migriert, sodass bestehende Installationen automatisch auf den neuen Bestand umstellen.
+  - Exakt **17 deduplizierte offizielle Webseiten** mit sauberen deutschen Titeln, Kategorien, Badges und Emojis hinterlegt (ARD Mediathek, ZDF, 3sat Programm, ARTE, WELT Mediathek, DF1 Live, TELE 5 Mediathek, ServusTV, Joyn Mediatheken, SendungVerpasst.de, DMAX, WDR Aktuelle Stunde, hr-fernsehen, KiKA Kinderfilme, netzwelt Mediathek, ARD YouTube, ZDF YouTube).
+  - Ersten Unter-Tab von *„2ix2 & Web TV“* auf **„Mediatheken & TV“** umbenannt und dynamisch aus `WebTvSitesManager.sitesFlow` gespeist; Standard-Startseite des In-App-Browsers auf `https://www.ardmediathek.de/` umgestellt.
+  - Neuen Button **„Standardbrowser“ / „Im Standardbrowser öffnen“** (`ACTION_VIEW` + `CATEGORY_BROWSABLE`) in den Webseiten-Karten, der Kachel-Übersicht, der freien URL-Eingabe sowie in der Toolbar und der Vollbild-Steuerleiste des In-App-Browsers ergänzt.
+- **Geänderte Dateien:**
+  - `app/src/main/java/com/example/data/storage/WebTvSitesManager.kt`, `app/src/main/java/com/example/ui/components/SettingsView.kt`, `app/src/main/java/com/example/ui/components/WebStreamBrowserView.kt`, `FUNKTIONSUEBERSICHT.md`, `PROTOKOLL.md`
+
+### 2026-11-19 – Live TV Light EPG: Responsive & variable Kartenhöhe auf Smartphones (`TvEpgScreen.kt`)
+- **Erledigte Aufgaben:**
+  - Ursache behoben: In `EpgChannelProgramCard` lagen Logo, Sender-Badges und alle 4 Aktions-Buttons in einer einzigen `Row`, wodurch schmale Handy-Displays die Badges vertikal umbrechen ließen, die Karte stark aufblähten und das Senderlogo vertikal in die Mitte rutschte.
+  - `EpgChannelProgramCard` per `BoxWithConstraints` (`< 540 dp`) auf ein kompaktes Smartphone-Layout mit variabler, inhaltsabhängiger Höhe (`wrapContentHeight`) umgestellt: Logo oben links bündig, Sendername/Badges/Uhrzeit einzeilig ohne Umbruch, Sendungstitel, optionale Beschreibung (`0 dp` wenn leer), Live-Fortschritt, *„Gleich danach“* und eigene kompakte Aktionsleiste unten; das breite Android-TV-Layout bleibt ab `540 dp` erhalten.
+  - `epg_auto_update_bar`, `EpgChannelTimelineRowCard` und `EpgProgramDetailDialog` ebenfalls responsiv mit variabler Höhe (max. `84 %` Bildschirmhöhe + scrollbarer Inhalt + Sticky Header/Footer) abgesichert.
+- **Geänderte Dateien:**
+  - `app/src/main/java/com/example/androidtvlight/ui/screens/TvEpgScreen.kt`, `FUNKTIONSUEBERSICHT.md`, `PROTOKOLL.md`
+
 ### 2026-11-19 – Umbenennung zu „MaD IPTV public“, Paketpfad `iptv.publicapp`, Download-Ordner & neues App-Icon / Android-TV-Banner
 - **Erledigte Aufgaben:**
   - App-Name in `app/src/main/res/values/strings.xml`, `settings.gradle.kts`, `metadata.json` sowie im In-App-Branding (`SettingsView.kt`, `TopBarSection.kt`, `TvNavigationRail.kt`, `StreamPlaybackService.kt`, `PlaylistBackupManager.kt`) auf **MaD IPTV public** umgestellt.

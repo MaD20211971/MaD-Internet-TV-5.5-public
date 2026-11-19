@@ -63,7 +63,6 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.automirrored.filled.OpenInNew
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.Backspace
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.ChromeReaderMode
 import androidx.compose.material.icons.filled.Close
@@ -77,13 +76,11 @@ import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Language
 import androidx.compose.material.icons.filled.Launch
 import androidx.compose.material.icons.filled.LiveTv
-import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.Movie
 import androidx.compose.material.icons.filled.OpenInBrowser
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.PlayCircle
 import androidx.compose.material.icons.filled.Refresh
-import androidx.compose.material.icons.filled.Security
 import androidx.compose.material.icons.filled.SmartDisplay
 import androidx.compose.material.icons.filled.Smartphone
 import androidx.compose.material.icons.filled.Speed
@@ -133,8 +130,6 @@ import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
-import androidx.compose.ui.text.input.KeyboardType
-import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -163,8 +158,6 @@ import okhttp3.Request
 import java.io.ByteArrayInputStream
 import java.util.concurrent.TimeUnit
 
-private const val WEB_TV_PIN_CODE = "1971"
-
 data class WebPortalPreset(
     val name: String,
     val url: String,
@@ -182,14 +175,13 @@ data class DirectWebChannel(
     val streamUrl: String,
     val webUrl: String,
     val logoTag: String,
-    val resolution: String = "1080p HD",
-    val is2ix2: Boolean = true
+    val resolution: String = "Web TV"
 )
 
 enum class WebTvMode {
-    DIRECT_CHANNELS,   // 100% crash-safe direct stream player (Nexus HD Player)
-    CUSTOM_TAB_PORTAL, // Chrome Custom Tab High-Speed Browser (Android 16 / S25 Ultra Optimized)
-    SAFE_EMBEDDED      // Sandboxed In-App WebView with Full Crash Guards
+    DIRECT_CHANNELS,   // Schnellübersicht aller Mediatheken & TV-Webseiten nach Kategorien
+    CUSTOM_TAB_PORTAL, // Webseiten-Verwaltung & Direktstart (In-App, Standardbrowser, Custom Tab)
+    SAFE_EMBEDDED      // Sandboxed In-App WebView mit Vollbildmodus
 }
 
 @SuppressLint("SetJavaScriptEnabled")
@@ -199,22 +191,6 @@ fun WebStreamBrowserView(
     onWebFullscreenChanged: (Boolean) -> Unit = {},
     isEnglish: Boolean = false
 ) {
-    // Strikter PIN-Schutz für die Rubrik Web TV (PIN: 1971, 12-Stellen-Vorlage):
-    // Solange nicht entsperrt, wird keinerlei Web-TV-Inhalt gerendert oder preisgegeben.
-    var isWebTvUnlocked by remember { mutableStateOf(false) }
-
-    if (!isWebTvUnlocked) {
-        LaunchedEffect(Unit) {
-            onWebFullscreenChanged(false)
-        }
-        WebTvPinLockScreen(
-            expectedPin = WEB_TV_PIN_CODE,
-            onPinSuccess = { isWebTvUnlocked = true },
-            isEnglish = isEnglish
-        )
-        return
-    }
-
     val context = LocalContext.current
     val hostView = LocalView.current
 
@@ -227,7 +203,7 @@ fun WebStreamBrowserView(
     var isEmbeddedFullscreen by remember { mutableStateOf(true) }
     var showAddSiteDialog by remember { mutableStateOf(false) }
     var siteToEdit by remember { mutableStateOf<WebTvSiteItem?>(null) }
-    var inAppTargetUrl by remember { mutableStateOf("http://kool.to/") }
+    var inAppTargetUrl by remember { mutableStateOf("https://www.ardmediathek.de/") }
 
     val isFullWebViewActive = selectedMode == WebTvMode.SAFE_EMBEDDED && isEmbeddedFullscreen
 
@@ -256,321 +232,40 @@ fun WebStreamBrowserView(
         }
     }
 
-    // Direct, crystal clear 2ix2 & DACH Web TV Channels (native Nexus Player streams)
-    val directChannels = remember {
-        listOf(
+    // Dynamische Kachel-Übersicht direkt aus den aktuell gespeicherten Web TV Webseiten
+    val directChannels = remember(webTvSites) {
+        webTvSites.map { site ->
             DirectWebChannel(
-                id = "ard",
-                name = "Das Erste (ARD)",
-                category = "Öffentlich-Rechtlich",
-                streamUrl = "https://mcdn.daserste.de/daserste/de/master.m3u8",
-                webUrl = "https://www.2ix2.com/das-erste-live-stream/",
-                logoTag = "ARD"
-            ),
-            DirectWebChannel(
-                id = "zdf",
-                name = "ZDF HD",
-                category = "Öffentlich-Rechtlich",
-                streamUrl = "https://zdf-hls-15.akamaized.net/hls/live/2016498/de/veryhigh/master.m3u8",
-                webUrl = "https://www.2ix2.com/zdf-live-stream/",
-                logoTag = "ZDF"
-            ),
-            DirectWebChannel(
-                id = "arte",
-                name = "ARTE Deutsch HD",
-                category = "Kultur & Doku",
-                streamUrl = "https://artesimulcast.akamaized.net/hls/live/2031003/artelive_de/master.m3u8",
-                webUrl = "https://www.2ix2.com/arte-live-stream/",
-                logoTag = "ARTE"
-            ),
-            DirectWebChannel(
-                id = "3sat",
-                name = "3sat HD",
-                category = "Kultur & Doku",
-                streamUrl = "https://zdf-hls-18.akamaized.net/hls/live/2016501/de/veryhigh/master.m3u8",
-                webUrl = "https://www.2ix2.com/3sat-live-stream/",
-                logoTag = "3SAT"
-            ),
-            DirectWebChannel(
-                id = "kika",
-                name = "KiKA Kinderkanal HD",
-                category = "Kinder",
-                streamUrl = "https://kika-hls.akamaized.net/hls/live/2022693/live/master.m3u8",
-                webUrl = "https://www.2ix2.com/kika-live-stream/",
-                logoTag = "KIKA"
-            ),
-            DirectWebChannel(
-                id = "phoenix",
-                name = "PHOENIX HD",
-                category = "Doku & Politik",
-                streamUrl = "https://zdf-hls-19.akamaized.net/hls/live/2016502/de/veryhigh/master.m3u8",
-                webUrl = "https://www.2ix2.com/phoenix-live-stream/",
-                logoTag = "PHOENIX"
-            ),
-            DirectWebChannel(
-                id = "tagesschau24",
-                name = "tagesschau24 HD",
-                category = "Nachrichten",
-                streamUrl = "https://tagesschau.akamaized.net/hls/live/2020115/tagesschau/tagesschau_1/master.m3u8",
-                webUrl = "https://www.2ix2.com/tagesschau24-live-stream/",
-                logoTag = "TS24"
-            ),
-            DirectWebChannel(
-                id = "welt",
-                name = "WELT Nachrichtensender",
-                category = "Nachrichten",
-                streamUrl = "https://live2.welt.de/live2/hls/master.m3u8",
-                webUrl = "https://www.2ix2.com/welt-live-stream/",
-                logoTag = "WELT"
-            ),
-            DirectWebChannel(
-                id = "zdfinfo",
-                name = "ZDFinfo HD",
-                category = "Doku & Wissen",
-                streamUrl = "https://zdf-hls-17.akamaized.net/hls/live/2016500/de/veryhigh/master.m3u8",
-                webUrl = "https://www.2ix2.com/zdfinfo-live-stream/",
-                logoTag = "INFO"
-            ),
-            DirectWebChannel(
-                id = "zdfneo",
-                name = "ZDFneo HD",
-                category = "Unterhaltung",
-                streamUrl = "https://zdf-hls-16.akamaized.net/hls/live/2016499/de/veryhigh/master.m3u8",
-                webUrl = "https://www.2ix2.com/zdfneo-live-stream/",
-                logoTag = "NEO"
-            ),
-            DirectWebChannel(
-                id = "wdr",
-                name = "WDR Köln HD",
-                category = "Regional (Drittes)",
-                streamUrl = "https://wdrfsgeo.akamaized.net/hls/live/2015750/wdrfsgeo/master.m3u8",
-                webUrl = "https://www.2ix2.com/wdr-live-stream/",
-                logoTag = "WDR"
-            ),
-            DirectWebChannel(
-                id = "ndr",
-                name = "NDR Fernsehen HD",
-                category = "Regional (Drittes)",
-                streamUrl = "https://ndrfs-lh.akamaihd.net/i/ndrfs_nds@430233/master.m3u8",
-                webUrl = "https://www.2ix2.com/ndr-live-stream/",
-                logoTag = "NDR"
-            ),
-            DirectWebChannel(
-                id = "swr",
-                name = "SWR Fernsehen BW HD",
-                category = "Regional (Drittes)",
-                streamUrl = "https://swrbw-hls.akamaized.net/hls/live/2018674/swrbw/master.m3u8",
-                webUrl = "https://www.2ix2.com/swr-live-stream/",
-                logoTag = "SWR"
-            ),
-            DirectWebChannel(
-                id = "br",
-                name = "BR Fernsehen Süd HD",
-                category = "Regional (Drittes)",
-                streamUrl = "https://brfs-lh.akamaihd.net/i/brfs_sued@119890/master.m3u8",
-                webUrl = "https://www.2ix2.com/br-live-stream/",
-                logoTag = "BR"
-            ),
-            DirectWebChannel(
-                id = "servustv",
-                name = "ServusTV On",
-                category = "Sport & Doku",
-                streamUrl = "https://rbmn-live.akamaized.net/hls/live/2002825/geoSTVDEweb/master.m3u8",
-                webUrl = "https://www.2ix2.com/servustv-live-stream/",
-                logoTag = "SERVUS"
-            ),
-            DirectWebChannel(
-                id = "rtl",
-                name = "RTL Television",
-                category = "Privatsender",
-                streamUrl = "https://www.2ix2.com/rtl-live-stream/",
-                webUrl = "https://www.2ix2.com/rtl-live-stream/",
-                logoTag = "RTL"
-            ),
-            DirectWebChannel(
-                id = "pro7",
-                name = "ProSieben HD",
-                category = "Privatsender",
-                streamUrl = "https://www.2ix2.com/prosieben-live-stream/",
-                webUrl = "https://www.2ix2.com/prosieben-live-stream/",
-                logoTag = "PRO7"
-            ),
-            DirectWebChannel(
-                id = "sat1",
-                name = "SAT.1",
-                category = "Privatsender",
-                streamUrl = "https://www.2ix2.com/sat1-live-stream/",
-                webUrl = "https://www.2ix2.com/sat1-live-stream/",
-                logoTag = "SAT1"
-            ),
-            DirectWebChannel(
-                id = "vox",
-                name = "VOX HD",
-                category = "Privatsender",
-                streamUrl = "https://www.2ix2.com/vox-live-stream/",
-                webUrl = "https://www.2ix2.com/vox-live-stream/",
-                logoTag = "VOX"
-            ),
-            DirectWebChannel(
-                id = "kabel1",
-                name = "Kabel Eins",
-                category = "Privatsender",
-                streamUrl = "https://www.2ix2.com/kabel-eins-live-stream/",
-                webUrl = "https://www.2ix2.com/kabel-eins-live-stream/",
-                logoTag = "K1"
-            ),
-            DirectWebChannel(
-                id = "rtl2",
-                name = "RTL II",
-                category = "Privatsender",
-                streamUrl = "https://www.2ix2.com/rtl2-live-stream/",
-                webUrl = "https://www.2ix2.com/rtl2-live-stream/",
-                logoTag = "RTL2"
-            ),
-            DirectWebChannel(
-                id = "super_rtl",
-                name = "Super RTL",
-                category = "Unterhaltung",
-                streamUrl = "https://www.2ix2.com/super-rtl-live-stream/",
-                webUrl = "https://www.2ix2.com/super-rtl-live-stream/",
-                logoTag = "SRTL"
-            ),
-            DirectWebChannel(
-                id = "ntv",
-                name = "n-tv Nachrichten",
-                category = "Nachrichten",
-                streamUrl = "https://www.2ix2.com/ntv-live-stream/",
-                webUrl = "https://www.2ix2.com/ntv-live-stream/",
-                logoTag = "NTV"
-            ),
-            DirectWebChannel(
-                id = "nitro",
-                name = "NITRO",
-                category = "Unterhaltung",
-                streamUrl = "https://www.2ix2.com/nitro-live-stream/",
-                webUrl = "https://www.2ix2.com/nitro-live-stream/",
-                logoTag = "NITRO"
-            ),
-            DirectWebChannel(
-                id = "dmax",
-                name = "DMAX Deutschland",
-                category = "Unterhaltung",
-                streamUrl = "https://www.2ix2.com/dmax-live-stream/",
-                webUrl = "https://www.2ix2.com/dmax-live-stream/",
-                logoTag = "DMAX"
-            ),
-            DirectWebChannel(
-                id = "sport1",
-                name = "SPORT1 HD",
-                category = "Sport",
-                streamUrl = "https://www.2ix2.com/sport1-live-stream/",
-                webUrl = "https://www.2ix2.com/sport1-live-stream/",
-                logoTag = "SPORT1"
-            ),
-            DirectWebChannel(
-                id = "eurosport",
-                name = "Eurosport 1",
-                category = "Sport",
-                streamUrl = "https://www.2ix2.com/eurosport-live-stream/",
-                webUrl = "https://www.2ix2.com/eurosport-live-stream/",
-                logoTag = "EURO1"
-            ),
-            DirectWebChannel(
-                id = "orf1",
-                name = "ORF 1 HD",
-                category = "Österreich (ORF)",
-                streamUrl = "https://www.2ix2.com/orf1-live-stream/",
-                webUrl = "https://www.2ix2.com/orf1-live-stream/",
-                logoTag = "ORF1"
-            ),
-            DirectWebChannel(
-                id = "orf2",
-                name = "ORF 2 HD",
-                category = "Österreich (ORF)",
-                streamUrl = "https://www.2ix2.com/orf2-live-stream/",
-                webUrl = "https://www.2ix2.com/orf2-live-stream/",
-                logoTag = "ORF2"
-            ),
-            DirectWebChannel(
-                id = "srf1",
-                name = "SRF 1 HD",
-                category = "Schweiz (SRF)",
-                streamUrl = "https://www.2ix2.com/srf1-live-stream/",
-                webUrl = "https://www.2ix2.com/srf1-live-stream/",
-                logoTag = "SRF1"
-            ),
-            DirectWebChannel(
-                id = "srf2",
-                name = "SRF zwei HD",
-                category = "Schweiz (SRF)",
-                streamUrl = "https://www.2ix2.com/srf2-live-stream/",
-                webUrl = "https://www.2ix2.com/srf2-live-stream/",
-                logoTag = "SRF2"
-            ),
-            DirectWebChannel(
-                id = "nydus_live",
-                name = "Nydus Live Stream",
-                category = "Live TV & Sport",
-                streamUrl = "http://nydus.org/stream/live",
-                webUrl = "http://nydus.org/stream/live",
-                logoTag = "NYDUS",
-                resolution = "Live HD",
-                is2ix2 = false
-            ),
-            DirectWebChannel(
-                id = "movie2k_portal",
-                name = "Movie2k.cx",
-                category = "Filme & Serien",
-                streamUrl = "https://movie2k.cx/",
-                webUrl = "https://movie2k.cx/",
-                logoTag = "M2K",
-                resolution = "HD / VoD",
-                is2ix2 = false
-            ),
-            DirectWebChannel(
-                id = "kool_to_portal",
-                name = "Kool.to (Live TV & Kino)",
-                category = "Deutsche TV Sender",
-                streamUrl = "http://kool.to/",
-                webUrl = "http://kool.to/",
-                logoTag = "KOOL",
-                resolution = "Live HD / VoD",
-                is2ix2 = false
-            ),
-            DirectWebChannel(
-                id = "kool_ws_portal",
-                name = "Kool.ws",
-                category = "Filme & Serien",
-                streamUrl = "http://kool.ws/",
-                webUrl = "http://kool.ws/",
-                logoTag = "KOOL",
-                resolution = "HD / VoD",
-                is2ix2 = false
-            ),
-            DirectWebChannel(
-                id = "tele24seven_de",
-                name = "Tele24Seven (DE Channels)",
-                category = "Deutsche TV Sender",
-                streamUrl = "https://tele24seven.com/?country=DE#country-channels",
-                webUrl = "https://tele24seven.com/?country=DE#country-channels",
-                logoTag = "T24",
-                resolution = "Live HD",
-                is2ix2 = false
-            ),
-            DirectWebChannel(
-                id = "megakino_portal",
-                name = "Megakino",
-                category = "Filme & Serien",
-                streamUrl = "http://megakino18.com/",
-                webUrl = "http://megakino18.com/",
-                logoTag = "MEGA",
-                resolution = "HD / VoD",
-                is2ix2 = false
+                id = site.id,
+                name = site.name,
+                category = site.category.ifBlank { "Web TV" },
+                streamUrl = site.url,
+                webUrl = site.url,
+                logoTag = site.iconEmoji.ifBlank { "📺" },
+                resolution = site.badge.ifBlank { "Web TV" }
             )
-        )
+        }
     }
 
-    // Function to launch high-performance Chrome Custom Tab (enforces http:// for cleartext stream sites)
+    // Öffnet die gewählte URL direkt im Android-Standardbrowser des Geräts
+    val openInDefaultBrowser: (String) -> Unit = { rawUrl ->
+        val url = WebTvSitesManager.normalizeWebUrl(rawUrl)
+        try {
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url)).apply {
+                addCategory(Intent.CATEGORY_BROWSABLE)
+                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            }
+            context.startActivity(browserIntent)
+        } catch (err: Exception) {
+            Toast.makeText(
+                context,
+                if (isEnglish) "Default browser could not be opened" else "Standardbrowser konnte nicht geöffnet werden",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+    }
+
+    // Öffnet die URL in einem schnellen Chrome Custom Tab (Fallback: Standardbrowser)
     val launchCustomTab: (String) -> Unit = { rawUrl ->
         val url = WebTvSitesManager.normalizeWebUrl(rawUrl)
         try {
@@ -590,31 +285,16 @@ fun WebStreamBrowserView(
             customTabsIntent.intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             customTabsIntent.launchUrl(context, Uri.parse(url))
         } catch (e: Exception) {
-            try {
-                val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
-                browserIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                context.startActivity(browserIntent)
-            } catch (err: Exception) {
-                Toast.makeText(context, "Browser konnte nicht gestartet werden", Toast.LENGTH_SHORT).show()
-            }
+            openInDefaultBrowser(url)
         }
     }
 
-    // Startet die Web-Ansicht direkt im Vollbildmodus (löst HTTP/HTTPS Mixed-Content für kool.to & Co.)
+    // Startet die In-App Web-Ansicht direkt im Vollbildmodus
     val openInAppFullscreen: (String) -> Unit = { rawUrl ->
         val normalized = WebTvSitesManager.normalizeWebUrl(rawUrl)
         inAppTargetUrl = normalized
         isEmbeddedFullscreen = true
         selectedMode = WebTvMode.SAFE_EMBEDDED
-    }
-
-    val openSmartWebPortal: (String) -> Unit = { rawUrl ->
-        val normalized = WebTvSitesManager.normalizeWebUrl(rawUrl)
-        if (WebTvSitesManager.requiresCleartextHttp(normalized)) {
-            openInAppFullscreen(normalized)
-        } else {
-            openInAppFullscreen(normalized)
-        }
     }
 
     Column(
@@ -624,7 +304,7 @@ fun WebStreamBrowserView(
             .testTag("web_stream_browser_screen")
     ) {
         if (!isFullWebViewActive) {
-            // Security Header Bar with instant Re-Lock action
+            // Header Bar (Direkter Zugang ohne PIN-Sperre)
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -633,76 +313,59 @@ fun WebStreamBrowserView(
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Row(verticalAlignment = Alignment.CenterVertically) {
+                Row(
+                    verticalAlignment = Alignment.CenterVertically,
+                    modifier = Modifier.weight(1f)
+                ) {
                     Icon(
-                        imageVector = Icons.Default.Security,
+                        imageVector = Icons.Default.LiveTv,
                         contentDescription = null,
-                        tint = AccentEmerald,
+                        tint = GoldPrimary,
                         modifier = Modifier.size(16.dp)
                     )
                     Spacer(modifier = Modifier.width(6.dp))
                     Text(
-                        text = if (isEnglish) "Web TV Unlocked (PIN Protected)" else "Web TV freigeschaltet (PIN-geschützt)",
+                        text = if (isEnglish) {
+                            "Web TV • Media Libraries & Portals (${webTvSites.size})"
+                        } else {
+                            "Web TV • Mediatheken & Portale (${webTvSites.size})"
+                        },
                         color = TextSecondary,
                         fontSize = 12.sp,
-                        fontWeight = FontWeight.Medium
+                        fontWeight = FontWeight.Medium,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis
                     )
                 }
 
-                Row(
-                    horizontalArrangement = Arrangement.spacedBy(8.dp),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    OutlinedButton(
-                        onClick = {
-                            selectedMode = WebTvMode.CUSTOM_TAB_PORTAL
-                            showAddSiteDialog = true
-                        },
-                        shape = RoundedCornerShape(8.dp),
-                        contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp),
-                        colors = ButtonDefaults.outlinedButtonColors(contentColor = AccentEmerald),
-                        border = androidx.compose.foundation.BorderStroke(1.dp, AccentEmerald.copy(alpha = 0.65f)),
-                        modifier = Modifier
-                            .height(30.dp)
-                            .testTag("web_tv_header_add_site_button")
-                    ) {
-                        Icon(
-                            imageVector = Icons.Default.Add,
-                            contentDescription = null,
-                            tint = AccentEmerald,
-                            modifier = Modifier.size(14.dp)
-                        )
-                        Spacer(modifier = Modifier.width(4.dp))
-                        Text(
-                            text = if (isEnglish) "Add Website" else "Webseite +",
-                            color = AccentEmerald,
-                            fontSize = 11.sp,
-                            fontWeight = FontWeight.Bold
-                        )
-                    }
+                Spacer(modifier = Modifier.width(8.dp))
 
-                    OutlinedButton(
-                        onClick = { isWebTvUnlocked = false },
-                        shape = RoundedCornerShape(8.dp),
-                        contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp),
-                        modifier = Modifier
-                            .height(30.dp)
-                            .testTag("web_tv_relock_button")
-                    ) {
-                        Icon(
-                            imageVector = Icons.Default.Lock,
-                            contentDescription = if (isEnglish) "Lock Web TV" else "Web TV sperren",
-                            tint = GoldPrimary,
-                            modifier = Modifier.size(14.dp)
-                        )
-                        Spacer(modifier = Modifier.width(4.dp))
-                        Text(
-                            text = if (isEnglish) "Lock" else "Sperren",
-                            color = GoldPrimary,
-                            fontSize = 11.sp,
-                            fontWeight = FontWeight.Bold
-                        )
-                    }
+                OutlinedButton(
+                    onClick = {
+                        selectedMode = WebTvMode.CUSTOM_TAB_PORTAL
+                        showAddSiteDialog = true
+                    },
+                    shape = RoundedCornerShape(8.dp),
+                    contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp),
+                    colors = ButtonDefaults.outlinedButtonColors(contentColor = AccentEmerald),
+                    border = androidx.compose.foundation.BorderStroke(1.dp, AccentEmerald.copy(alpha = 0.65f)),
+                    modifier = Modifier
+                        .height(32.dp)
+                        .testTag("web_tv_header_add_site_button")
+                ) {
+                    Icon(
+                        imageVector = Icons.Default.Add,
+                        contentDescription = null,
+                        tint = AccentEmerald,
+                        modifier = Modifier.size(14.dp)
+                    )
+                    Spacer(modifier = Modifier.width(4.dp))
+                    Text(
+                        text = if (isEnglish) "Add Website" else "Webseite +",
+                        color = AccentEmerald,
+                        fontSize = 11.sp,
+                        fontWeight = FontWeight.Bold
+                    )
                 }
             }
 
@@ -727,9 +390,11 @@ fun WebStreamBrowserView(
                             Icon(Icons.Default.LiveTv, contentDescription = null, modifier = Modifier.size(16.dp))
                             Spacer(modifier = Modifier.width(6.dp))
                             Text(
-                                text = if (isEnglish) "Live TV Channels" else "2ix2 & Web TV",
+                                text = if (isEnglish) "Media & TV" else "Mediatheken & TV",
                                 fontWeight = if (selectedMode == WebTvMode.DIRECT_CHANNELS) FontWeight.Bold else FontWeight.Normal,
-                                fontSize = 13.sp
+                                fontSize = 12.5.sp,
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis
                             )
                         }
                     }
@@ -745,7 +410,9 @@ fun WebStreamBrowserView(
                             Text(
                                 text = if (isEnglish) "Websites (${webTvSites.size})" else "Webseiten (${webTvSites.size})",
                                 fontWeight = if (selectedMode == WebTvMode.CUSTOM_TAB_PORTAL) FontWeight.Bold else FontWeight.Normal,
-                                fontSize = 13.sp
+                                fontSize = 12.5.sp,
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis
                             )
                         }
                     }
@@ -764,7 +431,9 @@ fun WebStreamBrowserView(
                             Text(
                                 text = if (isEnglish) "In-App Browser" else "In-App Ansicht",
                                 fontWeight = if (selectedMode == WebTvMode.SAFE_EMBEDDED) FontWeight.Bold else FontWeight.Normal,
-                                fontSize = 13.sp
+                                fontSize = 12.5.sp,
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis
                             )
                         }
                     }
@@ -785,7 +454,7 @@ fun WebStreamBrowserView(
                         }
                     },
                     onOpenInBrowser = { ch ->
-                        openInAppFullscreen(ch.webUrl)
+                        openInDefaultBrowser(ch.webUrl)
                     },
                     onOpenSite = { site ->
                         openInAppFullscreen(site.url)
@@ -804,7 +473,7 @@ fun WebStreamBrowserView(
             }
 
             WebTvMode.CUSTOM_TAB_PORTAL -> {
-                // Web TV Websites Hub with full manual Add, Edit, and Delete support
+                // Web TV Websites Hub with In-App, Standardbrowser, Custom Tab, Add, Edit & Delete
                 WebPortalsHubScreen(
                     sites = webTvSites,
                     onOpenPortal = { site ->
@@ -812,6 +481,12 @@ fun WebStreamBrowserView(
                     },
                     onOpenInApp = { site ->
                         openInAppFullscreen(site.url)
+                    },
+                    onOpenInDefaultBrowser = { site ->
+                        openInDefaultBrowser(site.url)
+                    },
+                    onOpenCustomTab = { site ->
+                        launchCustomTab(site.url)
                     },
                     onAddSiteClick = {
                         showAddSiteDialog = true
@@ -835,6 +510,9 @@ fun WebStreamBrowserView(
                     onCustomUrlLaunch = { url ->
                         openInAppFullscreen(url)
                     },
+                    onCustomUrlDefaultBrowser = { url ->
+                        openInDefaultBrowser(url)
+                    },
                     isEnglish = isEnglish
                 )
             }
@@ -852,6 +530,7 @@ fun WebStreamBrowserView(
                     },
                     onPlayDetectedStream = onPlayDetectedStream,
                     onLaunchExternal = launchCustomTab,
+                    onOpenInDefaultBrowser = openInDefaultBrowser,
                     onAddCurrentPageToSites = { title, url ->
                         val added = WebTvSitesManager.addSite(
                             context = context,
@@ -912,261 +591,7 @@ fun WebStreamBrowserView(
 }
 
 /**
- * Vollflächige, blickdichte PIN-Sperre für die Rubrik Web TV (PIN: 1971).
- * Kein Zugang und keine Einsicht ohne korrekten PIN.
- * Die PIN-Vorlage zeigt stets 12 Stellen an (PinTwelveSlotTemplate).
- */
-@Composable
-private fun WebTvPinLockScreen(
-    expectedPin: String = WEB_TV_PIN_CODE,
-    onPinSuccess: () -> Unit,
-    isEnglish: Boolean = false
-) {
-    var enteredPin by remember { mutableStateOf("") }
-    var isError by remember { mutableStateOf(false) }
-
-    fun verifyPin(candidate: String) {
-        if (candidate == expectedPin) {
-            onPinSuccess()
-        } else {
-            isError = true
-            enteredPin = ""
-        }
-    }
-
-    Box(
-        modifier = Modifier
-            .fillMaxSize()
-            .background(DarkNavyBackground)
-            .verticalScroll(rememberScrollState())
-            .padding(horizontal = 16.dp, vertical = 20.dp)
-            .testTag("web_tv_pin_lock_screen"),
-        contentAlignment = Alignment.Center
-    ) {
-        Card(
-            modifier = Modifier
-                .fillMaxWidth(0.95f)
-                .clip(RoundedCornerShape(22.dp))
-                .border(1.5.dp, GoldPrimary, RoundedCornerShape(22.dp)),
-            colors = CardDefaults.cardColors(containerColor = DarkNavyCard)
-        ) {
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(22.dp),
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
-                Box(
-                    modifier = Modifier
-                        .size(54.dp)
-                        .clip(CircleShape)
-                        .background(GoldPrimary.copy(alpha = 0.15f))
-                        .border(1.dp, GoldPrimary.copy(alpha = 0.5f), CircleShape),
-                    contentAlignment = Alignment.Center
-                ) {
-                    Icon(
-                        imageVector = Icons.Default.Lock,
-                        contentDescription = if (isEnglish) "Web TV Locked" else "Web TV gesperrt",
-                        tint = GoldPrimary,
-                        modifier = Modifier.size(28.dp)
-                    )
-                }
-
-                Spacer(modifier = Modifier.height(12.dp))
-
-                Text(
-                    text = if (isEnglish) "Web TV — PIN Protected" else "Rubrik Web TV — PIN-geschützt",
-                    fontSize = 19.sp,
-                    fontWeight = FontWeight.Bold,
-                    color = GoldPrimary,
-                    textAlign = TextAlign.Center
-                )
-
-                Spacer(modifier = Modifier.height(6.dp))
-
-                Text(
-                    text = if (isEnglish)
-                        "No access and no view without valid PIN authorization."
-                    else
-                        "Kein Zugang und keine Einsicht ohne gültige PIN-Autorisierung.",
-                    fontSize = 12.sp,
-                    color = TextSecondary,
-                    textAlign = TextAlign.Center
-                )
-
-                Spacer(modifier = Modifier.height(16.dp))
-
-                // 12-Stellen PIN-Vorlage (zeigt exakt 12 visuelle Stellen an)
-                PinTwelveSlotTemplate(
-                    enteredLength = enteredPin.length,
-                    isError = isError
-                )
-
-                Spacer(modifier = Modifier.height(12.dp))
-
-                OutlinedTextField(
-                    value = enteredPin,
-                    onValueChange = { input ->
-                        val digits = input.filter { it.isDigit() }
-                        if (digits.length <= 12) {
-                            enteredPin = digits
-                            isError = false
-                            if (digits == expectedPin) {
-                                verifyPin(digits)
-                            }
-                        }
-                    },
-                    label = { Text(if (isEnglish) "PIN Template (12 Digits)" else "PIN-Vorlage (12 Stellen)") },
-                    placeholder = { Text("•••• •••• ••••") },
-                    visualTransformation = PasswordVisualTransformation(),
-                    keyboardOptions = KeyboardOptions(
-                        keyboardType = KeyboardType.NumberPassword,
-                        imeAction = ImeAction.Done
-                    ),
-                    keyboardActions = KeyboardActions(onDone = { verifyPin(enteredPin) }),
-                    singleLine = true,
-                    isError = isError,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .testTag("web_tv_pin_input_field"),
-                    colors = OutlinedTextFieldDefaults.colors(
-                        focusedContainerColor = DarkSurface,
-                        unfocusedContainerColor = DarkSurface,
-                        focusedBorderColor = GoldPrimary,
-                        unfocusedBorderColor = if (isError) AccentRose else BorderGlow.copy(alpha = 0.5f),
-                        focusedTextColor = TextPrimary,
-                        unfocusedTextColor = TextPrimary
-                    )
-                )
-
-                if (isError) {
-                    Spacer(modifier = Modifier.height(8.dp))
-                    Text(
-                        text = if (isEnglish)
-                            "Incorrect PIN. Access denied."
-                        else
-                            "Falscher PIN! Kein Zugang zu Web TV.",
-                        color = AccentRose,
-                        fontSize = 12.sp,
-                        fontWeight = FontWeight.SemiBold,
-                        textAlign = TextAlign.Center
-                    )
-                }
-
-                Spacer(modifier = Modifier.height(14.dp))
-
-                // TV Remote & Touch Numpad (1-9, C, 0, OK)
-                Column(
-                    modifier = Modifier.fillMaxWidth(),
-                    verticalArrangement = Arrangement.spacedBy(8.dp)
-                ) {
-                    val rows = listOf(
-                        listOf("1", "2", "3"),
-                        listOf("4", "5", "6"),
-                        listOf("7", "8", "9"),
-                        listOf("C", "0", "OK")
-                    )
-
-                    rows.forEach { row ->
-                        Row(
-                            modifier = Modifier.fillMaxWidth(),
-                            horizontalArrangement = Arrangement.spacedBy(8.dp)
-                        ) {
-                            row.forEach { key ->
-                                Box(
-                                    modifier = Modifier
-                                        .weight(1f)
-                                        .height(46.dp)
-                                        .clip(RoundedCornerShape(10.dp))
-                                        .background(
-                                            when (key) {
-                                                "OK" -> GoldPrimary
-                                                "C" -> DarkSurfaceElevated
-                                                else -> DarkSurface
-                                            }
-                                        )
-                                        .border(
-                                            1.dp,
-                                            if (key == "OK") GoldLight else BorderGlow.copy(alpha = 0.3f),
-                                            RoundedCornerShape(10.dp)
-                                        )
-                                        .clickable {
-                                            when (key) {
-                                                "C" -> {
-                                                    if (enteredPin.isNotEmpty()) {
-                                                        enteredPin = enteredPin.dropLast(1)
-                                                    }
-                                                    isError = false
-                                                }
-                                                "OK" -> verifyPin(enteredPin)
-                                                else -> {
-                                                    if (enteredPin.length < 12) {
-                                                        val updated = enteredPin + key
-                                                        enteredPin = updated
-                                                        isError = false
-                                                        if (updated == expectedPin) {
-                                                            verifyPin(updated)
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                        .testTag("web_tv_pin_key_$key"),
-                                    contentAlignment = Alignment.Center
-                                ) {
-                                    if (key == "C") {
-                                        Icon(
-                                            imageVector = Icons.Default.Backspace,
-                                            contentDescription = "Backspace",
-                                            tint = TextSecondary,
-                                            modifier = Modifier.size(18.dp)
-                                        )
-                                    } else {
-                                        Text(
-                                            text = key,
-                                            fontSize = 16.sp,
-                                            fontWeight = FontWeight.Bold,
-                                            color = if (key == "OK") Color.Black else TextPrimary
-                                        )
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-
-                Spacer(modifier = Modifier.height(14.dp))
-
-                Button(
-                    onClick = { verifyPin(enteredPin) },
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(48.dp)
-                        .testTag("web_tv_pin_unlock_button"),
-                    colors = ButtonDefaults.buttonColors(containerColor = GoldPrimary),
-                    shape = RoundedCornerShape(10.dp)
-                ) {
-                    Icon(
-                        imageVector = Icons.Default.Lock,
-                        contentDescription = null,
-                        tint = Color.Black,
-                        modifier = Modifier.size(16.dp)
-                    )
-                    Spacer(modifier = Modifier.width(8.dp))
-                    Text(
-                        text = if (isEnglish) "Unlock Web TV" else "Web TV freischalten",
-                        color = Color.Black,
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 14.sp
-                    )
-                }
-            }
-        }
-    }
-}
-
-/**
- * 1. Direct Channels Screen: Lists curated 2ix2 and German Web TV Channels
+ * 1. Direct Channels Screen: Kachel-Übersicht der gespeicherten Mediatheken & TV-Webseiten
  */
 @Composable
 private fun DirectChannelsScreen(
@@ -1317,7 +742,17 @@ private fun DirectChannelsScreen(
         OutlinedTextField(
             value = searchQuery,
             onValueChange = { searchQuery = it },
-            placeholder = { Text(if (isEnglish) "Search channel (e.g. RTL, Pro7, ARD)..." else "Sender suchen (z.B. RTL, Pro7, ARD)...", fontSize = 12.sp, color = TextMuted) },
+            placeholder = {
+                Text(
+                    text = if (isEnglish) {
+                        "Search media library or website (e.g. ARD, ZDF, ARTE)..."
+                    } else {
+                        "Mediathek oder Webseite suchen (z.B. ARD, ZDF, ARTE)..."
+                    },
+                    fontSize = 12.sp,
+                    color = TextMuted
+                )
+            },
             modifier = Modifier
                 .fillMaxWidth()
                 .height(50.dp),
@@ -1398,7 +833,7 @@ private fun DirectChannelsScreen(
                             ) {
                                 Text(
                                     text = ch.logoTag,
-                                    fontSize = 11.sp,
+                                    fontSize = 18.sp,
                                     fontWeight = FontWeight.Black,
                                     color = GoldPrimary
                                 )
@@ -1441,25 +876,43 @@ private fun DirectChannelsScreen(
 
                         Row(
                             modifier = Modifier.fillMaxWidth(),
-                            horizontalArrangement = Arrangement.spacedBy(4.dp)
+                            horizontalArrangement = Arrangement.spacedBy(6.dp),
+                            verticalAlignment = Alignment.CenterVertically
                         ) {
                             Button(
                                 onClick = { onPlayChannel(ch) },
                                 colors = ButtonDefaults.buttonColors(containerColor = GoldPrimary),
                                 shape = RoundedCornerShape(6.dp),
                                 contentPadding = PaddingValues(horizontal = 8.dp, vertical = 4.dp),
-                                modifier = Modifier.weight(1f).height(32.dp)
+                                modifier = Modifier
+                                    .weight(1f)
+                                    .height(34.dp)
                             ) {
                                 Icon(Icons.Default.PlayArrow, contentDescription = null, tint = ObsidianBlack, modifier = Modifier.size(14.dp))
-                                Spacer(modifier = Modifier.width(2.dp))
-                                Text(text = "Play", color = ObsidianBlack, fontWeight = FontWeight.Bold, fontSize = 11.sp)
+                                Spacer(modifier = Modifier.width(3.dp))
+                                Text(
+                                    text = if (isEnglish) "Open" else "Öffnen",
+                                    color = ObsidianBlack,
+                                    fontWeight = FontWeight.Bold,
+                                    fontSize = 11.sp
+                                )
                             }
 
                             IconButton(
                                 onClick = { onOpenInBrowser(ch) },
-                                modifier = Modifier.size(32.dp)
+                                modifier = Modifier
+                                    .size(34.dp)
+                                    .clip(RoundedCornerShape(6.dp))
+                                    .background(AccentCyan.copy(alpha = 0.12f))
+                                    .border(1.dp, AccentCyan.copy(alpha = 0.5f), RoundedCornerShape(6.dp))
+                                    .testTag("web_tv_grid_default_browser_${ch.id}")
                             ) {
-                                Icon(Icons.AutoMirrored.Filled.OpenInNew, contentDescription = "2ix2 Web", tint = TextMuted, modifier = Modifier.size(16.dp))
+                                Icon(
+                                    imageVector = Icons.Default.OpenInBrowser,
+                                    contentDescription = if (isEnglish) "Open in default browser" else "Im Standardbrowser öffnen",
+                                    tint = AccentCyan,
+                                    modifier = Modifier.size(17.dp)
+                                )
                             }
                         }
                     }
@@ -1477,11 +930,14 @@ private fun WebPortalsHubScreen(
     sites: List<WebTvSiteItem>,
     onOpenPortal: (WebTvSiteItem) -> Unit,
     onOpenInApp: (WebTvSiteItem) -> Unit,
+    onOpenInDefaultBrowser: (WebTvSiteItem) -> Unit,
+    onOpenCustomTab: (WebTvSiteItem) -> Unit,
     onAddSiteClick: () -> Unit,
     onEditSite: (WebTvSiteItem) -> Unit,
     onDeleteSite: (WebTvSiteItem) -> Unit,
     onSaveCustomSite: (String, String) -> Unit,
     onCustomUrlLaunch: (String) -> Unit,
+    onCustomUrlDefaultBrowser: (String) -> Unit,
     isEnglish: Boolean
 ) {
     var quickNameInput by remember { mutableStateOf("") }
@@ -1725,69 +1181,128 @@ private fun WebPortalsHubScreen(
                         }
                     }
 
-                    // Action Row: Öffnen, In-App, Bearbeiten, Löschen
+                    // Primäre Start-Aktionen: In-App, Standardbrowser, Custom Tab
                     Row(
                         modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceBetween,
+                        horizontalArrangement = Arrangement.spacedBy(8.dp),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                            Button(
-                                onClick = { onOpenPortal(portal) },
-                                colors = ButtonDefaults.buttonColors(containerColor = GoldPrimary),
-                                shape = RoundedCornerShape(8.dp),
-                                modifier = Modifier.height(34.dp),
-                                contentPadding = PaddingValues(horizontal = 12.dp, vertical = 4.dp)
-                            ) {
-                                Icon(Icons.Default.Launch, contentDescription = null, tint = ObsidianBlack, modifier = Modifier.size(15.dp))
-                                Spacer(modifier = Modifier.width(4.dp))
-                                Text(text = "Öffnen", color = ObsidianBlack, fontWeight = FontWeight.Bold, fontSize = 12.sp)
-                            }
-
-                            OutlinedButton(
-                                onClick = { onOpenInApp(portal) },
-                                colors = ButtonDefaults.outlinedButtonColors(contentColor = AccentCyan),
-                                border = androidx.compose.foundation.BorderStroke(1.dp, AccentCyan.copy(alpha = 0.6f)),
-                                shape = RoundedCornerShape(8.dp),
-                                modifier = Modifier.height(34.dp),
-                                contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp)
-                            ) {
-                                Icon(Icons.Default.ChromeReaderMode, contentDescription = null, modifier = Modifier.size(14.dp))
-                                Spacer(modifier = Modifier.width(4.dp))
-                                Text(text = "In-App", fontWeight = FontWeight.Bold, fontSize = 11.sp)
-                            }
+                        Button(
+                            onClick = { onOpenInApp(portal) },
+                            colors = ButtonDefaults.buttonColors(containerColor = GoldPrimary),
+                            shape = RoundedCornerShape(8.dp),
+                            modifier = Modifier
+                                .weight(1f)
+                                .height(36.dp)
+                                .testTag("web_tv_open_in_app_${portal.id}"),
+                            contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp)
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.ChromeReaderMode,
+                                contentDescription = null,
+                                tint = ObsidianBlack,
+                                modifier = Modifier.size(15.dp)
+                            )
+                            Spacer(modifier = Modifier.width(5.dp))
+                            Text(
+                                text = if (isEnglish) "In-App" else "In-App",
+                                color = ObsidianBlack,
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 11.5.sp,
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis
+                            )
                         }
 
-                        Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                            OutlinedButton(
-                                onClick = { onEditSite(portal) },
-                                colors = ButtonDefaults.outlinedButtonColors(contentColor = GoldLight),
-                                border = androidx.compose.foundation.BorderStroke(1.dp, GoldPrimary.copy(alpha = 0.5f)),
-                                shape = RoundedCornerShape(8.dp),
-                                modifier = Modifier
-                                    .height(34.dp)
-                                    .testTag("web_tv_edit_site_${portal.id}"),
-                                contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp)
-                            ) {
-                                Icon(Icons.Default.Edit, contentDescription = "Bearbeiten", modifier = Modifier.size(14.dp))
-                                Spacer(modifier = Modifier.width(4.dp))
-                                Text(text = "Bearbeiten", fontSize = 11.sp, fontWeight = FontWeight.Bold)
-                            }
+                        OutlinedButton(
+                            onClick = { onOpenInDefaultBrowser(portal) },
+                            colors = ButtonDefaults.outlinedButtonColors(contentColor = AccentCyan),
+                            border = androidx.compose.foundation.BorderStroke(1.dp, AccentCyan.copy(alpha = 0.7f)),
+                            shape = RoundedCornerShape(8.dp),
+                            modifier = Modifier
+                                .weight(1.35f)
+                                .height(36.dp)
+                                .testTag("web_tv_open_default_browser_${portal.id}"),
+                            contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp)
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.OpenInBrowser,
+                                contentDescription = null,
+                                tint = AccentCyan,
+                                modifier = Modifier.size(15.dp)
+                            )
+                            Spacer(modifier = Modifier.width(5.dp))
+                            Text(
+                                text = if (isEnglish) "Default Browser" else "Standardbrowser",
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 11.5.sp,
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis
+                            )
+                        }
 
-                            OutlinedButton(
-                                onClick = { onDeleteSite(portal) },
-                                colors = ButtonDefaults.outlinedButtonColors(contentColor = AccentRose),
-                                border = androidx.compose.foundation.BorderStroke(1.dp, AccentRose.copy(alpha = 0.5f)),
-                                shape = RoundedCornerShape(8.dp),
-                                modifier = Modifier
-                                    .height(34.dp)
-                                    .testTag("web_tv_delete_site_${portal.id}"),
-                                contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp)
-                            ) {
-                                Icon(Icons.Default.Delete, contentDescription = "Löschen", modifier = Modifier.size(14.dp))
-                                Spacer(modifier = Modifier.width(4.dp))
-                                Text(text = "Löschen", fontSize = 11.sp, fontWeight = FontWeight.Bold)
-                            }
+                        IconButton(
+                            onClick = { onOpenCustomTab(portal) },
+                            modifier = Modifier
+                                .size(36.dp)
+                                .clip(RoundedCornerShape(8.dp))
+                                .background(DarkSurfaceElevated)
+                                .border(1.dp, GoldPrimary.copy(alpha = 0.45f), RoundedCornerShape(8.dp))
+                                .testTag("web_tv_open_custom_tab_${portal.id}")
+                        ) {
+                            Icon(
+                                imageVector = Icons.AutoMirrored.Filled.OpenInNew,
+                                contentDescription = if (isEnglish) "Open in Custom Tab" else "Im Custom Tab öffnen",
+                                tint = GoldLight,
+                                modifier = Modifier.size(16.dp)
+                            )
+                        }
+                    }
+
+                    // Verwaltungs-Aktionen: Bearbeiten & Löschen
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.End,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        OutlinedButton(
+                            onClick = { onEditSite(portal) },
+                            colors = ButtonDefaults.outlinedButtonColors(contentColor = GoldLight),
+                            border = androidx.compose.foundation.BorderStroke(1.dp, GoldPrimary.copy(alpha = 0.45f)),
+                            shape = RoundedCornerShape(8.dp),
+                            modifier = Modifier
+                                .height(32.dp)
+                                .testTag("web_tv_edit_site_${portal.id}"),
+                            contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp)
+                        ) {
+                            Icon(Icons.Default.Edit, contentDescription = "Bearbeiten", modifier = Modifier.size(13.dp))
+                            Spacer(modifier = Modifier.width(4.dp))
+                            Text(
+                                text = if (isEnglish) "Edit" else "Bearbeiten",
+                                fontSize = 11.sp,
+                                fontWeight = FontWeight.Bold
+                            )
+                        }
+
+                        Spacer(modifier = Modifier.width(8.dp))
+
+                        OutlinedButton(
+                            onClick = { onDeleteSite(portal) },
+                            colors = ButtonDefaults.outlinedButtonColors(contentColor = AccentRose),
+                            border = androidx.compose.foundation.BorderStroke(1.dp, AccentRose.copy(alpha = 0.45f)),
+                            shape = RoundedCornerShape(8.dp),
+                            modifier = Modifier
+                                .height(32.dp)
+                                .testTag("web_tv_delete_site_${portal.id}"),
+                            contentPadding = PaddingValues(horizontal = 10.dp, vertical = 4.dp)
+                        ) {
+                            Icon(Icons.Default.Delete, contentDescription = "Löschen", modifier = Modifier.size(13.dp))
+                            Spacer(modifier = Modifier.width(4.dp))
+                            Text(
+                                text = if (isEnglish) "Delete" else "Löschen",
+                                fontSize = 11.sp,
+                                fontWeight = FontWeight.Bold
+                            )
                         }
                     }
                 }
@@ -1804,47 +1319,81 @@ private fun WebPortalsHubScreen(
             ) {
                 Column(modifier = Modifier.padding(14.dp)) {
                     Text(
-                        text = if (isEnglish) "Open custom URL directly in Browser:" else "Beliebige Webadresse direkt im Browser starten:",
+                        text = if (isEnglish) "Open custom URL directly in Browser:" else "Beliebige Webadresse direkt starten:",
                         fontSize = 13.sp,
                         fontWeight = FontWeight.Bold,
                         color = GoldLight
                     )
-                    Spacer(modifier = Modifier.height(6.dp))
+                    Spacer(modifier = Modifier.height(8.dp))
+                    OutlinedTextField(
+                        value = customUrlInput,
+                        onValueChange = { customUrlInput = it },
+                        placeholder = { Text("https://...", fontSize = 12.sp, color = TextMuted) },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(48.dp),
+                        singleLine = true,
+                        textStyle = androidx.compose.ui.text.TextStyle(fontSize = 12.sp, color = TextPrimary),
+                        colors = OutlinedTextFieldDefaults.colors(
+                            focusedBorderColor = GoldPrimary,
+                            unfocusedBorderColor = BorderGlow.copy(alpha = 0.5f),
+                            focusedContainerColor = DarkNavyBackground,
+                            unfocusedContainerColor = DarkNavyBackground
+                        ),
+                        shape = RoundedCornerShape(8.dp)
+                    )
+                    Spacer(modifier = Modifier.height(8.dp))
                     Row(
                         modifier = Modifier.fillMaxWidth(),
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        verticalAlignment = Alignment.CenterVertically
                     ) {
-                        OutlinedTextField(
-                            value = customUrlInput,
-                            onValueChange = { customUrlInput = it },
-                            placeholder = { Text("https://...", fontSize = 12.sp, color = TextMuted) },
-                            modifier = Modifier
-                                .weight(1f)
-                                .height(46.dp),
-                            singleLine = true,
-                            textStyle = androidx.compose.ui.text.TextStyle(fontSize = 12.sp, color = TextPrimary),
-                            colors = OutlinedTextFieldDefaults.colors(
-                                focusedBorderColor = GoldPrimary,
-                                unfocusedBorderColor = BorderGlow.copy(alpha = 0.5f),
-                                focusedContainerColor = DarkNavyBackground,
-                                unfocusedContainerColor = DarkNavyBackground
-                            ),
-                            shape = RoundedCornerShape(8.dp)
-                        )
-
                         Button(
                             onClick = {
                                 val target = WebTvSitesManager.normalizeWebUrl(customUrlInput)
-                                if (target.isNotBlank()) {
+                                if (target.isNotBlank() && target != "https://" && target != "http://") {
                                     onCustomUrlLaunch(target)
                                 }
                             },
                             colors = ButtonDefaults.buttonColors(containerColor = GoldPrimary),
                             shape = RoundedCornerShape(8.dp),
-                            modifier = Modifier.height(46.dp)
+                            modifier = Modifier
+                                .weight(1f)
+                                .height(42.dp)
+                                .testTag("web_tv_custom_url_in_app_btn")
                         ) {
-                            Text("Start", color = ObsidianBlack, fontWeight = FontWeight.Bold, fontSize = 13.sp)
+                            Icon(Icons.Default.ChromeReaderMode, contentDescription = null, tint = ObsidianBlack, modifier = Modifier.size(16.dp))
+                            Spacer(modifier = Modifier.width(6.dp))
+                            Text(
+                                text = if (isEnglish) "In-App" else "In-App starten",
+                                color = ObsidianBlack,
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 12.sp
+                            )
+                        }
+
+                        OutlinedButton(
+                            onClick = {
+                                val target = WebTvSitesManager.normalizeWebUrl(customUrlInput)
+                                if (target.isNotBlank() && target != "https://" && target != "http://") {
+                                    onCustomUrlDefaultBrowser(target)
+                                }
+                            },
+                            colors = ButtonDefaults.outlinedButtonColors(contentColor = AccentCyan),
+                            border = androidx.compose.foundation.BorderStroke(1.dp, AccentCyan.copy(alpha = 0.7f)),
+                            shape = RoundedCornerShape(8.dp),
+                            modifier = Modifier
+                                .weight(1.2f)
+                                .height(42.dp)
+                                .testTag("web_tv_custom_url_default_browser_btn")
+                        ) {
+                            Icon(Icons.Default.OpenInBrowser, contentDescription = null, tint = AccentCyan, modifier = Modifier.size(16.dp))
+                            Spacer(modifier = Modifier.width(6.dp))
+                            Text(
+                                text = if (isEnglish) "Default Browser" else "Im Standardbrowser",
+                                fontWeight = FontWeight.Bold,
+                                fontSize = 12.sp
+                            )
                         }
                     }
                 }
@@ -1860,12 +1409,13 @@ private fun WebPortalsHubScreen(
 @Composable
 private fun SafeEmbeddedBrowserScreen(
     sites: List<WebTvSiteItem>,
-    initialUrl: String = "http://kool.to/",
+    initialUrl: String = "https://www.ardmediathek.de/",
     isFullscreen: Boolean = true,
     onToggleFullscreen: () -> Unit = {},
     onExitFullscreenWebView: () -> Unit = {},
     onPlayDetectedStream: (streamUrl: String, title: String) -> Unit,
     onLaunchExternal: (String) -> Unit,
+    onOpenInDefaultBrowser: (String) -> Unit,
     onAddCurrentPageToSites: (title: String, url: String) -> Unit = { _, _ -> },
     isEnglish: Boolean
 ) {
@@ -2017,12 +1567,26 @@ private fun SafeEmbeddedBrowserScreen(
                     Icon(Icons.Default.Add, contentDescription = "Webseite speichern", tint = AccentEmerald)
                 }
 
+                // Im Standardbrowser öffnen
+                IconButton(
+                    onClick = { onOpenInDefaultBrowser(currentUrl) },
+                    modifier = Modifier
+                        .size(36.dp)
+                        .testTag("web_tv_toolbar_default_browser_btn")
+                ) {
+                    Icon(
+                        imageVector = Icons.Default.OpenInBrowser,
+                        contentDescription = if (isEnglish) "Open in default browser" else "Im Standardbrowser öffnen",
+                        tint = AccentCyan
+                    )
+                }
+
                 // Open in High-Speed Custom Tab
                 IconButton(
                     onClick = { onLaunchExternal(currentUrl) },
                     modifier = Modifier.size(36.dp)
                 ) {
-                    Icon(Icons.AutoMirrored.Filled.OpenInNew, contentDescription = "Open in Chrome/Samsung", tint = GoldPrimary)
+                    Icon(Icons.AutoMirrored.Filled.OpenInNew, contentDescription = "Im Custom Tab öffnen", tint = GoldPrimary)
                 }
             }
 
@@ -2243,7 +1807,7 @@ private fun SafeEmbeddedBrowserScreen(
                                 override fun shouldInterceptRequest(view: WebView?, request: WebResourceRequest?): WebResourceResponse? {
                                     // CRITICAL: shouldInterceptRequest runs on Chromium's background IO thread (Chrome_IOThread)!
                                     // Never touch `view` on this thread; always post UI state updates via `mainHandler`.
-                                    // Do NOT interrupt WebView playback here so kool.to streams play seamlessly inside the Web-Ansicht.
+                                    // Do NOT interrupt WebView playback here so streams play seamlessly inside the Web-Ansicht.
                                     try {
                                         val reqUrl = request?.url?.toString()?.trim() ?: return super.shouldInterceptRequest(view, request)
                                         val koolStream = KoolToCatalogHelper.extractPlayableStreamUrl(reqUrl)
@@ -2366,13 +1930,27 @@ private fun SafeEmbeddedBrowserScreen(
                     }
 
                     IconButton(
+                        onClick = { onOpenInDefaultBrowser(currentUrl) },
+                        modifier = Modifier
+                            .size(32.dp)
+                            .testTag("web_tv_fullscreen_default_browser_btn")
+                    ) {
+                        Icon(
+                            imageVector = Icons.Default.OpenInBrowser,
+                            contentDescription = if (isEnglish) "Open in default browser" else "Im Standardbrowser öffnen",
+                            tint = AccentCyan,
+                            modifier = Modifier.size(17.dp)
+                        )
+                    }
+
+                    IconButton(
                         onClick = onToggleFullscreen,
                         modifier = Modifier.size(32.dp)
                     ) {
                         Icon(
                             imageVector = Icons.Default.FullscreenExit,
                             contentDescription = "Leiste einblenden",
-                            tint = AccentCyan,
+                            tint = GoldLight,
                             modifier = Modifier.size(17.dp)
                         )
                     }

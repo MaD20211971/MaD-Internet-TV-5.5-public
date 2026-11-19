@@ -180,29 +180,9 @@ fun SettingsView(
     var webTvSiteToEdit by remember { mutableStateOf<WebTvSiteItem?>(null) }
     var quickWebTvName by remember { mutableStateOf("") }
     var quickWebTvUrl by remember { mutableStateOf("") }
-    var isWebTvSettingsUnlocked by remember { mutableStateOf(false) }
-    var showWebTvSettingsPinPrompt by remember { mutableStateOf(false) }
     var showAllWebTvSites by remember { mutableStateOf(false) }
 
-    if (showWebTvSettingsPinPrompt) {
-        PinPromptDialog(
-            title = if (isEnglish) "Unlock Web TV Settings" else "Web TV Verwaltung freischalten",
-            subtitle = if (isEnglish) {
-                "Enter security PIN to view and manage Web TV addresses"
-            } else {
-                "Sicherheits-PIN eingeben, um hinterlegte Web-TV-Adressen einzusehen und zu verwalten."
-            },
-            expectedPin = "1971",
-            onDismiss = { showWebTvSettingsPinPrompt = false },
-            onPinSuccess = {
-                showWebTvSettingsPinPrompt = false
-                isWebTvSettingsUnlocked = true
-            },
-            isEnglish = isEnglish
-        )
-    }
-
-    if ((showAddWebTvSiteDialog || webTvSiteToEdit != null) && isWebTvSettingsUnlocked) {
+    if (showAddWebTvSiteDialog || webTvSiteToEdit != null) {
         WebTvSiteEditDialog(
             initialSite = webTvSiteToEdit,
             isEnglish = isEnglish,
@@ -520,23 +500,15 @@ fun SettingsView(
             }
         }
 
-        // Rubrik Web TV in Einstellungen (Streng PIN-geschützt: 1971 — keine Webadressen sichtbar ohne PIN!)
+        // Rubrik Web TV in Einstellungen (Direkt zugänglich ohne PIN-Sperre)
         item {
             SettingsSectionHeader(
                 icon = Icons.Default.Language,
                 title = if (isEnglish) "Rubrik Web TV • Manage Websites" else "Rubrik Web TV • Webseiten verwalten",
-                subtitle = if (isWebTvSettingsUnlocked) {
-                    if (isEnglish) {
-                        "Manually add, edit and delete websites for Web TV (${webTvSites.size} websites)"
-                    } else {
-                        "Webseiten für Web TV manuell hinzufügen, bearbeiten und löschen (${webTvSites.size} hinterlegt)"
-                    }
+                subtitle = if (isEnglish) {
+                    "Manually add, edit and delete websites for Web TV (${webTvSites.size} websites)"
                 } else {
-                    if (isEnglish) {
-                        "PIN-protected section • Web addresses are hidden until unlocked"
-                    } else {
-                        "PIN-geschützter Bereich • Webadressen sind ohne PIN-Freigabe ausgeblendet"
-                    }
+                    "Webseiten für Web TV manuell hinzufügen, bearbeiten und löschen (${webTvSites.size} hinterlegt)"
                 }
             )
             Spacer(modifier = Modifier.height(8.dp))
@@ -548,110 +520,23 @@ fun SettingsView(
                     .background(DarkNavyCard)
                     .border(
                         1.dp,
-                        if (isWebTvSettingsUnlocked) AccentEmerald.copy(alpha = 0.6f) else GoldPrimary.copy(alpha = 0.55f),
+                        AccentEmerald.copy(alpha = 0.6f),
                         RoundedCornerShape(12.dp)
                     )
                     .padding(14.dp)
             ) {
-                if (!isWebTvSettingsUnlocked) {
-                    // Gesperrter Zustand: KEINE Web-TV-Adressen oder Portalnamen sichtbar!
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        verticalAlignment = Alignment.CenterVertically,
-                        horizontalArrangement = Arrangement.SpaceBetween
-                    ) {
-                        Row(
-                            verticalAlignment = Alignment.CenterVertically,
-                            modifier = Modifier
-                                .weight(1f)
-                                .padding(end = 10.dp)
-                        ) {
-                            Box(
-                                modifier = Modifier
-                                    .size(38.dp)
-                                    .clip(RoundedCornerShape(10.dp))
-                                    .background(DarkSurfaceElevated)
-                                    .border(1.dp, GoldPrimary.copy(alpha = 0.6f), RoundedCornerShape(10.dp)),
-                                contentAlignment = Alignment.Center
-                            ) {
-                                Icon(
-                                    imageVector = Icons.Default.Lock,
-                                    contentDescription = "PIN-Schutz",
-                                    tint = GoldPrimary,
-                                    modifier = Modifier.size(18.dp)
-                                )
-                            }
-                            Spacer(modifier = Modifier.width(10.dp))
-                            Column {
-                                Text(
-                                    text = if (isEnglish) "🔒 Web TV Addresses Locked" else "🔒 Web-TV-Adressen sind PIN-geschützt",
-                                    fontSize = 13.sp,
-                                    fontWeight = FontWeight.Bold,
-                                    color = TextPrimary
-                                )
-                                Spacer(modifier = Modifier.height(2.dp))
-                                Text(
-                                    text = if (isEnglish) {
-                                        "Enter your security PIN to view, add or edit Web TV URLs."
-                                    } else {
-                                        "Hinterlegte Webadressen werden erst nach Eingabe der Sicherheits-PIN angezeigt."
-                                    },
-                                    fontSize = 11.sp,
-                                    color = TextMuted
-                                )
-                            }
-                        }
-
-                        Button(
-                            onClick = { showWebTvSettingsPinPrompt = true },
-                            colors = ButtonDefaults.buttonColors(
-                                containerColor = GoldPrimary,
-                                contentColor = ObsidianBlack
-                            ),
-                            shape = RoundedCornerShape(8.dp),
-                            contentPadding = PaddingValues(horizontal = 12.dp, vertical = 6.dp),
-                            modifier = Modifier
-                                .height(36.dp)
-                                .testTag("settings_web_tv_unlock_button")
-                        ) {
-                            Text(
-                                text = if (isEnglish) "🔓 Unlock (PIN)" else "🔓 PIN-Freigabe",
-                                fontSize = 11.5.sp,
-                                fontWeight = FontWeight.ExtraBold
-                            )
-                        }
-                    }
-                } else {
-                    // Entsperrter Zustand nach PIN 1971
-                    Row(
-                        modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceBetween,
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        Text(
-                            text = if (isEnglish) "Add new Web TV website:" else "Neue Web TV Webseite direkt eintragen:",
-                            fontSize = 12.sp,
-                            fontWeight = FontWeight.Bold,
-                            color = GoldLight
-                        )
-
-                        Box(
-                            modifier = Modifier
-                                .clip(RoundedCornerShape(6.dp))
-                                .background(AccentEmerald.copy(alpha = 0.18f))
-                                .border(1.dp, AccentEmerald, RoundedCornerShape(6.dp))
-                                .clickable { isWebTvSettingsUnlocked = false }
-                                .padding(horizontal = 8.dp, vertical = 4.dp)
-                                .testTag("settings_web_tv_lock_button")
-                        ) {
-                            Text(
-                                text = if (isEnglish) "🔒 Lock Web TV" else "🔒 Adressen sperren",
-                                fontSize = 10.sp,
-                                fontWeight = FontWeight.Bold,
-                                color = AccentEmerald
-                            )
-                        }
-                    }
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Text(
+                        text = if (isEnglish) "Add new Web TV website:" else "Neue Web TV Webseite direkt eintragen:",
+                        fontSize = 12.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = GoldLight
+                    )
+                }
 
                     Spacer(modifier = Modifier.height(8.dp))
 
@@ -954,7 +839,6 @@ fun SettingsView(
                             }
                         }
                     }
-                }
             }
         }
 

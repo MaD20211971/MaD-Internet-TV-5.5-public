@@ -79,7 +79,7 @@ data class WebTvSiteItem(
 object WebTvSitesManager {
 
     private const val PREFS_NAME = "web_tv_custom_sites_prefs"
-    private const val KEY_SITES_JSON = "web_tv_sites_json_v1"
+    private const val KEY_SITES_JSON = "web_tv_sites_json_v2"
 
     private val _sitesFlow = MutableStateFlow<List<WebTvSiteItem>>(emptyList())
     val sitesFlow: StateFlow<List<WebTvSiteItem>> = _sitesFlow.asStateFlow()
@@ -94,31 +94,7 @@ object WebTvSitesManager {
             val prefs = context.applicationContext.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
             val rawJson = prefs.getString(KEY_SITES_JSON, null)
             val loaded = if (rawJson != null) {
-                var parsed = parseSitesJson(rawJson)
-                var changed = false
-                val defaultTele24 = defaultSites().first { it.id == "default_tele24seven_de" }
-                if (parsed.none { it.url.contains("tele24seven.com", ignoreCase = true) }) {
-                    parsed = listOf(defaultTele24) + parsed
-                    changed = true
-                }
-                val defaultKoolTo = defaultSites().first { it.id == "default_kool_to" }
-                if (parsed.none { it.url.contains("kool.to", ignoreCase = true) }) {
-                    parsed = listOf(defaultKoolTo) + parsed
-                    changed = true
-                }
-                // Migrate any saved kool.to / kool.ws entries from https:// to http:// to prevent mixed-content blocking
-                parsed = parsed.map { site ->
-                    if (requiresCleartextHttp(site.url) && site.url.startsWith("https://", ignoreCase = true)) {
-                        changed = true
-                        site.copy(url = "http://" + site.url.substring("https://".length))
-                    } else {
-                        site
-                    }
-                }
-                if (changed) {
-                    saveSitesToPrefs(context.applicationContext, parsed)
-                }
-                parsed
+                parseSitesJson(rawJson)
             } else {
                 val defaults = defaultSites()
                 saveSitesToPrefs(context.applicationContext, defaults)
@@ -130,11 +106,7 @@ object WebTvSitesManager {
     }
 
     fun requiresCleartextHttp(rawUrl: String): Boolean {
-        val lower = rawUrl.trim().lowercase()
-        return lower.contains("kool.to") ||
-            lower.contains("kool.ws") ||
-            lower.contains("nydus.org") ||
-            lower.contains("megakino")
+        return false
     }
 
     fun normalizeWebUrl(rawUrl: String): String {
@@ -274,67 +246,157 @@ object WebTvSitesManager {
 
     fun defaultSites(): List<WebTvSiteItem> = listOf(
         WebTvSiteItem(
-            id = "default_tele24seven_de",
-            name = "Tele24Seven (DE)",
-            url = "https://tele24seven.com/?country=DE#country-channels",
-            category = "Deutsche TV Sender",
-            description = "24/7 Deutsche Live-TV Sender & Länder-Kanäle (tele24seven.com)",
-            badge = "DE Live TV",
+            id = "default_ard_mediathek",
+            name = "ARD Mediathek",
+            url = "https://www.ardmediathek.de/",
+            category = "Öffentlich-Rechtliche",
+            description = "Livestreams, Filme, Dokus & Sendungen der ARD",
+            badge = "Mediathek",
             iconEmoji = "📺"
         ),
         WebTvSiteItem(
-            id = "default_2ix2",
-            name = "2ix2.com",
-            url = "https://www.2ix2.com/",
-            category = "Deutsche TV Sender",
-            description = "Kostenloses deutsches Live TV (ARD, ZDF, RTL, Pro7, etc.)",
-            badge = "German Live TV",
+            id = "default_zdf",
+            name = "ZDF",
+            url = "https://www.zdf.de/",
+            category = "Öffentlich-Rechtliche",
+            description = "ZDF Mediathek, Live-TV, Serien & Dokumentationen",
+            badge = "Mediathek",
             iconEmoji = "📺"
         ),
         WebTvSiteItem(
-            id = "default_nydus",
-            name = "Nydus Live Stream",
-            url = "http://nydus.org/stream/live",
-            category = "Live TV & Sport",
-            description = "Live TV & Sport Streams, Events und Live-Übertragungen",
-            badge = "Live Streams",
-            iconEmoji = "📡"
+            id = "default_3sat",
+            name = "3sat Programm",
+            url = "https://www.3sat.de/programm",
+            category = "Öffentlich-Rechtliche",
+            description = "3sat TV-Programm, Kultur, Wissenschaft & Mediathek",
+            badge = "Programm",
+            iconEmoji = "📺"
         ),
         WebTvSiteItem(
-            id = "default_movie2k",
-            name = "Movie2k",
-            url = "https://movie2k.cx/",
-            category = "Filme & Serien",
-            description = "Aktuelle Filme, Serien und Kinofilme kostenlos im Stream",
-            badge = "Filme & Serien",
+            id = "default_arte",
+            name = "ARTE",
+            url = "https://www.arte.tv/de/",
+            category = "Kultur & Mediathek",
+            description = "Europäische Dokumentationen, Filme, Konzerte & Live-TV",
+            badge = "Kultur",
             iconEmoji = "🎬"
         ),
         WebTvSiteItem(
-            id = "default_kool_to",
-            name = "Kool.to (Live TV & Kino)",
-            url = "http://kool.to/",
-            category = "Live TV & Kino",
-            description = "Öffentliches Kool.to Portal: Deutsche & internationale Live-TV-Sender (/channels), Sport & VoD-Streams",
-            badge = "Live + Kino",
-            iconEmoji = "🦅"
+            id = "default_welt_mediathek",
+            name = "WELT Mediathek",
+            url = "https://www.welt.de/mediathek/",
+            category = "Nachrichten & Doku",
+            description = "WELT Live-News, Reportagen & Dokumentationen",
+            badge = "News & Doku",
+            iconEmoji = "📡"
         ),
         WebTvSiteItem(
-            id = "default_kool",
-            name = "Kool.ws",
-            url = "http://kool.ws/",
-            category = "Kino & Video On Demand",
-            description = "Kostenlose Kinofilme, beliebte Serien und Video-Streams (Mirror)",
-            badge = "Kino Streams",
+            id = "default_df1_live",
+            name = "DF1 Live",
+            url = "https://df1.de/live",
+            category = "Live TV",
+            description = "DF1 Livestream, Sport, Entertainment & Shows",
+            badge = "Live TV",
+            iconEmoji = "📡"
+        ),
+        WebTvSiteItem(
+            id = "default_tele5_mediathek",
+            name = "TELE 5 Mediathek",
+            url = "https://tele5.de/mediathek",
+            category = "Filme & Serien",
+            description = "Spielfilme, Sci-Fi, Kult-Klassiker & Serien",
+            badge = "Filme",
+            iconEmoji = "🎬"
+        ),
+        WebTvSiteItem(
+            id = "default_servustv",
+            name = "ServusTV",
+            url = "https://www.servustv.com/de/sendungen",
+            category = "Mediathek & Sport",
+            description = "ServusTV Sendungen, Sport, Dokus & Wissen",
+            badge = "Sport & Doku",
+            iconEmoji = "📡"
+        ),
+        WebTvSiteItem(
+            id = "default_joyn_mediatheken",
+            name = "Joyn Mediatheken",
+            url = "https://www.joyn.de/mediatheken",
+            category = "Mediatheken & Streaming",
+            description = "Kostenlose Mediatheken & Live-Sender auf Joyn",
+            badge = "Streaming",
             iconEmoji = "🍿"
         ),
         WebTvSiteItem(
-            id = "default_megakino",
-            name = "Megakino",
-            url = "http://megakino18.com/",
-            category = "Filme & Serien",
-            description = "Große Auswahl an Spielfilmen, Blockbustern und Serien",
-            badge = "Blockbuster",
+            id = "default_sendungverpasst",
+            name = "SendungVerpasst.de",
+            url = "https://www.sendungverpasst.de/",
+            category = "Mediathek-Übersicht",
+            description = "Verpasste TV-Sendungen aller deutschen Sender finden",
+            badge = "Übersicht",
+            iconEmoji = "🌐"
+        ),
+        WebTvSiteItem(
+            id = "default_dmax",
+            name = "DMAX",
+            url = "https://dmax.de/sendungen",
+            category = "Doku & Unterhaltung",
+            description = "DMAX Sendungen, Abenteuer, Technik & Real-Life-Dokus",
+            badge = "Doku",
             iconEmoji = "🎥"
+        ),
+        WebTvSiteItem(
+            id = "default_wdr_aktuelle_stunde",
+            name = "WDR Aktuelle Stunde",
+            url = "https://www1.wdr.de/fernsehen/aktuelle-stunde/index.html",
+            category = "Regional TV",
+            description = "WDR Aktuelle Stunde – Nachrichten & Magazin aus NRW",
+            badge = "Regional",
+            iconEmoji = "📺"
+        ),
+        WebTvSiteItem(
+            id = "default_hr_fernsehen",
+            name = "hr-fernsehen",
+            url = "https://www.hr-fernsehen.de/sendungen-a-z/index.html",
+            category = "Regional TV",
+            description = "Alle Sendungen A–Z im hr-fernsehen",
+            badge = "Regional",
+            iconEmoji = "📺"
+        ),
+        WebTvSiteItem(
+            id = "default_kika_kinderfilme",
+            name = "KiKA Kinderfilme",
+            url = "https://www.kika.de/videos/filme/kinderfilme-100",
+            category = "Kinder & Familie",
+            description = "Kinderfilme & Serien von ARD und ZDF",
+            badge = "Kinder",
+            iconEmoji = "🍿"
+        ),
+        WebTvSiteItem(
+            id = "default_netzwelt_mediathek",
+            name = "netzwelt Mediathek",
+            url = "https://www.netzwelt.de/mediathek/index.html",
+            category = "Mediathek-Übersicht",
+            description = "Mediatheken-Übersicht & Streaming-Highlights",
+            badge = "Übersicht",
+            iconEmoji = "🌐"
+        ),
+        WebTvSiteItem(
+            id = "default_youtube_ard",
+            name = "ARD (YouTube)",
+            url = "https://www.youtube.com/ARD",
+            category = "YouTube",
+            description = "Offizieller YouTube-Kanal der ARD",
+            badge = "YouTube",
+            iconEmoji = "🎬"
+        ),
+        WebTvSiteItem(
+            id = "default_youtube_zdf",
+            name = "ZDF (YouTube)",
+            url = "https://www.youtube.com/@ZDF/videos",
+            category = "YouTube",
+            description = "Offizieller YouTube-Kanal des ZDF",
+            badge = "YouTube",
+            iconEmoji = "🎬"
         )
     )
 }
@@ -381,7 +443,7 @@ fun WebTvSiteEditDialog(
                         name = it
                         showError = false
                     },
-                    label = { Text(if (isEnglish) "Website Name" else "Name der Webseite (z.B. 2ix2, Sport TV)") },
+                    label = { Text(if (isEnglish) "Website Name" else "Name der Webseite (z.B. ARD, ZDF)") },
                     singleLine = true,
                     modifier = Modifier
                         .fillMaxWidth()
