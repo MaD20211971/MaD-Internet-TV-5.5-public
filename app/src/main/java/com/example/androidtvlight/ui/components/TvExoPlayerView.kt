@@ -38,6 +38,8 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.VolumeOff
 import androidx.compose.material.icons.automirrored.filled.VolumeUp
 import androidx.compose.material.icons.filled.AspectRatio
+import androidx.compose.material.icons.filled.Cast
+import androidx.compose.material.icons.filled.CastConnected
 import androidx.compose.material.icons.filled.ClosedCaption
 import androidx.compose.material.icons.filled.Dns
 import androidx.compose.material.icons.filled.Forward10
@@ -117,8 +119,12 @@ import com.example.androidtvlight.ui.theme.TvBrightSky
 import com.example.androidtvlight.ui.theme.TvCoralAlert
 import com.example.androidtvlight.ui.theme.TvElectricCyan
 import com.example.androidtvlight.ui.theme.TvEmeraldLive
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.example.androidtvlight.ui.theme.TvGoldenFocus
 import com.example.androidtvlight.ui.theme.TvOnPrimaryDark
+import com.example.cast.UniversalCastManager
+import com.example.cast.model.CastMediaItem
+import com.example.cast.ui.CastControlSheet
 import kotlinx.coroutines.delay
 
 /**
@@ -172,10 +178,16 @@ fun TvExoPlayerView(
     val lifecycleOwner = LocalLifecycleOwner.current
 
     var controlsVisible by remember { mutableStateOf(true) }
+    var showCastDialog by remember { mutableStateOf(false) }
+    val castState by UniversalCastManager.uiState.collectAsStateWithLifecycle()
+
+    LaunchedEffect(context) {
+        UniversalCastManager.ensureInitialized(context)
+    }
 
     // Auto-hide controls after 3.5 seconds when playing so fullscreen is 100% distraction-free
-    LaunchedEffect(controlsVisible, playerState.isPlaying, playerState.showChannelZapperOverlay) {
-        if (controlsVisible && playerState.isPlaying && !playerState.showChannelZapperOverlay) {
+    LaunchedEffect(controlsVisible, playerState.isPlaying, playerState.showChannelZapperOverlay, showCastDialog) {
+        if (controlsVisible && playerState.isPlaying && !playerState.showChannelZapperOverlay && !showCastDialog) {
             delay(3_500L)
             controlsVisible = false
         }
@@ -199,6 +211,34 @@ fun TvExoPlayerView(
     }
 
     val activeRecording = playerState.activeRecording
+
+    val currentCastMedia = remember(
+        channel.id,
+        channel.name,
+        channel.currentShow,
+        channel.logoUrl,
+        channel.primaryStreamUrl,
+        playerState.currentStreamUrl,
+        activeRecording?.id,
+        activeRecording?.playbackUri
+    ) {
+        val streamUrl = activeRecording?.playbackUri
+            ?: playerState.currentStreamUrl.ifBlank { channel.primaryStreamUrl }
+        CastMediaItem(
+            streamUrl = streamUrl,
+            title = activeRecording?.channelTitle ?: channel.name,
+            subtitle = activeRecording?.formattedDate ?: channel.currentShow,
+            logoUrl = channel.logoUrl,
+            isLive = activeRecording == null,
+            isAudioOnly = false
+        )
+    }
+
+    LaunchedEffect(currentCastMedia.streamUrl, currentCastMedia.title, castState.isConnected) {
+        if (castState.isConnected && currentCastMedia.streamUrl.isNotBlank()) {
+            UniversalCastManager.updateMediaIfConnected(context, currentCastMedia)
+        }
+    }
 
     // Bind media item whenever the channel, stream URL, or selected MP4 recording changes — clear previous frame and play immediately!
     LaunchedEffect(playerState.currentStreamUrl, channel.id, activeRecording?.id, activeRecording?.playbackUri) {
@@ -708,6 +748,19 @@ fun TvExoPlayerView(
                             }
                         }
                         IconButton(
+                            onClick = { showCastDialog = true },
+                            modifier = Modifier
+                                .size(48.dp)
+                                .testTag("exo_cast_button")
+                        ) {
+                            Icon(
+                                imageVector = if (castState.isConnected) Icons.Default.CastConnected else Icons.Default.Cast,
+                                contentDescription = "Auf Gerät übertragen (Cast)",
+                                tint = if (castState.isConnected) TvElectricCyan else Color.White
+                            )
+                        }
+
+                        IconButton(
                             onClick = onToggleFavorite,
                             modifier = Modifier
                                 .size(48.dp)
@@ -1150,6 +1203,21 @@ fun TvExoPlayerView(
                 onShowTrackSelector(false)
             },
             onVolumeChange = onVolumeChange
+        )
+    }
+
+    if (showCastDialog) {
+        CastControlSheet(
+            currentMedia = currentCastMedia,
+            onDismiss = { showCastDialog = false },
+            onCastStartedPauseLocal = {
+                if (playerState.isPlaying) {
+                    onTogglePlayPause()
+                } else {
+                    exoPlayer.pause()
+                }
+            },
+            isEnglish = false
         )
     }
 }

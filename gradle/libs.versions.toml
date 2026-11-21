@@ -44,6 +44,9 @@ googleid = "1.1.1"
 media3 = "1.5.1"
 browser = "1.8.0"
 paging = "3.3.6"
+playServicesCastFramework = "21.5.0"
+mediarouter = "1.7.0"
+zxingCore = "3.5.3"
 
 
 [libraries]
@@ -114,6 +117,9 @@ androidx-media3-session = { group = "androidx.media3", name = "media3-session", 
 androidx-media3-datasource-okhttp = { group = "androidx.media3", name = "media3-datasource-okhttp", version.ref = "media3" }
 androidx-media3-database = { group = "androidx.media3", name = "media3-database", version.ref = "media3" }
 androidx-media3-datasource = { group = "androidx.media3", name = "media3-datasource", version.ref = "media3" }
+play-services-cast-framework = { group = "com.google.android.gms", name = "play-services-cast-framework", version.ref = "playServicesCastFramework" }
+androidx-mediarouter = { group = "androidx.mediarouter", name = "mediarouter", version.ref = "mediarouter" }
+zxing-core = { group = "com.google.zxing", name = "core", version.ref = "zxingCore" }
 
 
 [plugins]

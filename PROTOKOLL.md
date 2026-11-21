@@ -16,6 +16,26 @@
 
 ## Sektion 3 – CHRONOLOGISCHES LOG
 
+### 2026-11-21 – Universal Cast Engine: Google Cast, DLNA, Roku, AirPlay, Kodi, Web-Cast & Miracast
+- **Erledigte Aufgaben:**
+  - Neues isoliertes Modul `com.example.cast.*` aufgebaut (ohne Änderungen an geschützten Datenbank-/Parser-/PlayerManager-Kernmodulen):
+    - `CastModels.kt` & `ManualCastDeviceStore.kt`: Modelle für alle 7 Cast-Protokolle sowie lokale Persistenz für manuell hinzugefügte Geräte (Kodi mit Port/Benutzer/Passwort, Roku, DLNA, AirPlay).
+    - `GoogleCastOptionsProvider.kt` & `GoogleCastController.kt`: Offizielles Google Cast SDK (`play-services-cast-framework`) + `androidx.mediarouter` mit Default Media Receiver (`CC1AD845`), crash-sicher auch auf Geräten ohne Google Play Services.
+    - `DlnaCastController.kt`: Native SSDP-Erkennung (`239.255.255.250:1900`), Device-XML-Parser sowie SOAP-Steuerung (`SetAVTransportURI` mit DIDL-Lite, `Play`, `Pause`, `Stop`, `SetVolume`, `SetMute`).
+    - `RokuCastController.kt`: SSDP-Erkennung (`roku:ecp`) + Roku ECP HTTP-API (`:8060`, PlayOnRoku-Start & Medien-/Lautstärke-Tasten).
+    - `KodiCastController.kt`: mDNS/NSD-Erkennung (`_xbmc-jsonrpc-h._tcp.`) + Kodi JSON-RPC 2.0 HTTP-API inkl. Basic-Auth.
+    - `AirPlayCastController.kt`: mDNS/NSD-Erkennung (`_airplay._tcp.`) + AirPlay-1-HTTP-Steuerung (`/play`, `/rate`, `/stop`) inkl. klarem Web-Cast-Hinweis bei verschlüsseltem AirPlay 2.
+    - `LocalCastProxyAndWebServer.kt`: Lokaler HTTP-Server im WLAN (`:8099`) mit IPTV-Header-/CORS-Relay-Proxy, HLS-M3U8-Manifest-Rewriting, Range-Support für lokale Dateien sowie Fullscreen-HTML5/HLS.js-Web-Cast-Empfänger inkl. automatischem Senderwechsel.
+    - `MiracastLauncher.kt`: Direkter System-Aufruf (`ACTION_CAST_SETTINGS` + Samsung Smart View / Wireless-Display-Fallback).
+    - `UniversalCastManager.kt`: Zentraler `StateFlow`-Orchestrator inkl. `WifiManager.MulticastLock`, WLAN-Prüfung und automatischem Senderwechsel bei aktiver Sitzung.
+    - `QrCodeGenerator.kt` (`zxing:core`) & `CastControlSheet.kt`: Einheitliches Material-3-Steuer-Sheet (Geräteliste, Web-Cast QR-Code, Miracast, manuelle IP/Kodi-Eingabe, Proxy-Schalter und aktive TV-Fernbedienung).
+  - Ausschließlich das **reine Cast-Symbol** (`Icons.Default.Cast` / `Icons.Default.CastConnected`) in `NexusPlayerView.kt` (`player_cast_button`) und nach Nutzer-Freigabe minimal-invasiv in `TvExoPlayerView.kt` (`exo_cast_button`) integriert; automatisches Pausieren der lokalen Wiedergabe beim Cast-Start.
+  - `CHANGE_WIFI_MULTICAST_STATE` und `GoogleCastOptionsProvider`-Metadaten im `AndroidManifest.xml` sowie `play-services-cast-framework`, `androidx-mediarouter` und `zxing-core` in `gradle/libs.versions.toml` / `app/build.gradle.kts` eingetragen.
+  - Unit-Tests in `UniversalCastEngineTest.kt` ergänzt.
+- **Geänderte / neue Dateien:**
+  - Neu: `app/src/main/java/com/example/cast/model/CastModels.kt`, `app/src/main/java/com/example/cast/ManualCastDeviceStore.kt`, `app/src/main/java/com/example/cast/UniversalCastManager.kt`, `app/src/main/java/com/example/cast/protocol/{GoogleCastOptionsProvider.kt, GoogleCastController.kt, DlnaCastController.kt, RokuCastController.kt, KodiCastController.kt, AirPlayCastController.kt, LocalCastProxyAndWebServer.kt, MiracastLauncher.kt}`, `app/src/main/java/com/example/cast/ui/{QrCodeGenerator.kt, CastControlSheet.kt}`, `app/src/test/java/com/example/UniversalCastEngineTest.kt`
+  - Geändert: `gradle/libs.versions.toml`, `app/build.gradle.kts`, `app/src/main/AndroidManifest.xml`, `app/src/main/java/com/example/ui/components/NexusPlayerView.kt`, `app/src/main/java/com/example/androidtvlight/ui/components/TvExoPlayerView.kt`, `FUNKTIONSUEBERSICHT.md`, `PROTOKOLL.md`
+
 ### 2026-11-19 – Web TV: PIN-Entfernung, 17 offizielle Mediatheken/Portale & Standardbrowser-Button
 - **Erledigte Aufgaben:**
   - Beide Web-TV-PIN-Abfragen vollständig entfernt: Sperrbildschirm (`WebTvPinLockScreen`) + „Sperren“-Button in `WebStreamBrowserView.kt` sowie die Web-TV-PIN-Sperre in `SettingsView.kt`. Der allgemeine App-Installations-PIN (`1971`) und sonstige PINs bleiben unverändert aktiv.

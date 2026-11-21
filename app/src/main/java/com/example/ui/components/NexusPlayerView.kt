@@ -38,6 +38,8 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AspectRatio
 import androidx.compose.material.icons.filled.Audiotrack
+import androidx.compose.material.icons.filled.Cast
+import androidx.compose.material.icons.filled.CastConnected
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Download
 import androidx.compose.material.icons.filled.Favorite
@@ -80,6 +82,9 @@ import com.example.domain.player.PlayerController
 import com.example.domain.player.StreamSelectionDialog
 import androidx.compose.runtime.mutableLongStateOf
 import androidx.media3.common.C
+import com.example.cast.UniversalCastManager
+import com.example.cast.model.CastMediaItem
+import com.example.cast.ui.CastControlSheet
 import com.example.data.player.TrackOption
 import com.example.data.player.WatchProgressHelper
 import com.example.data.player.VodWatchHistoryManager
@@ -199,9 +204,15 @@ fun NexusPlayerView(
     var showSubtitleMenu by remember { mutableStateOf(false) }
     var showSpeedMenu by remember { mutableStateOf(false) }
     var showExternalMenu by remember { mutableStateOf(false) }
+    var showCastDialog by remember { mutableStateOf(false) }
+    val castState by UniversalCastManager.uiState.collectAsStateWithLifecycle()
     var isDraggingSlider by remember { mutableStateOf(false) }
     var dragPositionMs by remember { mutableLongStateOf(0L) }
     val focusRequester = remember { FocusRequester() }
+
+    LaunchedEffect(context) {
+        UniversalCastManager.ensureInitialized(context)
+    }
 
     val isVod = channel.type == ContentType.MOVIE ||
         channel.type == ContentType.SERIES ||
@@ -209,6 +220,32 @@ fun NexusPlayerView(
         channel.streamUrl.startsWith("file://") ||
         channel.groupTitle == "Downloads & Aufnahmen" ||
         (duration > 0L && duration != C.TIME_UNSET && channel.type != ContentType.LIVE_TV && channel.type != ContentType.RADIO)
+
+    val currentCastMedia = remember(
+        channel.id,
+        channel.streamUrl,
+        channel.name,
+        channel.groupTitle,
+        channel.logoUrl,
+        isVod,
+        playerManager.activeStreamUrl
+    ) {
+        CastMediaItem(
+            streamUrl = playerManager.activeStreamUrl.ifBlank { channel.streamUrl },
+            title = channel.name,
+            subtitle = channel.groupTitle,
+            logoUrl = channel.logoUrl.orEmpty(),
+            isLive = !isVod,
+            isAudioOnly = channel.type == ContentType.RADIO,
+            positionMs = if (isVod) playerManager.currentPosition.value else 0L
+        )
+    }
+
+    LaunchedEffect(currentCastMedia.streamUrl, currentCastMedia.title, castState.isConnected) {
+        if (castState.isConnected && currentCastMedia.streamUrl.isNotBlank()) {
+            UniversalCastManager.updateMediaIfConnected(context, currentCastMedia)
+        }
+    }
 
     var resumeNoticeMs by remember { mutableStateOf<Long?>(null) }
     LaunchedEffect(channel.id, channel.streamUrl, isVod) {
@@ -878,6 +915,30 @@ fun NexusPlayerView(
                                 imageVector = Icons.Default.List,
                                 contentDescription = "Senderliste",
                                 tint = GoldLight
+                            )
+                        }
+
+                        Spacer(modifier = Modifier.width(8.dp))
+
+                        // Universal Cast Symbol (einziges sichtbares Cast-Element im Player)
+                        IconButton(
+                            onClick = { showCastDialog = true },
+                            modifier = Modifier
+                                .size(38.dp)
+                                .clip(CircleShape)
+                                .background(if (castState.isConnected) AccentCyan.copy(alpha = 0.22f) else DarkSurface)
+                                .border(
+                                    1.dp,
+                                    if (castState.isConnected) AccentCyan else BorderGlow.copy(alpha = 0.2f),
+                                    CircleShape
+                                )
+                                .testTag("player_cast_button")
+                        ) {
+                            Icon(
+                                imageVector = if (castState.isConnected) Icons.Default.CastConnected else Icons.Default.Cast,
+                                contentDescription = if (isEnglish) "Cast" else "Auf Gerät übertragen (Cast)",
+                                tint = if (castState.isConnected) AccentCyan else GoldLight,
+                                modifier = Modifier.size(20.dp)
                             )
                         }
 
@@ -2367,6 +2428,16 @@ fun NexusPlayerView(
                     playerController?.selectStreamManually(index)
                 },
                 onDismiss = { showStreamSelectionDialog = false },
+                isEnglish = isEnglish
+            )
+        }
+
+        // Universal Cast Control Sheet (Google Cast, DLNA, Roku, AirPlay, Kodi, Web-Cast, Miracast)
+        if (showCastDialog) {
+            CastControlSheet(
+                currentMedia = currentCastMedia,
+                onDismiss = { showCastDialog = false },
+                onCastStartedPauseLocal = { playerManager.pause() },
                 isEnglish = isEnglish
             )
         }

@@ -119,6 +119,9 @@ dependencies {
   implementation(libs.androidx.media3.datasource.okhttp)
   implementation(libs.androidx.media3.database)
   implementation(libs.androidx.media3.datasource)
+  implementation(libs.play.services.cast.framework)
+  implementation(libs.androidx.mediarouter)
+  implementation(libs.zxing.core)
   implementation(libs.converter.moshi)
   implementation(libs.firebase.ai)
   // Uncomment to use Firestore:
